@@ -89,6 +89,12 @@
 		border-color: #004c92;
 	}
 }
+input[type=password].personal-block__form-input{
+	height: 31px;
+	font-size: 30px;
+	line-height: 30px;
+	letter-spacing: 5px;
+}
 textarea.personal-block__form-input{
 	max-height: 64px;
 }
