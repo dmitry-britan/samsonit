@@ -1,0 +1,33 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--login')
+
+block content
+  .container
+    .page__breadcrumbs
+      -var breadcrumbs = ['Главная', 'Войти в личный кабинет'];
+      include pug/parts/breadcrumbs
+  section.section.section--login
+    .page__inner
+      main.page__content
+        //- HEADER
+        h1.page__header Войти в личный кабинет
+        
+        .page__body
+          form(action="personal-data.html").form
+            .form__field.is--required
+              label.form__label E-mail
+              input.form__input(type="text", name="email")
+            .form__field.is--required
+              label.form__label Пароль
+              input.form__input(type="password", name="password")
+            .form__field
+              a(href="").link Забыли пароль
+              a(href="registration.html").link Зарегистрироваться
+            .form__action
+              input(type="submit", value="Войти").btn.btn--primary
+
+      aside.page__sidebar.sidebar
+
+block body-end

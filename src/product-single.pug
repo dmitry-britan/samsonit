@@ -1,0 +1,132 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--personal-data')
+
+block content
+  .container
+    -var breadcrumbs = ['Главная', 'Samsonite - V22*305'];
+    include pug/parts/breadcrumbs
+
+    main.product-single
+      .product-single__inner
+        //- Product Details
+        .product-single__details
+          h1.product-single__title 
+            | Samsonite 
+            span - V22*305
+          .product-single__info
+            //- Info block 1
+            .product-single__info-block
+              ul.product-single__props
+                each prop in [{title:'Коллекция', value:'Cosmolite 3.0'}, {title:'Объем', value:'36.0 л'}, {title:'Вес', value:'1.70 кг'}, {title:'Ширина', value:'40 см'}, {title:'Высота', value:'55 см'}, {title:'Глубина', value:'20 см'}]
+                  li.product-single__props-item
+                    span.product-single__props-title= prop.title
+                      |:
+                    span.product-single__props-value= prop.value
+
+            //- Info block 2
+            .product-single__info-block
+              ul.product-single__props
+                each prop in [{title:'Материал', value:'100% Curv® - Propex Германия'}, {title:'Гарантия', value:'Ограниченная всемирная 10 лет'}]
+                  li.product-single__props-item
+                    span.product-single__props-title= prop.title
+                      |:
+                    span.product-single__props-value= prop.value
+              //- Variants
+              .product-single__variants
+                .product-single__variants-text
+                  strong Цвет:
+                  span Синий шифер
+                each color in [1,2,3,4]
+                  .product-single__variants-color
+                    input(id="color-"+color, type="radio", name="product_color").is--hidden
+                    label(for="color-"+color class="is--color-"+color)
+
+
+
+          //- Price - Qty - Buy
+          .product-single__action
+            .product-single__price
+              ins.product-single__price-new
+                span.product-single__price-new-value 17 559 
+                span.product-single__price-new-currency грн
+              del.product-single__price-old
+                span.product-single__price-old-value 17 559 
+                span.product-single__price-old-currency грн
+
+            input(type="text", name="product_qty", value="1").product-single__qty
+
+            a(href="").product-single__buy.btn.btn--primary В корзину
+
+          .tabs.js-tabs
+            .tabs__list
+              a(href="#description").tabs__list-item.is--active.js-tabs-item Описание
+              a(href="#features").tabs__list-item.js-tabs-item Особенности
+              a(href="#payment").tabs__list-item.js-tabs-item Оплата
+              a(href="#delivery").tabs__list-item.js-tabs-item Доставка
+
+            #description.tabs__content.js-tabs-content.is--active
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+
+            #features.tabs__content.js-tabs-content
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+
+            #payment.tabs__content.js-tabs-content
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+
+            #delivery.tabs__content.js-tabs-content
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+              p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
+              p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
+
+        //- Product Photos
+        .product-single__photos
+          a(href="").product-single__photo
+            img(src="images/product-single/main.jpg", alt="")
+          .product-single__thumbs
+            button.product-single__thumbs-control.product-single__thumbs-control--prev.js-thumbs-slider-prev
+              i.fa.fa-angle-up
+            .product-single__thumbs-inner.js-thumbs-slider
+              each i in [1,2,3,4,5]
+                -var isActive = (i===1)?'is--active':'';
+                a(href="images/product-single/t-"+i+".jpg", rel="gallery", class="product-single__thumbs-item "+isActive)
+                  img(src="images/product-single/t-"+i+".jpg", alt="")
+            button.product-single__thumbs-control.product-single__thumbs-control--next.js-thumbs-slider-next
+              i.fa.fa-angle-down
+
+    section.section.section--recommend
+      .section__title Рекомендуемые товары
+      .section__body
+        .slider.is--reverse.slider--recommend
+          .slider__controls
+            button.slider__controls-prev.js-recommend-slider-prev
+              i.icon.icon--prev-up
+            .slider__pagination
+              .slider__pagination-current
+              .slider__pagination-divider /
+              .slider__pagination-total
+            button.slider__controls-next.js-recommend-slider-next
+              i.icon.icon--next-down
+          .slider__body
+            .js-recommend-slider
+              include pug/db/products
+              each product, index in products
+                .slider__item
+                  include pug/parts/product
+
+block body-end

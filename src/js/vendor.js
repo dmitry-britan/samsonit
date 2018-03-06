@@ -1,0 +1,8 @@
+// @include('vendor/jquery.js')
+// @include('vendor/slick.js')
+// @include('vendor/arcticModal.js')
+// @include('vendor/fancyBox.js')
+// @include('vendor/jqueryvalidation.js')
+// @include('vendor/Ion.RangeSlider.js')
+// @include('vendor/jquery.mousewheel.min.js')
+// @include('vendor/jquery.jscrollpane.min.js')

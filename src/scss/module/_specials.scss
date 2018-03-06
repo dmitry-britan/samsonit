@@ -1,0 +1,123 @@
+.specials{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1556px;
+	margin: 0 auto;
+}
+.specials__block{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	&.is--set-1{
+		flex-basis: 508px;
+	}
+	&.is--set-2{
+		flex-basis: 1032px;
+	}
+}
+.specials__item{
+	display: flex;
+	flex-basis: 508px;
+	min-height: 274px;
+	margin-bottom: 16px;
+	padding: 40px 45px 25px 33px;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+	&.is--type-1{
+		position: relative;
+		justify-content: flex-end;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 10px; right: 10px;
+			bottom: 10px; left: 10px;
+			border: 1px solid #ffffff;
+		}
+		.specials__text{
+			margin-bottom: 35px;
+		}
+		.specials__readmore{
+			text-align: right;
+		}
+		.specials__content{
+			position: relative;
+			z-index: 50;
+		}
+	}
+	&.is--type-2{
+		justify-content: flex-end;
+		background-position: left bottom;
+		.specials__readmore{
+			text-align: right;
+		}
+	}
+	&.is--type-3{
+		background-position: right bottom;
+	}
+	&.is--type-4{
+		justify-content: center;
+		align-items: center;
+		background-position: 10px 12px;
+		
+		.specials__title{
+			font-size: 37px;
+			font-weight: 800;
+			line-height: 40px;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 10px rgba(#000, .5);
+			color: #ffffff;
+			span{
+				font-size: 21px;
+				line-height: 24px;
+				font-weight: 400;
+				text-shadow: 1px 1px 3px rgba(#000, .5);
+				color: #ffffff;
+			}
+		}
+	}
+	.is--set-2 &{
+		.specials__readmore{
+			margin: auto 0 0 0;
+		}
+	}
+}
+.specials__content{
+	display: flex;
+	flex-direction: column;
+	max-width: 227px;
+}
+.specials__title{
+	margin: 0 0 30px;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: $color__primary;
+
+	span{
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+		text-transform: none;
+		color: rgba(#000000, .4);
+	}
+}
+.specials__text{
+	overflow: hidden;
+	height: 60px;
+	margin: 0;
+	text-overflow: ellipsis;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+	color: rgba(#000000, .5);
+}
+.specials__readmore{
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 20px;
+	letter-spacing: 0.9px;
+	text-decoration: underline;
+	color: #000000;
+}

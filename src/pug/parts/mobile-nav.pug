@@ -1,0 +1,124 @@
+.mobile-nav__toggle-wrapper
+  .js-nav-toggle.mobile-nav__toggle
+    span.icon-nav toggle menu
+
+// MENU
+nav.mobile-nav
+  .mobile-nav__inner
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-1.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Чемоданы
+        ul.mobile-nav__list
+          -var items = ['Пластиковые', 'Тканевые', 'Чемоданы на 4х колесах', 'Чемоданы на 2х колесах', 'Чемоданы для детей'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+          
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-2.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Сумки
+        ul.mobile-nav__list
+          -var items = ['Дорожные сумки', 'Дорожные сумки ан калесах', 'Сумки для ноутбуков', 'Женские сумки', 'Мужские сумки', 'Бьюти кейсы'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-3.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Рюкзаки
+        ul.mobile-nav__list
+          -var items = ['Рюкзаки на колосах ', 'Рюкзаки для ноутбуков', 'Женские рюкзаки', 'Мужские рюкзаки', 'Рюкзаки для детей'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-4.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Бизнес
+        ul.mobile-nav__list
+          -var items = ['Пордпледы для костюмов ', 'Портфели', 'Рюкзаки для ноутбуков', 'Сумки для ноутбуков'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-5.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Кожгалантерея
+        ul.mobile-nav__list
+          -var items = ['Кошельки', 'Женские кошельки', 'Мужские  кошельки'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-6.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Дорожные аксессуары
+        ul.mobile-nav__list
+          -var items = ['Чехлы для чемоданов', 'Зонты ', 'Подушки для путишествий ', 'Ремни для чемоданов', 'Повязки для сна'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner
+        a(href="").mobile-nav__block-icon
+          img(src="images/menu/m-7.jpg", alt="")
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Коллекции
+        ul.mobile-nav__list
+          -var items = ['Cabin size', 'Limited Edition', 'Cross collection'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+    .mobile-nav__block
+      .mobile-nav__block-inner.is--no-icon.is--two-column
+        h4.mobile-nav__block-title
+          a.mobile-nav__block-title-link(href='catalog.html') Компания
+        ul.mobile-nav__list
+          -var items = ['О нас', 'Гарантия и сервия', 'Новости', 'Контакты', 'Магазины', 'Lookbook'];
+          each item in items
+            li.mobile-nav__item
+              a.mobile-nav__link(href='catalog.html')= item
+
+    .mobile-nav__block
+      .mobile-nav__block-inner.is--contacts
+        .contacts-block
+          .contacts-block__phones
+            .contacts-block__phones-item (044) 360 - 25 - 10 
+            .contacts-block__phones-item (050) 355 - 22 - 82 
+          .contacts-block__worktime
+            .contacts-block__worktime-item 
+              strong Пн. - Пт.: 
+              span 10:00 - 20:00
+            .contacts-block__worktime-item 
+              strong Сб: 
+              span 10:00 - 19:00
+            .contacts-block__worktime-item 
+              strong Вс: 
+              span 10:00 - 18:00
+        
+  .mobile-nav__footer
+    .mobile-nav__footer-langs
+      .langs
+        a(href="").langs__item.is--current Ru
+        a(href="").langs__item En
+        a(href="").langs__item Ua
+    .mobile-nav__footer-socials
+      .socials
+        a(href="").socials__item twitter
+        a(href="").socials__item facebook
+        a(href="").socials__item instagramm
+

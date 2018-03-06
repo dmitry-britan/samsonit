@@ -1,0 +1,33 @@
+// FOOTER
+footer.footer
+  .footer__inner
+    .footer__menu
+      nav.menu
+        ul.menu__list
+          -var titles = ['О нас', 'Каталог', 'Лукбук']
+          each title in titles
+            li.menu__item
+              a(href="").menu__link= title
+    .footer__menu
+      nav.menu
+        ul.menu__list
+          -var titles = ['Доставка', 'Качество', 'Сервис']
+          each title in titles
+            li.menu__item
+              a(href="").menu__link= title
+    .footer__logo
+      a(href="").logo
+        img(src="images/logo-small.png", alt="").logo__img
+    .footer__menu
+      nav.menu
+          -var titles = ['Магазины', 'Контакты', 'Сотрудничество']
+          each title in titles
+            li.menu__item
+              a(href="").menu__link= title
+    .footer__menu
+      nav.menu
+          -var titles = ['Магазины', 'Контакты', 'Сотрудничество']
+          each title in titles
+            li.menu__item
+              a(href="").menu__link= title
+// /FOOTER

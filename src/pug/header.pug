@@ -1,0 +1,19 @@
+header.header
+	.header__menu
+		include parts/mobile-nav
+	.header__logo
+		a(href="index.html").logo
+			img(src="images/logo.png", alt="").logo__img
+	.header__categories
+		include parts/categories-menu
+	.header__icons
+		.site-actions
+			a(href="").site-actions__item
+				i.icon.icon--search
+			a(href="login.html").site-actions__item
+				i.icon.icon--user
+			a(href="").site-actions__item
+				i.icon.icon--heart
+			.site-actions__item
+				i.icon.icon--cart
+				include parts/cart-dropdown

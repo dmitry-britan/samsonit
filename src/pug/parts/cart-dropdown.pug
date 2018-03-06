@@ -1,0 +1,26 @@
+.cart-dropdown
+	.cart-dropdown__inner
+		.cart-dropdown__body.js-scroll-list
+			each cartItem in [1,2,3,4,5]
+				article.cart-dropdown__product
+					a(href="").cart-dropdown__product-photo
+						img(src="images/product/p-"+cartItem+".jpg", alt="")
+					.cart-dropdown__product-content
+						h4.cart-dropdown__product-title
+							span.cart-dropdown__product-title-name Samsonite 
+							span.cart-dropdown__product-title-model - V22*305
+						.cart-dropdown__product-details 36.0 л | 1.70 кг | 40 x 55 x 20
+						.cart-dropdown__product-details Чемодан на колёсах 55 см
+						.cart-dropdown__product-action
+							input(type="text" value="1").cart-dropdown__product-qty 
+							i.cart-dropdown__product-qty-sign 
+							.cart-dropdown__product-price
+								span.cart-dropdown__product-price-value 14 569
+								span.cart-dropdown__product-price-currency грн
+					i.cart-dropdown__product-remove
+
+		.cart-dropdown__footer
+			a(href="").btn.btn--primary
+				| В корзину
+			a(href="").btn.btn--primary
+				| Оформить заказ

@@ -1,0 +1,13 @@
+nav.personal-menu
+	ul.personal-menu__list
+		-
+			var links = [
+				{id:0, title:'Персональные данные', url:'personal-data.html'},
+				{id:1, title:'Изменить пароль', url:'personal-change-password.html'},
+				{id:2, title:'Избранные заказы (4)', url:'personal-favorite-orders.html'},
+				{id:3, title:'Мои заказы', url:'personal-orders.html'}
+			];
+		each link in links
+			-var current = (linkID === link.id)?'is--current':'';
+			li(class="personal-menu__item")
+				a(href=link.url, class="personal-menu__link "+current)= link.title

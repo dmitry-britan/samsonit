@@ -1,0 +1,10 @@
+.site-actions{
+	display: flex;
+}
+.site-actions__item{
+	position: relative;
+	margin-right: 35px;
+	&:last-child{
+		margin-right: 0;
+	}
+}

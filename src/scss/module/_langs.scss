@@ -1,0 +1,29 @@
+.langs{}
+.langs__item{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	text-decoration: none;
+	color: #393939;
+
+	&:before{
+		display: inline-block;
+		padding: 0 5px;
+		content: '/';
+		font-weight: 400;
+		color: #393939;
+	}
+
+	&:first-child:before{
+		display: none;
+	}
+
+	&.is--current{
+		color: #3e4143;
+		font-weight: 900;
+	}
+}

@@ -1,0 +1,43 @@
+.icon{}
+.icon--search{
+	@include sprite('search');
+}
+.icon--user{
+	@include sprite('user');
+}
+.icon--heart{
+	@include sprite('heart');
+}
+.icon--cart{
+	@include sprite('cart');
+}
+.icon--arrow-up{
+	@include sprite('arrow-up');
+}
+.icon--arrow-left{
+	@include sprite('arrow-left');
+}
+.icon--arrow-right{
+	@include sprite('arrow-right');
+}
+.icon--color-check{
+	@include sprite('color-check');
+}
+.icon--product-compare{
+	@include sprite('product-compare');
+}
+.icon--product-cart{
+	@include sprite('product-cart');
+}
+.icon--prev-up{
+	@include sprite('prev-up');
+}
+.icon--next-down{
+	@include sprite('next-down');
+}
+.icon--prev-left{
+	@include sprite('prev-left');
+}
+.icon--next-right{
+	@include sprite('next-right');
+}

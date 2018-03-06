@@ -1,0 +1,10 @@
+@include font-face("FontAwesome", "../fonts/FontAwesome");
+@import 'module/font-awesome-4.7.0/scss/font-awesome';
+
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Black", 900, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Extrabld", 800, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Bold", bold, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Semibold", 600, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-Regular", normal, normal);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNova-RegularIt", normal, italic);
+@include font-face("Proxima Nova", "../fonts/ProximaNova/ProximaNovaT-Thin", 100, normal);

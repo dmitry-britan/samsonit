@@ -1,0 +1,35 @@
+.promo-slider
+	.promo-slider__controls
+		button.promo-slider__controls-next.js-promo-slider-next
+			i.icon.icon--next-right
+		.promo-slider__pagination
+			.promo-slider__pagination-current
+			.promo-slider__pagination-divider /
+			.promo-slider__pagination-total
+		button.promo-slider__controls-prev.js-promo-slider-prev
+			i.icon.icon--prev-left
+	.promo-slider__inner.js-promo-slider
+		each item in [1,2,3,4,5]
+			.promo-slider__item
+				.promo-slider__item-inner
+					.promo-slider__content
+						.promo-slider__content-inner
+							.promo-slider__title
+								.promo-slider__title-type
+									| Новая коллекция
+								.promo-slider__title-text
+									| Cosmolite 3.0 
+								.promo-slider__title-model
+									| V22*305
+							.promo-slider__text
+								| Самый легкий чемодан из коллекции Curson от Samsonite, Lite-Shock сочетает в себе минимальный вес с максимальной ударопрочностью. Его органическая форма усилена и предназначена для поглощения ударов.
+						.promo-slider__action
+							.promo-slider__price
+								.promo-slider__price-value
+									| 17 559 
+								.promo-slider__price-currency
+									| грн
+							.promo-slider__readmore
+								| подробнее
+					.promo-slider__photo
+						img(src="images/promo-slide.png", alt="")

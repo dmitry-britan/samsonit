@@ -1,0 +1,26 @@
+.socials{
+	text-align: right;
+}
+.socials__item{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 900;
+	text-decoration: none;
+	color: #393939;
+
+	&:before{
+		display: inline-block;
+		padding: 0 8px;
+		content: '|';
+		font-weight: 900;
+		color: #393939;
+	}
+
+	&:first-child:before{
+		display: none;
+	}
+}

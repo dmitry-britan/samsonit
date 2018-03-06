@@ -1,0 +1,31 @@
+.personal-block__headers
+	.personal-block__headers-item.is--ml0 Изображение
+	.personal-block__headers-item Название
+	.personal-block__headers-item Цена
+each product in [1,2]
+	.personal-block__product
+		a(href="").personal-block__product-photo
+			img(src="images/product/p-1.jpg", alt="")
+
+		.personal-block__product-details
+			.personal-block__product-title
+				strong
+					| Samsonite - 
+				span
+					| V22*305
+			.personal-block__product-desc
+				| 36.0 л | 1.70 кг | 40 x 55 x 20
+			.personal-block__product-props
+				| Чемодан на колёсах 55 см
+
+		.personal-block__product-price
+			.personal-block__product-price-value
+				| 17 559 
+			.personal-block__product-price-currency
+				| грн.
+
+		.personal-block__product-action
+			a(href="").personal-block__product-action-link
+				i.icon.icon--product-compare
+			a(href="").personal-block__product-action-link
+				i.icon.icon--product-cart

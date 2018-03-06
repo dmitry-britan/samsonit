@@ -1,0 +1,16 @@
+.footer{
+	padding: 60px 0 80px;
+	background: #ffffff;
+}
+.footer__inner{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1320px;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.footer__menu{}
+.footer__logo{
+	align-self: center;
+}

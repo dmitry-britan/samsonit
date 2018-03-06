@@ -1,0 +1,29 @@
+.contacts-block{
+	display: flex;
+	align-self: flex-start;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 60px;
+	background-color: #004c93;
+}
+.contacts-block__worktime{}
+.contacts-block__phones{}
+.contacts-block__phones-item{
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 32px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.contacts-block__worktime-item{
+	display: flex;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.1px;
+	color: #ffffff;
+
+	strong, span{
+		min-width: 60px;
+		font-weight: 400;
+	}
+}

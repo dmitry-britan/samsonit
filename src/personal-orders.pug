@@ -1,0 +1,28 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--personal-data')
+
+block content
+  section.section.section--personal
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Личный кабинет'];
+          include pug/parts/breadcrumbs
+        h1.page__title Личный кабинет
+      .page__inner
+        main.page__content
+          .page__body
+            .personal-block
+              .personal-block__header История покупок
+              .personal-block__body
+                include pug/personal/orders
+              .personal-block__footer
+                include pug/parts/pagination
+        aside.page__sidebar.sidebar.is--no-padding
+          //- Personal Menu
+          -var linkID = 3;
+          include pug/personal/menu
+
+block body-end

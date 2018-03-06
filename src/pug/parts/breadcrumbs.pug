@@ -1,0 +1,5 @@
+nav.breadcrumbs
+	-var current = "";
+	each item, i in breadcrumbs
+		-if (i ===  breadcrumbs.length - 1) { current = " is--current" }
+		a(href="",class="breadcrumbs__item"+current)= item

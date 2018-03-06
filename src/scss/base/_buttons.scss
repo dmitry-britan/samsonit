@@ -1,0 +1,26 @@
+/**
+ *
+ * buttons
+ *
+ **/
+.btn{
+	padding: 12px 31px;
+	border: none;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: $color__primary;
+	color: #fffefe;
+	&:focus,
+	&:hover{
+		border: none;
+	}
+}
+.btn--primary{
+	&:hover{
+		color: #ffffff;
+	}
+}

@@ -1,0 +1,113 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--category')
+
+block content
+  section.category
+    main.category__content
+      //- HEADER
+      .category__header
+        .category__header-crumbs
+          -var breadcrumbs = ['Главная', 'Чемоданы'];
+          include pug/parts/breadcrumbs
+        .category__header-title
+          h1.category__title Чемоданы
+      
+      //- TEXT
+      .category__text Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия. По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+      
+      //- SORT
+      .category__sort
+        .sort-panel
+      
+      //- PRODUCTS
+      .category__body
+        .products
+          include pug/db/products
+          each product, index in products
+            include pug/parts/product
+      
+      //- PAGINATION
+      .category__action
+        include pug/parts/pagination
+
+        a(href="").pagination__next-page
+          span Следующая страница
+          i.icon--arrow-right
+
+
+    aside.category__sidebar.sidebar
+      //- Categories Groups
+      include pug/parts/categories-groups
+
+      //- Filter
+      include pug/parts/filter
+block body-end
+  script.
+    var $range = $(".js-price-slider"),
+    $from = $(".js-price-from"),
+    $to = $(".js-price-to"),
+    range,
+    min = 0,
+    max = 40000,
+    from = 3000,
+    to = 20000;
+
+    var updateValues = function () {
+        $from.prop("value", from);
+        $to.prop("value", to);
+    };
+
+    $range.ionRangeSlider({
+        type: "double",
+        min: min,
+        max: max,
+        prettify_enabled: false,
+        grid: false,
+        from: from,
+        to: to,
+        hide_min_max: true,
+        hide_from_to: true,
+        onChange: function (data) {
+            from = data.from;
+            to = data.to;
+            
+            updateValues();
+        }
+    });
+
+    range = $range.data("ionRangeSlider");
+
+    var updateRange = function () {
+        range.update({
+            from: from,
+            to: to
+        });
+    };
+
+    $from.on("change", function () {
+        from = +$(this).prop("value");
+        if (from < min) {
+            from = min;
+        }
+        if (from > to) {
+            from = to;
+        }
+
+        updateValues();
+        updateRange();
+    });
+
+    $to.on("change", function () {
+        to = +$(this).prop("value");
+        if (to > max) {
+            to = max;
+        }
+        if (to < from) {
+            to = from;
+        }
+
+        updateValues();
+        updateRange();
+    });

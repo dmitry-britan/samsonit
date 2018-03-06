@@ -1,0 +1,32 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--index')
+
+block content
+  section.section.section--promo-slider
+    include pug/index/promo-slider
+
+  section.section.section--specials
+    include pug/index/specials
+
+  section.section.section--recommend-news
+    include pug/parts/recommend-news
+
+  section.section.section--features-slider
+    .slider.slider--features
+      .slider__controls
+        button.slider__controls-prev.js-features-slider-prev
+          i.icon.icon--prev-up
+        .slider__pagination
+          .slider__pagination-current
+          .slider__pagination-divider /
+          .slider__pagination-total
+        button.slider__controls-next.js-features-slider-next
+          i.icon.icon--next-down
+      .slider__body
+        .js-features-slider
+          each item in [1,2,3,4,5]
+            include pug/parts/feature-item
+
+block body-end

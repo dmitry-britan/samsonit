@@ -1,0 +1,75 @@
+.widget
+	.widget__header Фильтр
+	.widget__body
+		//- Filter - Price
+		.filter
+			.filter__header
+				.filter__header-title Цена
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__price
+					label.filter__price-input
+						input(value="15 000").filter__price-value.js-price-from
+						span.filter__price-currency грн
+					.filter__price-separator - 
+					label.filter__price-input
+						input(value="20 000").filter__price-value.js-price-to
+						span.filter__price-currency грн
+					input.filter__price-slider.js-price-slider
+			
+		//- Filter - Materials
+		.filter
+			.filter__header
+				.filter__header-title Материал
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__checkbox
+					input(id="material-1", type="checkbox", name="material-1").checkbox
+					label(for="material-1") Кожа
+				.filter__checkbox
+					input(id="material-2", type="checkbox", name="material-2").checkbox
+					label(for="material-2") Кожа
+				.filter__checkbox
+					input(id="material-3", type="checkbox", name="material-3").checkbox
+					label(for="material-3") Пластик
+				.filter__checkbox
+					input(id="material-4", type="checkbox", name="material-4").checkbox
+					label(for="material-4") Пластик
+				.filter__checkbox
+					input(id="material-5", type="checkbox", name="material-5").checkbox
+					label(for="material-5") Ткань
+				.filter__checkbox
+					input(id="material-6", type="checkbox", name="material-6").checkbox
+					label(for="material-6") Ткань
+			
+		//- Filter - Sizes
+		.filter
+			.filter__header
+				.filter__header-title Размер
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__checkbox
+					input(id="size-1", type="checkbox", name="size-1").checkbox
+					label(for="size-1") 50 - 55 см
+				.filter__checkbox
+					input(id="size-2", type="checkbox", name="size-2").checkbox
+					label(for="size-2") 60 - 69 см
+				.filter__checkbox
+					input(id="size-3", type="checkbox", name="size-3").checkbox
+					label(for="size-3") 70 - 79 см
+				.filter__checkbox
+					input(id="size-4", type="checkbox", name="size-4").checkbox
+					label(for="size-4") >80см.
+			
+		//- Filter - Colors
+		.filter
+			.filter__header
+				.filter__header-title Цвет
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__colors
+					each color in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+						.filter__color
+							input(id="color-"+color, type="checkbox", name="color-"+color).is--hidden
+							label(for="color-"+color class="is--color-"+color)
+			

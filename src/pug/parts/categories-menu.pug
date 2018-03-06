@@ -1,0 +1,35 @@
+mixin submenu(header, bg)
+	.categories-menu__dropdown(style="background-image: url('images/submenu/sm-"+bg+".jpg')")
+		.categories-menu__dropdown-title= header
+		.categories-menu__dropdown-inner
+			-var categories = ['Пластиковые', 'Тканевые', 'Чемоданы на 4х колесах', 'Чемоданы на 2х колесах', 'Чемоданы для детей'];
+			each category in categories
+				ul.categories-menu__sublist.level-1
+					li.categories-menu__sublist-item
+						a(href="").categories-menu__sublist-link= category
+						-var subcategories = ['Большие чемоданы', 'Средние чемоданы', 'Caribian Size'];
+						ul.categories-menu__sublist.level-2
+							each category in subcategories
+								li.categories-menu__sublist-item
+									a(href="").categories-menu__sublist-link= category
+
+nav.categories-menu
+	ul.categories-menu__list
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Кабинный багаж
+			+submenu('Кабинный багаж', 1)
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Чемоданы
+			+submenu('Чемоданы', 1)
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Бизнес
+			+submenu('Бизнес', 3)
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Сумки
+			+submenu('Сумки', 2)
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Для детей
+			+submenu('Для детей', 2)
+		li.categories-menu__item
+			a(href="category.html").categories-menu__link Акция
+			+submenu('Акция', 2)

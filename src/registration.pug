@@ -1,0 +1,44 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--registration')
+
+block content
+  section.page__inner
+    main.page__content
+      //- HEADER
+      -var breadcrumbs = ['Главная', 'Регистрация'];
+      include pug/parts/breadcrumbs
+      h1.page__header Регистрация
+      
+      .page__body
+        form(action="personal-data.html").form.is--two-column
+          .form__field.is--required
+            label.form__label Ваше имя
+            input.form__input(type="text", name="name")
+          .form__field.is--required
+            label.form__label Фамилия
+            input.form__input(type="text", name="surname")
+          .form__field.is--required
+            label.form__label Отчество
+            input.form__input(type="text", name="patronymic")
+          .form__field.is--required
+            label.form__label Ваш Email
+            input.form__input(type="text", name="email")
+          .form__field
+            label.form__label Телефон
+            input.form__input(type="text", name="phone")
+          .form__divider
+          .form__field.is--required
+            label.form__label Пароль
+            input.form__input(type="text", name="password")
+          .form__field.is--required
+            label.form__label Подтвердите пароль
+            input.form__input(type="text", name="password_confirm")
+          .form__action
+            input(type="submit", value="Зарегистрироваться").btn.btn--primary
+
+
+    aside.page__sidebar.sidebar
+
+block body-end

@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  min-width: 1900px;
+  background-color: #eee;
+  font: normal normal normal 12px/24px "Proxima Nova", Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+  transition: all 300ms linear;
+  transition-property: color, background-color;
+  &:hover{
+    color: $color__primary;
+  }
+}
+.container{
+  min-width: 320px;
+  max-width: 1670px;
+	margin: 0 auto;
+  padding: 0 15px;
+}
+.link{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: $color__primary;
+  letter-spacing: 0.71px;
+  &+.link{
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,34 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--checkout')
+
+block content
+  section.section
+    .checkout
+      .checkout__header Контактные данные
+      .checkout__main
+        form(action="").form.is--two-column
+          .form__field
+            label.form__label Ф.И.О
+            input.form__input(type="text", name="name")
+          .form__field
+            label.form__label Телефон
+            input.form__input(type="text", name="phone")
+          .form__field
+            label.form__label E-mail
+            input.form__input(type="text", name="email")
+          .form__field
+            label.form__label Город
+            input.form__input(type="text", name="city")
+          .form__field
+            label.form__label Адрес
+            input.form__input(type="text", name="address")
+          .form__field
+            label.form__label Номер дисконтной карты
+            input.form__input(type="text", name="card")
+          .form__action
+            input(type="submit", value="Сохранить").btn.btn--primary
+      .checkout__sidebar
+
+block body-end

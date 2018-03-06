@@ -1,0 +1,39 @@
+article.product
+	.product__inner.js-product
+		a(href="product-single.html").product__photo
+			img(src="images/product/p-"+(index+1)+".jpg", alt="")
+		h2.product__title
+			a(href="product-single.html").product__title-link
+				=product.title 
+				span
+					| - 
+					=product.model
+		a(href="").product__brand
+			span.product__brand-inner= product.brand
+		.product__variants
+			each color in product.colors
+				div(class="product__variants-item color-"+color)
+		.product__properties
+			each prop in product.props
+				.product__properties-item= prop
+		.product__desc= product.desc
+		-if (product.oldPrice){
+			.product__price
+				.product__price-inner
+					del.product__price-old
+						span.product__price-old-value= product.oldPrice
+						span.product__price-old-currency грн
+					ins.product__price-new
+						span.product__price-new-value= product.price
+						span.product__price-new-currency грн
+		-} else {
+			.product__price
+				.product__price-inner
+					span.product__price-value= product.price
+					span.product__price-currency грн
+		-}
+		.product__action
+			a(href="").product__action-link
+				i.icon.icon--product-compare
+			a(href="").product__action-link
+				i.icon.icon--product-cart
