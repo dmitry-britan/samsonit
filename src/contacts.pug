@@ -1,0 +1,83 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--news')
+
+block content
+  section.section.section--news
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Контакты'];
+          include pug/parts/breadcrumbs
+        h1.page__title Контакты
+      .page__inner
+        main.page__content
+          section.section.section--contacts
+            .contacts
+              .contacts__data
+                article.contacts__data-block
+                  h4.contacts__data-header
+                    | Телефон
+                  a(href="tel:+380443602510").contacts__data-phone
+                    | (044) 360 - 25 - 10
+                  a(href="tel:+380503552282").contacts__data-phone
+                    | (050) 355 - 22 - 82
+
+                article.contacts__data-block
+                  h4.contacts__data-header
+                    | Email
+                  a(href="mailto:index@samsonite.com.ua").contacts__data-email
+                    | index@samsonite.com.ua
+
+                article.contacts__data-block
+                  h4.contacts__data-header
+                    | Время работы:
+                  .contacts__data-worktime
+                    span Пн - Пт: 
+                    strong 10:00 - 20:00
+                  .contacts__data-worktime
+                    span Сб: 
+                    strong 10:00 - 19:00
+                  .contacts__data-worktime
+                    span Вс:
+                    strong 10:00 - 18:00
+              .contacts__form
+                h4.contacts__form-header
+                  | Контактная форма
+                .contacts__form-body
+                  form(action="").form.js--contacts-form
+                    .form__row.is--col-3
+                      .form__field
+                        input.form__input(type="text", name="name", placeholder="Имя")
+                      .form__field
+                        input.form__input(type="text", name="email", placeholder="Email")
+                      .form__field
+                        input.form__input(type="text", name="phone", placeholder="Телефон")
+                    .form__row
+                      .form__field
+                        textarea(name="msg", cols="30", rows="10", placeholder="Текст сообщения").form__textarea
+                    .form__row.is--flex-end
+                      .form__action
+                        input(type="submit", value="отправить сообщение").btn.btn--secondary
+          section.section.section--lookbook
+            h3.section__title.is--large
+              | Lookbook
+            .lookbook
+              .lookbook__content
+                h3.lookbook__title
+                  | Мы Instagramm
+                p.lookbook__text
+                  | Подписывайся на наш instagramm и будь в курсе всех новинок и акций
+                .lookbook__action
+                  a(href="").lookbook__action-btn
+                    | Подписаться 
+              .lookbook__photos
+                a(href="").lookbook__photos-item
+                  img(src="images/lookbook/l-1.png", alt="")
+                a(href="").lookbook__photos-item
+                  img(src="images/lookbook/l-2.png", alt="")
+                a(href="").lookbook__photos-item
+                  img(src="images/lookbook/l-3.png", alt="")
+
+block body-end
