@@ -1,0 +1,42 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--news')
+
+block content
+  section.section.section--news
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Новости'];
+          include pug/parts/breadcrumbs
+        h1.page__title Новости
+      .page__inner
+        main.page__content
+          article.article.is--news
+            .article__inner
+              .article__content
+                h2.article__title
+                  | 10 лайфхаков как правильно паковать свой чемодан
+                p.article__text
+                  | Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код.
+                .article__action
+                  a(href="").article__action-link
+                    | Читать дальше
+              .article__media
+                img(src="images/news/n-1.png", alt="")
+
+          article.article.is--news
+            .article__inner
+              .article__content
+                h2.article__title
+                  | Качество Samsonite - методики тестирования
+                p.article__text
+                  | Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код.
+                .article__action
+                  a(href="").article__action-link
+                    | Читать дальше
+              .article__media
+                img(src="images/news/n-2.png", alt="")
+
+block body-end

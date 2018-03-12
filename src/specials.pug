@@ -1,0 +1,42 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--specials')
+
+block content
+  section.section.section--specials
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Акции'];
+          include pug/parts/breadcrumbs
+        h1.page__title Акции
+      .page__inner
+        main.page__content
+          article.article.is--special
+            .article__inner
+              .article__content
+                h2.article__title
+                  | Удобный бизнес
+                p.article__text
+                  | При покупке товаров из раздела бизнес скидка на следующую покупку -30%
+                .article__action
+                  a(href="").article__action-btn
+                    | Перейти в акцию
+              .article__media
+                img(src="images/special/s-1.png", alt="")
+
+          article.article.is--special
+            .article__inner
+              .article__content
+                h2.article__title
+                  | Двойная выгода
+                p.article__text
+                  | При покупке от 14 000 грн получи в подарок планшет
+                .article__action
+                  a(href="").article__action-btn
+                    | Перейти в акцию
+              .article__media
+                img(src="images/special/s-2.png", alt="")
+
+block body-end
