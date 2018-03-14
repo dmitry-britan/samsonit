@@ -1,0 +1,34 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page page--lookbook')
+
+block content
+  section.section
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Lookbook'];
+          include pug/parts/breadcrumbs
+        h1.page__title Lookbook
+      .page__inner
+        main.page__content
+          .lookbook.is--page
+            .lookbook__content
+              h3.lookbook__title
+                | Мы Instagramm
+              p.lookbook__text
+                | Подписывайся на наш instagramm и будь в курсе всех новинок и акций
+              .lookbook__action
+                a(href="").lookbook__action-btn
+                  | Подписаться 
+            .lookbook__photos
+              each i in [1,2,3,4,5,6,7,8,9,10,11,12]
+                a(href="").lookbook__photos-item
+                  img(src="images/lookbook/l-"+i+".png", alt="")
+              
+              .lookbook__photos-action
+                a(href="").btn.btn--secondary
+                  | ПОКАЗАТЬ ЕЩЕ
+
+block body-end
