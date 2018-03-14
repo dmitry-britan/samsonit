@@ -14,6 +14,7 @@
 	text-decoration: none;
 	background-color: $color__primary;
 	color: #fffefe;
+	transition: all 300ms linear;
 	&:focus,
 	&:hover{
 		border: none;
@@ -21,6 +22,20 @@
 }
 .btn--primary{
 	&:hover{
+		color: #ffffff;
+	}
+}
+.btn--secondary{
+	min-width: 300px;
+	padding: 18px 30px;
+	background: transparent;
+	border: 2px solid $color__primary;
+	font-weight: 700;
+	text-align: center;
+	color: $color__primary;
+	&:hover{
+		border: 2px solid $color__primary;
+		background: $color__primary;
 		color: #ffffff;
 	}
 }

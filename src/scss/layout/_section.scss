@@ -28,6 +28,10 @@
 	&--lookbook{
 		padding: 0;
 	}
+	&--contacts{
+		padding: 0;
+		margin-bottom: 90px;
+	}
 	&--personal{}
 	&--login{
 		margin-bottom: 250px;
@@ -41,4 +45,13 @@
 	font-weight: 700;
 	line-height: 36px;
 	color: rgba(#000000, .8);
+	&.is--large{
+		margin: 0 0 70px;
+		font-size: 37px;
+		line-height: 42px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.71px;
+		color: #000000;
+	}
 }

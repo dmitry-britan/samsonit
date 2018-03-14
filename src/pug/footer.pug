@@ -4,10 +4,10 @@ footer.footer
     .footer__menu
       nav.menu
         ul.menu__list
-          -var titles = ['О нас', 'Каталог', 'Лукбук']
-          each title in titles
+          -var links = [{url:'about.html', title:'О нас'}, {url:'category.html', title:'Каталог'}, {url:'lookbook.html', title:'Лукбук'}]
+          each link in links
             li.menu__item
-              a(href="").menu__link= title
+              a(href=link.url).menu__link= link.title
     .footer__menu
       nav.menu
         ul.menu__list
@@ -20,10 +20,10 @@ footer.footer
         img(src="images/logo-small.png", alt="").logo__img
     .footer__menu
       nav.menu
-          -var titles = ['Магазины', 'Контакты', 'Сотрудничество']
-          each title in titles
+          -var links = [{url:'shops.html', title:'Магазины'}, {url:'contacts.html', title:'Контакты'}, {url:'partners.html', title:'Сотрудничество'}]
+          each link in links
             li.menu__item
-              a(href="").menu__link= title
+              a(href=link.url).menu__link= link.title
     .footer__menu
       nav.menu
           -var titles = ['Магазины', 'Контакты', 'Сотрудничество']

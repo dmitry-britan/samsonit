@@ -4,5 +4,5 @@ zip/
 aero-debug.log
 aero-deploy.tar.gz
 .vscode/
-*.png
-*.jpg
+/*.png
+/*.jpg
