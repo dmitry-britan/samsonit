@@ -25,7 +25,7 @@ class Menu {
 		$('body').toggleClass('is--mobile-active');
 	}
 	toggleMenuTriggerClass() {
-		$('.js-nav-toggle').toggleClass('is--active');
+		$('.js-nav-toggle').toggleClass('is-active');
 	}
 	closeMobileMenuOnOutOfClick() {
 		$('body').mouseup((e) => {
@@ -33,7 +33,7 @@ class Menu {
 
 			if (subject.length
 				&& !$(e.target).hasClass('js-nav-toggle')
-				&& !$(e.target).hasClass('icon-nav')
+				&& !$(e.target).hasClass('hamburger__inner')
 				&& e.target.className !== subject.attr('class')
 				&& !subject.has(e.target).length) {
 				this.toggleMenuVisibility();

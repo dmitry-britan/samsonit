@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1520809260408">
+    <link rel="stylesheet" href="css/main.css?v=1521014714055">
   </head>
   <body>
     <header class="header">
       <div class="header__menu">
-        <div class="mobile-nav__toggle-wrapper">
-          <div class="js-nav-toggle mobile-nav__toggle"><span class="icon-nav">toggle menu</span></div>
+        <div class="hamburger hamburger--spin js-nav-toggle">
+          <div class="hamburger__box">
+            <div class="hamburger__inner"></div>
+          </div>
         </div>
         <!-- MENU-->
         <nav class="mobile-nav">
@@ -535,8 +537,54 @@
         </div>
         <div class="page__inner">
           <main class="page__content">
+            <section class="section section--contacts">
+              <div class="contacts">
+                <div class="contacts__data">
+                  <article class="contacts__data-block">
+                    <h4 class="contacts__data-header">Телефон</h4><a class="contacts__data-phone" href="tel:+380443602510">(044) 360 - 25 - 10</a><a class="contacts__data-phone" href="tel:+380503552282">(050) 355 - 22 - 82</a>
+                  </article>
+                  <article class="contacts__data-block">
+                    <h4 class="contacts__data-header">Email</h4><a class="contacts__data-email" href="mailto:index@samsonite.com.ua">index@samsonite.com.ua</a>
+                  </article>
+                  <article class="contacts__data-block">
+                    <h4 class="contacts__data-header">Время работы:</h4>
+                    <div class="contacts__data-worktime"><span>Пн - Пт: </span><strong>10:00 - 20:00</strong></div>
+                    <div class="contacts__data-worktime"><span>Сб: </span><strong>10:00 - 19:00</strong></div>
+                    <div class="contacts__data-worktime"><span>Вс:</span><strong>10:00 - 18:00</strong></div>
+                  </article>
+                </div>
+                <div class="contacts__form">
+                  <h4 class="contacts__form-header">Контактная форма</h4>
+                  <div class="contacts__form-body">
+                    <form class="form js--contacts-form" action="">
+                      <div class="form__row is--col-3">
+                        <div class="form__field">
+                          <input class="form__input" type="text" name="name" placeholder="Имя">
+                        </div>
+                        <div class="form__field">
+                          <input class="form__input" type="text" name="email" placeholder="Email">
+                        </div>
+                        <div class="form__field">
+                          <input class="form__input" type="text" name="phone" placeholder="Телефон">
+                        </div>
+                      </div>
+                      <div class="form__row">
+                        <div class="form__field">
+                          <textarea class="form__textarea" name="msg" cols="30" rows="10" placeholder="Текст сообщения"></textarea>
+                        </div>
+                      </div>
+                      <div class="form__row is--flex-end">
+                        <div class="form__action">
+                          <input class="btn btn--secondary" type="submit" value="отправить сообщение">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
             <section class="section section--lookbook">
-              <h3 class="section__title">Lookbook</h3>
+              <h3 class="section__title is--large">Lookbook</h3>
               <div class="lookbook">
                 <div class="lookbook__content">
                   <h3 class="lookbook__title">Мы Instagramm</h3>
@@ -556,9 +604,9 @@
         <div class="footer__menu">
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="">О нас</a></li>
-              <li class="menu__item"><a class="menu__link" href="">Каталог</a></li>
-              <li class="menu__item"><a class="menu__link" href="">Лукбук</a></li>
+              <li class="menu__item"><a class="menu__link" href="about.html">О нас</a></li>
+              <li class="menu__item"><a class="menu__link" href="category.html">Каталог</a></li>
+              <li class="menu__item"><a class="menu__link" href="lookbook.html">Лукбук</a></li>
             </ul>
           </nav>
         </div>
@@ -574,9 +622,9 @@
         <div class="footer__logo"><a class="logo" href=""><img class="logo__img" src="images/logo-small.png" alt=""></a></div>
         <div class="footer__menu">
           <nav class="menu">
-            <li class="menu__item"><a class="menu__link" href="">Магазины</a></li>
-            <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
-            <li class="menu__item"><a class="menu__link" href="">Сотрудничество</a></li>
+            <li class="menu__item"><a class="menu__link" href="shops.html">Магазины</a></li>
+            <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+            <li class="menu__item"><a class="menu__link" href="partners.html">Сотрудничество</a></li>
           </nav>
         </div>
         <div class="footer__menu">
@@ -589,7 +637,7 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1520809260408"></script>
-    <script src="js/main.js?v=1520809260408"></script>
+    <script src="js/vendor.js?v=1521014714060"></script>
+    <script src="js/main.js?v=1521014714060"></script>
   </body>
 </html>

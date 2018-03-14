@@ -309,7 +309,7 @@ var Menu = function() {
 	}, {
 		key: 'toggleMenuTriggerClass',
 		value: function toggleMenuTriggerClass() {
-			$('.js-nav-toggle').toggleClass('is--active');
+			$('.js-nav-toggle').toggleClass('is-active');
 		}
 	}, {
 		key: 'closeMobileMenuOnOutOfClick',
@@ -319,7 +319,7 @@ var Menu = function() {
 			$('body').mouseup(function(e) {
 				var subject = $('.is--visible');
 
-				if (subject.length && !$(e.target).hasClass('js-nav-toggle') && !$(e.target).hasClass('icon-nav') && e.target.className !== subject.attr('class') && !subject.has(e.target).length) {
+				if (subject.length && !$(e.target).hasClass('js-nav-toggle') && !$(e.target).hasClass('hamburger__inner') && e.target.className !== subject.attr('class') && !subject.has(e.target).length) {
 					_this2.toggleMenuVisibility();
 					_this2.toggleBodyBackground();
 					_this2.toggleMenuTriggerClass();
