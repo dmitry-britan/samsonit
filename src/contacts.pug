@@ -1,7 +1,7 @@
 extends pug/base
 
 append vars
-  - html.classList.push('page page--news')
+  - body.classList.push('page page--news')
 
 block content
   section.section.section--news
@@ -60,6 +60,9 @@ block content
                     .form__row.is--flex-end
                       .form__action
                         input(type="submit", value="отправить сообщение").btn.btn--secondary
+          
+          include pug/parts/shops
+
           section.section.section--lookbook
             h3.section__title.is--large
               | Lookbook
