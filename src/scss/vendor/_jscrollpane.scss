@@ -21,6 +21,11 @@
     width: 6px;
     height: 100%;
     background-color: #f0f0f0;
+
+    .shops-map__list &{
+        top: 0; right: 50px;
+        background-color: rgba(#004c93, .12);
+    }
 }
 
 .jspHorizontalBar {
@@ -52,6 +57,9 @@
     position: relative;
     width: 6px;
     border-radius: 3px;
+    .shops-map__list &{
+        background-color: rgba(#004c93, .12);
+    }
 }
 
 .jspDrag {
@@ -62,6 +70,9 @@
     width: 6px;
     border-radius: 3px;
     cursor: pointer;
+    .shops-map__list &{
+        background-color: #004c93;
+    }
 }
 
 .jspHorizontalBar .jspTrack,
