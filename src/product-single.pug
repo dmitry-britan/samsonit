@@ -1,7 +1,7 @@
 extends pug/base
 
 append vars
-  - body.classList.push('page page--personal-data')
+  - body.classList.push('page page--product')
 
 block content
   .container
@@ -94,20 +94,25 @@ block content
               p Оставаясь верным великим историям, которые неразрывно вплетены в ДНК дизайна Cosmolite, Samsonite заново открыл классическую коллекцию из материала Curv, дополнив новейшими технологиями и эстетикой дизайна. 
               p Новый Cosmolite 3.0 сохранил свой легендарный силуэт, но теперь легче, чем раньше, благодаря использованию более элегантных и легких компонентов. Все это приходит с обновленной модной цветовой палитрой, которая подкреплена компонентами в соответствующем цвете и тонким, элегантным силуэтом подобным рыбьему скелету.
 
-        //- Product Photos
-        .product-single__photos
-          a(href="").product-single__photo
-            img(src="images/product-single/main.jpg", alt="")
-          .product-single__thumbs
-            button.product-single__thumbs-control.product-single__thumbs-control--prev.js-thumbs-slider-prev
-              i.fa.fa-angle-up
-            .product-single__thumbs-inner.js-thumbs-slider
-              each i in [1,2,3,4,5]
-                -var isActive = (i===1)?'is--active':'';
-                a(href="images/product-single/t-"+i+".jpg", rel="gallery", class="product-single__thumbs-item "+isActive)
-                  img(src="images/product-single/t-"+i+".jpg", alt="")
-            button.product-single__thumbs-control.product-single__thumbs-control--next.js-thumbs-slider-next
-              i.fa.fa-angle-down
+        //- Product Media
+        .product-single__media
+          .product-single__photos
+            a(href="").product-single__photo
+              img(src="images/product-single/main.jpg", alt="")
+            .product-single__thumbs
+              button.product-single__thumbs-control.product-single__thumbs-control--prev.js-thumbs-slider-prev
+                i.fa.fa-angle-up
+              .product-single__thumbs-inner.js-thumbs-slider
+                each i in [1,2,3,4,5]
+                  -var isActive = (i===1)?'is--active':'';
+                  a(href="images/product-single/t-"+i+".jpg", rel="gallery", class="product-single__thumbs-item "+isActive)
+                    img(src="images/product-single/t-"+i+".jpg", alt="")
+              button.product-single__thumbs-control.product-single__thumbs-control--next.js-thumbs-slider-next
+                i.fa.fa-angle-down
+          .product-single__video
+            .product-single__video-title Видео
+            .product-single__video-body
+              img(src="images/video.png", alt="")
 
     section.section.section--recommend
       .section__title Рекомендуемые товары

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="page page--personal-data" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521014720291">
+    <link rel="stylesheet" href="css/main.css?v=1521325970532">
   </head>
-  <body>
+  <body class="page page--product">
     <header class="header">
       <div class="header__menu">
         <div class="hamburger hamburger--spin js-nav-toggle">
@@ -138,7 +138,7 @@
           </div>
         </nav>
       </div>
-      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" alt=""></a></div>
+      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt=""></a></div>
       <div class="header__categories">
         <nav class="categories-menu">
           <ul class="categories-menu__list">
@@ -458,7 +458,7 @@
         </nav>
       </div>
       <div class="header__icons">
-        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="login.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
+        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="personal-data.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
           <div class="site-actions__item"><i class="icon icon--cart"></i>
             <div class="cart-dropdown">
               <div class="cart-dropdown__inner">
@@ -519,7 +519,7 @@
                     </div><i class="cart-dropdown__product-remove"></i>
                   </article>
                 </div>
-                <div class="cart-dropdown__footer"><a class="btn btn--primary" href="">В корзину</a><a class="btn btn--primary" href="">Оформить заказ</a></div>
+                <div class="cart-dropdown__footer"><a class="btn btn--grey" href="">В корзину</a><a class="btn btn--primary" href="checkout.html">Оформить заказ</a></div>
               </div>
             </div>
           </div>
@@ -609,12 +609,18 @@
               </div>
             </div>
           </div>
-          <div class="product-single__photos"><a class="product-single__photo" href=""><img src="images/product-single/main.jpg" alt=""></a>
-            <div class="product-single__thumbs">
-              <button class="product-single__thumbs-control product-single__thumbs-control--prev js-thumbs-slider-prev"><i class="fa fa-angle-up"></i></button>
-              <div class="product-single__thumbs-inner js-thumbs-slider"><a class="product-single__thumbs-item is--active" href="images/product-single/t-1.jpg" rel="gallery"><img src="images/product-single/t-1.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-2.jpg" rel="gallery"><img src="images/product-single/t-2.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-3.jpg" rel="gallery"><img src="images/product-single/t-3.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-4.jpg" rel="gallery"><img src="images/product-single/t-4.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-5.jpg" rel="gallery"><img src="images/product-single/t-5.jpg" alt=""></a>
+          <div class="product-single__media">
+            <div class="product-single__photos"><a class="product-single__photo" href=""><img src="images/product-single/main.jpg" alt=""></a>
+              <div class="product-single__thumbs">
+                <button class="product-single__thumbs-control product-single__thumbs-control--prev js-thumbs-slider-prev"><i class="fa fa-angle-up"></i></button>
+                <div class="product-single__thumbs-inner js-thumbs-slider"><a class="product-single__thumbs-item is--active" href="images/product-single/t-1.jpg" rel="gallery"><img src="images/product-single/t-1.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-2.jpg" rel="gallery"><img src="images/product-single/t-2.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-3.jpg" rel="gallery"><img src="images/product-single/t-3.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-4.jpg" rel="gallery"><img src="images/product-single/t-4.jpg" alt=""></a><a class="product-single__thumbs-item " href="images/product-single/t-5.jpg" rel="gallery"><img src="images/product-single/t-5.jpg" alt=""></a>
+                </div>
+                <button class="product-single__thumbs-control product-single__thumbs-control--next js-thumbs-slider-next"><i class="fa fa-angle-down"></i></button>
               </div>
-              <button class="product-single__thumbs-control product-single__thumbs-control--next js-thumbs-slider-next"><i class="fa fa-angle-down"></i></button>
+            </div>
+            <div class="product-single__video">
+              <div class="product-single__video-title">Видео</div>
+              <div class="product-single__video-body"><img src="images/video.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -1090,7 +1096,7 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1521014720296"></script>
-    <script src="js/main.js?v=1521014720296"></script>
+    <script src="js/vendor.js?v=1521325970541"></script>
+    <script src="js/main.js?v=1521325970541"></script>
   </body>
 </html>

@@ -258,7 +258,8 @@ if ($('.js-promo-slider').length) {
 	$promo.slick({
 		arrows: true,
 		infinite: true,
-		speed: 400,
+		fade: true,
+		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		adaptiveHeight: true,
@@ -626,8 +627,21 @@ if ($('.js-product').length) {
 //
 // Scroll pane Init
 // =================================================================
-var $scrollable = $('.js-scroll-list');
+(function() {
+	var $scrollable = $('.js-scroll-list');
 
-if ($scrollable.length) {
+	if ($scrollable.length) {
+		$scrollable.jScrollPane();
+	}
+})();
+
+(function() {
+	var $scrollable = $('.js-scroll-shops');
+
 	$scrollable.jScrollPane();
-}
+	if ($scrollable.length) {
+		$('.js-tabs-item').on('click', function() {
+			$scrollable.jScrollPane();
+		});
+	}
+})();

@@ -3,14 +3,14 @@ header.header
 		include parts/mobile-nav
 	.header__logo
 		a(href="index.html").logo
-			img(src="images/logo.png", alt="").logo__img
+			img(src="images/logo.png", srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt="").logo__img
 	.header__categories
 		include parts/categories-menu
 	.header__icons
 		.site-actions
 			a(href="").site-actions__item
 				i.icon.icon--search
-			a(href="login.html").site-actions__item
+			a(href="personal-data.html").site-actions__item
 				i.icon.icon--user
 			a(href="").site-actions__item
 				i.icon.icon--heart

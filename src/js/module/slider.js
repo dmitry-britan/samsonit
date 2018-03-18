@@ -178,7 +178,8 @@ if ($('.js-promo-slider').length) {
 	$promo.slick({
 		arrows: true,
 		infinite: true,
-		speed: 400,
+		fade: true,
+		speed: 500,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		adaptiveHeight: true,

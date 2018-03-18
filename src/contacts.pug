@@ -61,7 +61,66 @@ block content
                       .form__action
                         input(type="submit", value="отправить сообщение").btn.btn--secondary
           
-          include pug/parts/shops
+          section.section.section--shops-map
+            h3.section__title.is--large.is--primary.is--centered
+              | Наши магазины
+            include pug/parts/shops
+            
+            script.
+              var map;
+              var marker;
+
+              function initMap() {
+                var samsonit = {lat: 50.429931, lng: 30.5332056};
+                
+                map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 16,
+                  center: samsonit,
+                  styles: [],
+                });
+                marker = new google.maps.Marker({
+                  position: samsonit,
+                  map: map,
+                });
+              }
+              function placeMarker(location) {
+                if (marker == undefined){
+                    marker = new google.maps.Marker({
+                        position: location,
+                        map: map, 
+                        animation: google.maps.Animation.DROP,
+                    });
+                }
+                else{
+                    marker.setPosition(location);
+                }
+                map.setCenter(location);
+              }
+              function removeActiveState(elements) {
+                elements.forEach(function(element){
+                  element.classList.remove('is--active');
+                });
+              }
+              
+              
+              var shops = document.querySelectorAll('.js-shop');
+              var tabs = document.querySelectorAll('.js-tabs-item');
+
+              shops.forEach(function(shop){
+                shop.addEventListener('click', function(event){
+                  var target = event.currentTarget;
+                  var lat = parseFloat(target.getAttribute('data-lat'));
+                  var lng = parseFloat(target.getAttribute('data-lng'));
+                  
+                  // перекд.чаем активное состояние
+                  removeActiveState(shops);
+                  target.classList.add('is--active');
+
+                  placeMarker({lat: lat, lng: lng});
+                });
+              });
+              
+            script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0&callback=initMap')
 
           section.section.section--lookbook
             h3.section__title.is--large

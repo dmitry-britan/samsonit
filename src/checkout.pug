@@ -8,27 +8,190 @@ block content
     h1.section__title.is--large.is--centered
       | Контактные данные
     .checkout
-      .checkout__user-form
-        form(action="").form.js--contacts-form
-          .form__row.is--col-3
-            .form__field
-              input.form__input(type="text", name="name", placeholder="Имя")
-            .form__field
-              input.form__input(type="text", name="sname", placeholder="Фамилия")
-            .form__field
-              input.form__input(type="text", name="mname", placeholder="Отчество")
-          .form__row.is--col-3.is--last-empty
-            .form__field
-              input.form__input(type="text", name="email", placeholder="Email")
-            .form__field
-              input.form__input(type="text", name="phone", placeholder="Телефон")
-            .form__field
-          .form__row
-            .form__field
-              textarea(name="msg", cols="30", rows="10", placeholder="Комментарий").form__textarea
-          .form__row.is--flex-end
-            .form__action
-              input(type="submit", value="отправить сообщение").btn.btn--secondary
-      .checkout__login-form
+      .checkout__main
+        .checkout__user-form
+          form(action="").form.js--client-form
+            .form__row.is--col-3
+              .form__field
+                input.form__input(type="text", name="name", placeholder="Имя")
+              .form__field
+                input.form__input(type="text", name="sname", placeholder="Фамилия")
+              .form__field
+                input.form__input(type="text", name="mname", placeholder="Отчество")
+            .form__row.is--col-3.is--last-empty
+              .form__field
+                input.form__input(type="text", name="email", placeholder="Email")
+              .form__field
+                input.form__input(type="text", name="phone", placeholder="Телефон")
+              .form__field.is--flex-empty
+            .form__row
+              .form__field
+                textarea(name="msg", cols="30", rows="10", placeholder="Комментарий").form__textarea
 
+        .checkout__details
+          .checkout__delivery
+            .checkout__block
+              .checkout__title способ доставки 
+              .checkout__checkbox
+                input(id="delivery-1", type="radio", name="delivery").checkbox
+                label(for="delivery-1") 
+                  | Самовывоз
+                  i.icon.icon--arrow-down
+                a(href="" data-modal="shops").btn.btn--choose-shop.js-shop-link
+                  i.icon.icon--location
+                  | Выбрать ближайший магазин
+              .checkout__checkbox
+                input(id="delivery-2", type="radio", name="delivery").checkbox
+                label(for="delivery-2") Куръерская доставка
+              .checkout__checkbox
+                input(id="delivery-3", type="radio", name="delivery").checkbox
+                label(for="delivery-3") Новая почта
+          .checkout__payment
+            .checkout__block
+              .checkout__title способ оплаты
+              .checkout__checkbox
+                input(id="payment-1", type="radio", name="payment").checkbox
+                label(for="payment-1") Онлайн-оплата
+              .checkout__checkbox
+                input(id="payment-2", type="radio", name="payment").checkbox
+                label(for="payment-2") Накладний платеж Новая Почта
+              .checkout__checkbox
+                input(id="payment-3", type="radio", name="payment").checkbox
+                label(for="payment-3") Наличными 
+            .checkout__action
+              a(href="").btn.btn--grey продолжить покупки
+
+            
+      .checkout__sidebar
+        .checkout__login-form
+          .login-widget
+            .login-widget__title
+              | я зарегистрированный пользователь
+            .login-widget__body
+              form(action="").form.js--login-form
+                .form__field
+                  input.form__input(type="text", name="login", placeholder="Логин")
+                .form__field
+                  input.form__input(type="password", name="password", placeholder="Пароль")
+                .form__action
+                  input(type="submit", value="войти").login-widget__action
+
+            .login-widget__subtitle
+              | Так же можно зайти через соц сети
+            .login-widget__social
+              a(href="").login-widget__social-item: i.fa.fa-vk
+              a(href="").login-widget__social-item: i.fa.fa-facebook
+              a(href="").login-widget__social-item: i.fa.fa-twitter
+              a(href="").login-widget__social-item: i.fa.fa-linkedin
+              a(href="").login-widget__social-item: i.fa.fa-instagram
+        
+        .checkout__action
+          .checkout__checkbox
+            input(id="agree", type="checkbox", name="agree").checkbox
+            label(for="agree").is--tiny Я согласен с условиями предоставления услуг предоставляю согласие на обработку моих персональных данных
+          a(href="").btn.btn--primary
+            | Оформить заказ
 block body-end
+  div(style='display: none;')
+    //- Thank You!
+    #shops.popup
+      .popup__close.arcticmodal-close
+      .popup__inner
+        include pug/parts/shops
+        
+        script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0')
+        script.
+          $('.js-shop-link').one('click', () => {
+            setTimeout(() => {
+              var map;
+              var marker;
+
+              function initMap() {
+                var samsonit = {lat: 50.429931, lng: 30.5332056};
+                
+                map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 16,
+                  center: samsonit,
+                  styles: [],
+                });
+                marker = new google.maps.Marker({
+                  position: samsonit,
+                  map: map,
+                });
+              }
+              function placeMarker(location) {
+                if (marker == undefined){
+                    marker = new google.maps.Marker({
+                        position: location,
+                        map: map, 
+                        animation: google.maps.Animation.DROP,
+                    });
+                }
+                else{
+                    marker.setPosition(location);
+                }
+                map.setCenter(location);
+              }
+              function removeActiveState(elements) {
+                elements.forEach(function(element){
+                  element.classList.remove('is--active');
+                });
+              }
+              initMap();
+
+              //
+              // Tabs
+              //---------------------------------------------------------------------------------------
+              if ($('.js-tabs').length) {
+                let $tabs = $('.js-tabs-item');
+                let $panes = $('.js-tabs-content');
+
+                $tabs.on('click', (event) => {
+                  event.preventDefault();
+
+                  let id = $(event.currentTarget).attr('href');
+
+                  $tabs.removeClass('is--active');
+                  $(event.currentTarget).addClass('is--active');
+
+                  $panes.removeClass('is--active');
+                  $(id).addClass('is--active');
+                });
+              }
+
+              //
+              // Scroll Pane
+              //---------------------------------------------------------------------------------------
+              (() => {
+                let $scrollable = $('.js-scroll-shops');
+
+                $scrollable.jScrollPane();
+                if ($scrollable.length) {
+                  $('.js-tabs-item').on('click', () => {
+                    $scrollable.jScrollPane();
+                  });
+                }
+              })();
+
+              //
+              // Shops
+              //---------------------------------------------------------------------------------------
+              var shops = document.querySelectorAll('.js-shop');
+              var tabs = document.querySelectorAll('.js-tabs-item');
+
+              shops.forEach(function(shop){
+                shop.addEventListener('click', function(event){
+                  var target = event.currentTarget;
+                  var lat = parseFloat(target.getAttribute('data-lat'));
+                  var lng = parseFloat(target.getAttribute('data-lng'));
+                  
+                  // перекд.чаем активное состояние
+                  removeActiveState(shops);
+                  target.classList.add('is--active');
+
+                  placeMarker({lat: lat, lng: lng});
+                });
+              });
+            }, 1000);
+            
+          });

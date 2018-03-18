@@ -1,0 +1,19 @@
+.popup{
+	position: relative;
+}
+.popup__close{
+	position: absolute;
+	top: 8px; right: 8px;
+	width: 15px; height: 15px;
+	font-size: 18px;
+	color: $color__primary;
+	transition: all 300ms linear;
+	cursor: pointer;
+	&:after{
+		content: '';
+		@include sprite('close');
+	}
+}
+.popup__inner{
+	width: 1620px;
+}

@@ -6,12 +6,28 @@
 	padding-right: 43px;
 	background: #ffffff;
 }
-.header__menu{}
-.header__logo{
-	margin-right: auto;
+.header__menu{
 	margin-left: 30px;
 }
-.header__categories{
-	margin-right: 80px;
+.header__logo{
+	max-width: 310px;
+	width: percentage(310/1920);
+
+	@include media('<1260px'){
+		max-width: 36px;
+	}
 }
-.header__icons{}
+.header__categories{
+	max-width: 980px;
+	width: percentage(980/1920);
+	@include media('<1260px'){
+		width: percentage(1200/1920);
+	}
+}
+.header__icons{
+	max-width: 200px;
+	width: percentage(200/1920);
+	@include media('<1260px'){
+		width: percentage(300/1920);
+	}
+}

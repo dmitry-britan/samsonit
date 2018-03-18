@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="page page--category" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521014712284">
+    <link rel="stylesheet" href="css/main.css?v=1521325949421">
   </head>
-  <body>
+  <body class="page page--category">
     <header class="header">
       <div class="header__menu">
         <div class="hamburger hamburger--spin js-nav-toggle">
@@ -138,7 +138,7 @@
           </div>
         </nav>
       </div>
-      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" alt=""></a></div>
+      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt=""></a></div>
       <div class="header__categories">
         <nav class="categories-menu">
           <ul class="categories-menu__list">
@@ -458,7 +458,7 @@
         </nav>
       </div>
       <div class="header__icons">
-        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="login.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
+        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="personal-data.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
           <div class="site-actions__item"><i class="icon icon--cart"></i>
             <div class="cart-dropdown">
               <div class="cart-dropdown__inner">
@@ -519,7 +519,7 @@
                     </div><i class="cart-dropdown__product-remove"></i>
                   </article>
                 </div>
-                <div class="cart-dropdown__footer"><a class="btn btn--primary" href="">В корзину</a><a class="btn btn--primary" href="">Оформить заказ</a></div>
+                <div class="cart-dropdown__footer"><a class="btn btn--grey" href="">В корзину</a><a class="btn btn--primary" href="checkout.html">Оформить заказ</a></div>
               </div>
             </div>
           </div>
@@ -542,6 +542,38 @@
           <div class="sort-panel"></div>
         </div>
         <div class="category__body">
+          <div class="category-panel">
+            <div class="category-panel__filter">
+              <div class="category-panel__filter-item">от 15 000 грн   -   до 20 000 грн</div>
+              <div class="category-panel__filter-item">Кожа, Пластик</div>
+              <div class="category-panel__filter-item">50 - 69 см</div>
+              <div class="category-panel__filter-item">Расширяемый</div>
+              <div class="category-panel__filter-reset">Сбросить</div>
+            </div>
+            <div class="category-panel__sort">
+              <div class="sort">
+                <div class="sort__current"><span class="sort__current-text">Сначала популярные</span><i class="sort__current-icon icon--arrow-down"></i></div>
+                <ul class="sort__list">
+                  <li class="sort__list-item">
+                    <input class="radio" id="sort-0" type="radio" name="sort" checked>
+                    <label for="sort-0">По умолчанию</label>
+                  </li>
+                  <li class="sort__list-item">
+                    <input class="radio" id="sort-1" type="radio" name="sort" checked>
+                    <label for="sort-1">Сначала дорогие</label>
+                  </li>
+                  <li class="sort__list-item">
+                    <input class="radio" id="sort-2" type="radio" name="sort" checked>
+                    <label for="sort-2">Сначала дешовые</label>
+                  </li>
+                  <li class="sort__list-item">
+                    <input class="radio" id="sort-3" type="radio" name="sort" checked>
+                    <label for="sort-3">Сначала популярные</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="products">
             <article class="product">
               <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-1.jpg" alt=""></a>
@@ -663,8 +695,18 @@
                 <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
               </div>
             </article>
+            <div class="category-special">
+              <div class="category-special__inner" style="background-image:url(./images/special.png);">
+                <div class="category-special__brand"><img src="images/brand.png" alt=""></div>
+                <div class="category-special__header">
+                  <div class="category-special__header-text">Новая коллекция</div>
+                  <div class="category-special__header-title">limited edition</div>
+                </div>
+                <div class="category-special__text">Самый легкий чемодан из коллекции Curson от Samsonite, Lite-Shock сочетает в себе минимальный вес с максимальной ударопрочностью. Его органическая форма усилена и предназначена для поглощения ударов.</div><a class="category-special__action" href="">Следующая страница</a>
+              </div>
+            </div>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-7.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-1.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 37G*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">TECHNUM</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -685,7 +727,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-8.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-2.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- CB0*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">FLUX</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -707,7 +749,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-9.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-3.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 86V*103</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Shock</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -728,7 +770,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-10.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-4.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 82V*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube DLX</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -749,7 +791,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-11.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-5.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- V22*305</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Cosmolite 3.0</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -773,7 +815,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-12.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-6.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 33V*007</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -793,7 +835,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-13.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-7.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 82V*003</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube DLX</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -814,7 +856,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-14.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-8.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 31C*008</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Wavebreaker Marvel</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -832,7 +874,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-15.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-9.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 01V*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Locked</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -853,7 +895,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-16.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-10.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 44D*001</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Neopulse</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -877,7 +919,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-17.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-11.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 98V*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Shock</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -898,7 +940,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-18.jpg" alt=""></a>
+              <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-12.jpg" alt=""></a>
                 <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 44D*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Neopulse</span></a>
                 <div class="product__variants">
                   <div class="product__variants-item color-1"></div>
@@ -1136,8 +1178,8 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1521014712290"></script>
-    <script src="js/main.js?v=1521014712290"></script>
+    <script src="js/vendor.js?v=1521325949428"></script>
+    <script src="js/main.js?v=1521325949428"></script>
     <script>
       var $range = $(".js-price-slider"),
       $from = $(".js-price-from"),

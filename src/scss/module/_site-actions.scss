@@ -1,10 +1,8 @@
 .site-actions{
 	display: flex;
+	justify-content: space-between;
 }
 .site-actions__item{
 	position: relative;
-	margin-right: 35px;
-	&:last-child{
-		margin-right: 0;
-	}
+	padding: 38px 0;
 }

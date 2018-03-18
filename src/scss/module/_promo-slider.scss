@@ -12,6 +12,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	transition: all 500ms ease-in-out;
+	transform: translateX(-300px);
+
+	.slick-current &{
+		transform: translateX(0);
+	}
 }
 .promo-slider__content-inner{
 	max-width: 60%;
@@ -45,7 +51,14 @@
 .promo-slider__pagination-current{}
 .promo-slider__pagination-divider{}
 .promo-slider__pagination-total{}
-.promo-slider__photo{}
+.promo-slider__photo{
+	transition: all 500ms ease-in-out;
+	transform: translateX(300px);
+
+	.slick-current &{
+		transform: translateX(0);
+	}
+}
 
 .promo-slider__title{
 	position: relative;
@@ -118,6 +131,7 @@
 	line-height: 20px;
 	letter-spacing: 0.7px;
 	text-transform: uppercase;
+	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
 }

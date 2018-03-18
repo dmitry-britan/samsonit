@@ -4,10 +4,11 @@ body:after{
   right: 0;
   width: 0;
   height: 0;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.01);
   content: '';
   opacity: 0;
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  cursor: pointer;
 }
 body.is--mobile-active{
   overflow: hidden;

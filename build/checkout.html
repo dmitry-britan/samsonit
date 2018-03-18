@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html class="page page--checkout" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521014713506">
+    <link rel="stylesheet" href="css/main.css?v=1521325952878">
   </head>
-  <body>
+  <body class="page page--checkout">
     <header class="header">
       <div class="header__menu">
         <div class="hamburger hamburger--spin js-nav-toggle">
@@ -138,7 +138,7 @@
           </div>
         </nav>
       </div>
-      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" alt=""></a></div>
+      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt=""></a></div>
       <div class="header__categories">
         <nav class="categories-menu">
           <ul class="categories-menu__list">
@@ -458,7 +458,7 @@
         </nav>
       </div>
       <div class="header__icons">
-        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="login.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
+        <div class="site-actions"><a class="site-actions__item" href=""><i class="icon icon--search"></i></a><a class="site-actions__item" href="personal-data.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
           <div class="site-actions__item"><i class="icon icon--cart"></i>
             <div class="cart-dropdown">
               <div class="cart-dropdown__inner">
@@ -519,7 +519,7 @@
                     </div><i class="cart-dropdown__product-remove"></i>
                   </article>
                 </div>
-                <div class="cart-dropdown__footer"><a class="btn btn--primary" href="">В корзину</a><a class="btn btn--primary" href="">Оформить заказ</a></div>
+                <div class="cart-dropdown__footer"><a class="btn btn--grey" href="">В корзину</a><a class="btn btn--primary" href="checkout.html">Оформить заказ</a></div>
               </div>
             </div>
           </div>
@@ -527,40 +527,105 @@
       </div>
     </header>
     <section class="section">
+      <h1 class="section__title is--large is--centered">Контактные данные</h1>
       <div class="checkout">
-        <div class="checkout__header">Контактные данные</div>
         <div class="checkout__main">
-          <form class="form is--two-column" action="">
-            <div class="form__field">
-              <label class="form__label">Ф.И.О</label>
-              <input class="form__input" type="text" name="name">
+          <div class="checkout__user-form">
+            <form class="form js--client-form" action="">
+              <div class="form__row is--col-3">
+                <div class="form__field">
+                  <input class="form__input" type="text" name="name" placeholder="Имя">
+                </div>
+                <div class="form__field">
+                  <input class="form__input" type="text" name="sname" placeholder="Фамилия">
+                </div>
+                <div class="form__field">
+                  <input class="form__input" type="text" name="mname" placeholder="Отчество">
+                </div>
+              </div>
+              <div class="form__row is--col-3 is--last-empty">
+                <div class="form__field">
+                  <input class="form__input" type="text" name="email" placeholder="Email">
+                </div>
+                <div class="form__field">
+                  <input class="form__input" type="text" name="phone" placeholder="Телефон">
+                </div>
+                <div class="form__field is--flex-empty"></div>
+              </div>
+              <div class="form__row">
+                <div class="form__field">
+                  <textarea class="form__textarea" name="msg" cols="30" rows="10" placeholder="Комментарий"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="checkout__details">
+            <div class="checkout__delivery">
+              <div class="checkout__block">
+                <div class="checkout__title">способ доставки </div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="delivery-1" type="radio" name="delivery">
+                  <label for="delivery-1">
+                     Самовывоз<i class="icon icon--arrow-down"></i></label><a class="btn btn--choose-shop js-shop-link" href="" data-modal="shops"><i class="icon icon--location"></i>Выбрать ближайший магазин</a>
+                </div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="delivery-2" type="radio" name="delivery">
+                  <label for="delivery-2">Куръерская доставка</label>
+                </div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="delivery-3" type="radio" name="delivery">
+                  <label for="delivery-3">Новая почта</label>
+                </div>
+              </div>
             </div>
-            <div class="form__field">
-              <label class="form__label">Телефон</label>
-              <input class="form__input" type="text" name="phone">
+            <div class="checkout__payment">
+              <div class="checkout__block">
+                <div class="checkout__title">способ оплаты</div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="payment-1" type="radio" name="payment">
+                  <label for="payment-1">Онлайн-оплата</label>
+                </div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="payment-2" type="radio" name="payment">
+                  <label for="payment-2">Накладний платеж Новая Почта</label>
+                </div>
+                <div class="checkout__checkbox">
+                  <input class="checkbox" id="payment-3" type="radio" name="payment">
+                  <label for="payment-3">Наличными </label>
+                </div>
+              </div>
+              <div class="checkout__action"><a class="btn btn--grey" href="">продолжить покупки</a></div>
             </div>
-            <div class="form__field">
-              <label class="form__label">E-mail</label>
-              <input class="form__input" type="text" name="email">
-            </div>
-            <div class="form__field">
-              <label class="form__label">Город</label>
-              <input class="form__input" type="text" name="city">
-            </div>
-            <div class="form__field">
-              <label class="form__label">Адрес</label>
-              <input class="form__input" type="text" name="address">
-            </div>
-            <div class="form__field">
-              <label class="form__label">Номер дисконтной карты</label>
-              <input class="form__input" type="text" name="card">
-            </div>
-            <div class="form__action">
-              <input class="btn btn--primary" type="submit" value="Сохранить">
-            </div>
-          </form>
+          </div>
         </div>
-        <div class="checkout__sidebar"></div>
+        <div class="checkout__sidebar">
+          <div class="checkout__login-form">
+            <div class="login-widget">
+              <div class="login-widget__title">я зарегистрированный пользователь</div>
+              <div class="login-widget__body">
+                <form class="form js--login-form" action="">
+                  <div class="form__field">
+                    <input class="form__input" type="text" name="login" placeholder="Логин">
+                  </div>
+                  <div class="form__field">
+                    <input class="form__input" type="password" name="password" placeholder="Пароль">
+                  </div>
+                  <div class="form__action">
+                    <input class="login-widget__action" type="submit" value="войти">
+                  </div>
+                </form>
+              </div>
+              <div class="login-widget__subtitle">Так же можно зайти через соц сети</div>
+              <div class="login-widget__social"><a class="login-widget__social-item" href=""><i class="fa fa-vk"></i></a><a class="login-widget__social-item" href=""><i class="fa fa-facebook"></i></a><a class="login-widget__social-item" href=""><i class="fa fa-twitter"></i></a><a class="login-widget__social-item" href=""><i class="fa fa-linkedin"></i></a><a class="login-widget__social-item" href=""><i class="fa fa-instagram"></i></a></div>
+            </div>
+          </div>
+          <div class="checkout__action">
+            <div class="checkout__checkbox">
+              <input class="checkbox" id="agree" type="checkbox" name="agree">
+              <label class="is--tiny" for="agree">Я согласен с условиями предоставления услуг предоставляю согласие на обработку моих персональных данных</label>
+            </div><a class="btn btn--primary" href="">Оформить заказ</a>
+          </div>
+        </div>
       </div>
     </section>
     <!-- FOOTER-->
@@ -602,7 +667,229 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1521014713510"></script>
-    <script src="js/main.js?v=1521014713510"></script>
+    <script src="js/vendor.js?v=1521325952884"></script>
+    <script src="js/main.js?v=1521325952884"></script>
+    <div style="display: none;">
+      <div class="popup" id="shops">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <div class="shops-map">
+            <div class="shops-map__inner">
+              <div class="shops-map__content">
+                <div class="shops-map__tabs js-tabs"><a class="shops-map__tabs-item is--active js-tabs-item" href="#city-1">Киев</a><a class="shops-map__tabs-item js-tabs-item" href="#city-2">Одесса</a><a class="shops-map__tabs-item js-tabs-item" href="#city-3">Львов</a></div>
+                <div class="shops-map__tabs-content is--active js-tabs-content" id="city-1">
+                  <ul class="shops-map__list js-scroll-shops">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="shops-map__tabs-content js-tabs-content" id="city-2">
+                  <ul class="shops-map__list js-scroll-shops">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="shops-map__tabs-content js-tabs-content" id="city-3">
+                  <ul class="shops-map__list js-scroll-shops">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                      <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
+                      <div class="shops-map__shop-phone">(044) 286-82-38</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                      <div class="shops-map__shop-title">Универмаг "Украина" </div>
+                      <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
+                      <div class="shops-map__shop-phone">(044) 496-16-55</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
+                    </li>
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                      <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
+                      <div class="shops-map__shop-phone">(044) 498-33-54</div>
+                      <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="shops-map__map">
+                <div class="map" id="map"></div>
+              </div>
+            </div>
+          </div>
+          <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbR8xpKsCCuj-3AZ9oHMHat8vR621poH0"></script>
+          <script>
+            $('.js-shop-link').one('click', () => {
+              setTimeout(() => {
+                var map;
+                var marker;
+            
+                function initMap() {
+                  var samsonit = {lat: 50.429931, lng: 30.5332056};
+                  
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: samsonit,
+                    styles: [],
+                  });
+                  marker = new google.maps.Marker({
+                    position: samsonit,
+                    map: map,
+                  });
+                }
+                function placeMarker(location) {
+                  if (marker == undefined){
+                      marker = new google.maps.Marker({
+                          position: location,
+                          map: map, 
+                          animation: google.maps.Animation.DROP,
+                      });
+                  }
+                  else{
+                      marker.setPosition(location);
+                  }
+                  map.setCenter(location);
+                }
+                function removeActiveState(elements) {
+                  elements.forEach(function(element){
+                    element.classList.remove('is--active');
+                  });
+                }
+                initMap();
+            
+                //
+                // Tabs
+                //---------------------------------------------------------------------------------------
+                if ($('.js-tabs').length) {
+                  let $tabs = $('.js-tabs-item');
+                  let $panes = $('.js-tabs-content');
+            
+                  $tabs.on('click', (event) => {
+                    event.preventDefault();
+            
+                    let id = $(event.currentTarget).attr('href');
+            
+                    $tabs.removeClass('is--active');
+                    $(event.currentTarget).addClass('is--active');
+            
+                    $panes.removeClass('is--active');
+                    $(id).addClass('is--active');
+                  });
+                }
+            
+                //
+                // Scroll Pane
+                //---------------------------------------------------------------------------------------
+                (() => {
+                  let $scrollable = $('.js-scroll-shops');
+            
+                  $scrollable.jScrollPane();
+                  if ($scrollable.length) {
+                    $('.js-tabs-item').on('click', () => {
+                      $scrollable.jScrollPane();
+                    });
+                  }
+                })();
+            
+                //
+                // Shops
+                //---------------------------------------------------------------------------------------
+                var shops = document.querySelectorAll('.js-shop');
+                var tabs = document.querySelectorAll('.js-tabs-item');
+            
+                shops.forEach(function(shop){
+                  shop.addEventListener('click', function(event){
+                    var target = event.currentTarget;
+                    var lat = parseFloat(target.getAttribute('data-lat'));
+                    var lng = parseFloat(target.getAttribute('data-lng'));
+                    
+                    // перекд.чаем активное состояние
+                    removeActiveState(shops);
+                    target.classList.add('is--active');
+            
+                    placeMarker({lat: lat, lng: lng});
+                  });
+                });
+              }, 1000);
+              
+            });
+          </script>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

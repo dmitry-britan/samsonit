@@ -20,6 +20,9 @@
 .icon--arrow-right{
 	@include sprite('arrow-right');
 }
+.icon--arrow-down{
+	@include sprite('arrow-down');
+}
 .icon--color-check{
 	@include sprite('color-check');
 }
@@ -40,4 +43,7 @@
 }
 .icon--next-right{
 	@include sprite('next-right');
+}
+.icon--location{
+	@include sprite('location');
 }

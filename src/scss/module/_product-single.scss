@@ -10,12 +10,27 @@
 	padding: 40px 80px 100px 30px;
 	background-color: #ffffff;
 }
+.product-single__media{
+	width: 50%;
+}
+.product-single__video{}
+.product-single__video-title{
+	margin: 0 0 25px;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 34px;
+	color: #000000;
+}
+.product-single__video-body{
+	img{
+		display: block;
+	}
+}
 .product-single__photos{
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-	width: 50%;
-
+	margin-bottom: 65px;
 	img{
 		align-self: center;
 		display: block;

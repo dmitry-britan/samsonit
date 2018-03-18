@@ -1,0 +1,20 @@
+.category-panel
+	.category-panel__filter
+		.category-panel__filter-item от 15 000 грн   -   до 20 000 грн
+		.category-panel__filter-item Кожа, Пластик
+		.category-panel__filter-item 50 - 69 см
+		.category-panel__filter-item Расширяемый
+		.category-panel__filter-reset Сбросить
+
+
+	.category-panel__sort
+		.sort
+			.sort__current
+				span.sort__current-text Сначала популярные
+				i.sort__current-icon.icon--arrow-down
+			ul.sort__list
+				-var sort = [{state:'checked', title:'По умолчанию'}, {state:'false', title:'Сначала дорогие'}, {state:'false', title:'Сначала дешовые'}, {state:'false', title:'Сначала популярные'}];
+				each item, index in sort
+					li.sort__list-item
+						input(id="sort-"+index, type="radio", name="sort" checked).radio
+						label(for="sort-"+index)= item.title

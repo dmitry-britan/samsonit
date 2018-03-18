@@ -23,8 +23,14 @@ block content
       
       //- PRODUCTS
       .category__body
+        include pug/parts/category-panel
         .products
-          include pug/db/products
+          include pug/db/products-6
+          each product, index in products
+            include pug/parts/product
+          include pug/parts/category-special
+          
+          include pug/db/products-12
           each product, index in products
             include pug/parts/product
       

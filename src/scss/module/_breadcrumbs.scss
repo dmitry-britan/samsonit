@@ -1,5 +1,11 @@
 .breadcrumbs{
-  // margin: 35px 0 15px;
+  .page--product &{
+    margin: 35px 0 45px;
+  }
+  .page--about &,
+  .page--news-post &{
+    margin: 0 0 45px;
+  }
 }
 .breadcrumbs__item{
   position: relative;
