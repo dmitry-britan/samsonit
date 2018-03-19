@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521325949421">
+    <link rel="stylesheet" href="css/main.css?v=1521447959501">
   </head>
   <body class="page page--category">
     <header class="header">
@@ -138,7 +138,10 @@
           </div>
         </nav>
       </div>
-      <div class="header__logo"><a class="logo" href="index.html"><img class="logo__img" src="images/logo.png" srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt=""></a></div>
+      <div class="header__logo"><a class="logo" href="index.html">
+          <picture>
+            <source srcset="images/logo-mobile.png 1260w" media="(max-width: 1260px)"><img class="logo__img" src="images/logo.png" alt="">
+          </picture></a></div>
       <div class="header__categories">
         <nav class="categories-menu">
           <ul class="categories-menu__list">
@@ -1178,8 +1181,8 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1521325949428"></script>
-    <script src="js/main.js?v=1521325949428"></script>
+    <script src="js/vendor.js?v=1521447959508"></script>
+    <script src="js/main.js?v=1521447959508"></script>
     <script>
       var $range = $(".js-price-slider"),
       $from = $(".js-price-from"),

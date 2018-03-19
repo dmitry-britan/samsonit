@@ -3,7 +3,9 @@ header.header
 		include parts/mobile-nav
 	.header__logo
 		a(href="index.html").logo
-			img(src="images/logo.png", srcset="images/logo.png 2000w, images/logo-mobile.png 1260w" alt="").logo__img
+			picture
+				source(srcset='images/logo-mobile.png 1260w', media='(max-width: 1260px)')
+				img(src='images/logo.png', alt='').logo__img
 	.header__categories
 		include parts/categories-menu
 	.header__icons
