@@ -1,5 +1,11 @@
 .section{
 	padding: 60px;
+	@include media('<1460px'){
+		padding: 30px;
+	}
+	@include media('<480px'){
+		padding: 30px 15px;
+	}
 	&--orders{
 		padding: 0;
 	}
@@ -28,6 +34,9 @@
 	&--lang-social{
 		padding-top: 0;
 		background: #fff;
+		@include media('<1060px'){
+			display: none;
+		}
 	}
 	&--lookbook{
 		padding: 0;

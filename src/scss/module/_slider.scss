@@ -3,7 +3,13 @@
   padding: 0 0 0 90px;
   &.is--reverse{
     padding: 0 90px 0 0;
+    @include media('<960px'){
+      padding-right: 40px;
+    }
   }
+	@include media('<960px'){
+		padding-left: 40px;
+	}
 }
 .slider__controls{
   position: absolute;
@@ -20,6 +26,14 @@
   line-height: 52px;
   letter-spacing: 0.8px;
   color: #000000;
+	@include media('<960px'){
+    top: 120px;
+    bottom: auto;
+    width: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 38px;
+	}
 
   .slider--features &{
     align-items: flex-start;

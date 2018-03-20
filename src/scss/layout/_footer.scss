@@ -1,6 +1,9 @@
 .footer{
 	padding: 60px 0 80px;
 	background: #ffffff;
+	@include media('<960px'){
+		padding: 40px 0;
+	}
 }
 .footer__inner{
 	display: flex;
@@ -10,8 +13,29 @@
 	padding: 0 15px;
 	justify-content: space-between;
 	align-items: flex-start;
+	@include media('<960px'){
+		justify-content: center;
+	}
 }
-.footer__menu{}
+.footer__menu{
+	@include media('<960px'){
+		display: none;
+	}
+}
+.footer__social{
+	display: none;
+	@include media('<960px'){
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
 .footer__logo{
+	display: flex;
 	align-self: center;
+	@include media('<960px'){
+		width: 100%;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
 }
