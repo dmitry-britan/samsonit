@@ -19,6 +19,14 @@
 	&:hover{
 		outline: none;
 	}
+
+	&.is--large{
+		padding: 24px 35px;
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
 }
 .btn--primary{
 	&:hover{
@@ -42,7 +50,7 @@
 }
 
 .btn--grey{
-	background: #fff;
+	background: transparent;
 	border: 1px solid #cccccc;
 	color: #cccccc;
 	&:hover{

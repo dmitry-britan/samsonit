@@ -47,3 +47,12 @@
 .icon--location{
 	@include sprite('location');
 }
+.icon--remove{
+	@include sprite('remove');
+}
+.icon--minus{
+	@include sprite('minus');
+}
+.icon--plus{
+	@include sprite('plus');
+}

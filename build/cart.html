@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521538129015">
+    <link rel="stylesheet" href="css/main.css?v=1521558628642">
   </head>
-  <body class="page page--personal-data">
+  <body class="page page--cart">
     <header class="header">
       <div class="header__menu">
         <div class="hamburger hamburger--spin js-nav-toggle">
@@ -529,67 +529,505 @@
         </div>
       </div>
     </header>
-    <section class="section section--personal">
+    <section class="section section--cart">
       <div class="container">
         <div class="page__header">
           <div class="page__breadcrumbs">
-            <nav class="breadcrumbs"><a class="breadcrumbs__item" href="">Главная</a><a class="breadcrumbs__item is--current" href="">Личный кабинет</a>
+            <nav class="breadcrumbs"><a class="breadcrumbs__item" href="">Главная</a><a class="breadcrumbs__item is--current" href="">Корзина</a>
             </nav>
           </div>
-          <h1 class="page__title">Личный кабинет</h1>
+          <h1 class="page__title">Корзина</h1>
         </div>
-        <div class="page__inner">
-          <main class="page__content">
-            <div class="page__body">
-              <div class="personal-block">
-                <div class="personal-block__header">Избранные заказы</div>
-                <div class="personal-block__body">
-                  <div class="personal-block__headers">
-                    <div class="personal-block__headers-item">Изображение</div>
-                    <div class="personal-block__headers-item">Название</div>
-                    <div class="personal-block__headers-item">Цена</div>
-                  </div>
-                  <div class="personal-block__product"><a class="personal-block__product-favore" href=""><i class="icon icon--product-favore"></i></a><a class="personal-block__product-photo" href=""><img src="images/product/p-1.jpg" alt=""></a>
-                    <div class="personal-block__product-details">
-                      <div class="personal-block__product-title"><strong>Samsonite - </strong><span>V22*305</span></div>
-                      <div class="personal-block__product-desc">36.0 л | 1.70 кг | 40 x 55 x 20</div>
-                      <div class="personal-block__product-props">Чемодан на колёсах 55 см</div>
-                    </div>
-                    <div class="personal-block__product-price">
-                      <div class="personal-block__product-price-value">17 559 </div>
-                      <div class="personal-block__product-price-currency">грн.</div>
-                    </div>
-                    <div class="personal-block__product-action"><a class="personal-block__product-action-link" href=""><i class="icon icon--product-compare"></i></a><a class="personal-block__product-action-link" href=""><i class="icon icon--product-cart"></i></a></div>
-                  </div>
-                  <div class="personal-block__product"><a class="personal-block__product-favore" href=""><i class="icon icon--product-favore"></i></a><a class="personal-block__product-photo" href=""><img src="images/product/p-1.jpg" alt=""></a>
-                    <div class="personal-block__product-details">
-                      <div class="personal-block__product-title"><strong>Samsonite - </strong><span>V22*305</span></div>
-                      <div class="personal-block__product-desc">36.0 л | 1.70 кг | 40 x 55 x 20</div>
-                      <div class="personal-block__product-props">Чемодан на колёсах 55 см</div>
-                    </div>
-                    <div class="personal-block__product-price">
-                      <div class="personal-block__product-price-value">17 559 </div>
-                      <div class="personal-block__product-price-currency">грн.</div>
-                    </div>
-                    <div class="personal-block__product-action"><a class="personal-block__product-action-link" href=""><i class="icon icon--product-compare"></i></a><a class="personal-block__product-action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+        <main class="cart">
+          <div class="cart__inner">
+            <div class="cart__header">
+              <div class="cart__header-item is--photo">Изображение</div>
+              <div class="cart__header-item is--title">Название</div>
+              <div class="cart__header-item is--qty">Количество</div>
+              <div class="cart__header-item is--price">Цена </div>
+              <div class="cart__header-item is--total">Итого</div>
+            </div>
+            <article class="cart__product"><a class="cart__product-photo" href=""><img src="images/product/p-1.jpg" alt=""></a>
+              <div class="cart__product-content">
+                <div class="cart__product-info">
+                  <h4 class="cart__product-title"><span class="cart__product-title-name">Samsonite </span><span class="cart__product-title-model">- V22*305</span></h4>
+                  <div class="cart__product-details">36.0 л | 1.70 кг | 40 x 55 x 20</div>
+                  <div class="cart__product-details">Чемодан на колёсах 55 см</div>
+                </div>
+                <div class="cart__product-qty">
+                  <div class="qty js-qty"><span class="qty__minus js-qty-minus"><i class="icon icon--minus"></i></span>
+                    <input class="qty__value js-qty-value" type="text" name="qty" value="1"><span class="qty__plus js-qty-plus"><i class="icon icon--plus"></i></span>
                   </div>
                 </div>
-                <div class="personal-block__footer">
-                  <div class="pagination"><a class="pagination__item is--prev" href="#1"><i class="icon--arrow-left"></i></a><a class="pagination__item" href="#1">1</a><span class="pagination__item is--active">2</span><a class="pagination__item" href="#3">3</a><a class="pagination__item" href="#4">4</a><a class="pagination__item" href="#5">5</a><span class="pagination__item is--ellipsis">&hellip;</span><a class="pagination__item" href="#10">10</a><a class="pagination__item is--next" href="#10"><i class="icon--arrow-right"></i></a></div>
+                <div class="cart__product-price"><span class="cart__product-price-value">17 559 </span><span class="cart__product-price-currency">грн</span></div>
+                <div class="cart__product-total"><span class="cart__product-total-value">17 559 </span><span class="cart__product-total-currency">грн</span></div>
+              </div>
+              <div class="cart__product-remove js-cart-item-remove"><span>Удалить товар</span><i class="icon icon--remove"></i></div>
+            </article>
+            <article class="cart__product"><a class="cart__product-photo" href=""><img src="images/product/p-2.jpg" alt=""></a>
+              <div class="cart__product-content">
+                <div class="cart__product-info">
+                  <h4 class="cart__product-title"><span class="cart__product-title-name">Samsonite </span><span class="cart__product-title-model">- V22*305</span></h4>
+                  <div class="cart__product-details">36.0 л | 1.70 кг | 40 x 55 x 20</div>
+                  <div class="cart__product-details">Чемодан на колёсах 55 см</div>
+                </div>
+                <div class="cart__product-qty">
+                  <div class="qty js-qty"><span class="qty__minus js-qty-minus"><i class="icon icon--minus"></i></span>
+                    <input class="qty__value js-qty-value" type="text" name="qty" value="1"><span class="qty__plus js-qty-plus"><i class="icon icon--plus"></i></span>
+                  </div>
+                </div>
+                <div class="cart__product-price"><span class="cart__product-price-value">17 559 </span><span class="cart__product-price-currency">грн</span></div>
+                <div class="cart__product-total"><span class="cart__product-total-value">17 559 </span><span class="cart__product-total-currency">грн</span></div>
+              </div>
+              <div class="cart__product-remove js-cart-item-remove"><span>Удалить товар</span><i class="icon icon--remove"></i></div>
+            </article>
+            <div class="cart__total">
+              <div class="cart__total-item">
+                <div class="cart__total-sum"> <span>Сумма: </span>52 677 грн</div>
+                <div class="cart__total-discount"> <span>Cкидка: </span>- 20 %  (10 535 грн)</div>
+              </div>
+              <div class="cart__total-item">
+                <div class="cart__total-value"><span class="cart__total-value-text">Итого:</span><span class="cart__total-value-num">42 141</span><span class="cart__total-value-currency">грн</span></div>
+              </div>
+            </div>
+            <div class="cart__action">
+              <div class="cart__action-item"><a class="btn btn--grey is--large" href="">продолжить покупки</a></div>
+              <div class="cart__action-item"><a class="btn btn--primary is--large" href="">Оформить заказ</a></div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+    <section class="section section--recommend">
+      <div class="container">
+        <div class="section__title">Рекомендуемые товары</div>
+        <div class="section__body">
+          <div class="slider is--reverse slider--recommend">
+            <div class="slider__controls">
+              <button class="slider__controls-prev js-recommend-slider-prev"><i class="icon icon--prev-up"></i></button>
+              <div class="slider__pagination">
+                <div class="slider__pagination-current"></div>
+                <div class="slider__pagination-divider">/</div>
+                <div class="slider__pagination-total"></div>
+              </div>
+              <button class="slider__controls-next js-recommend-slider-next"><i class="icon icon--next-down"></i></button>
+            </div>
+            <div class="slider__body">
+              <div class="js-recommend-slider">
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-1.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- V22*305</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Cosmolite 3.0 </span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                        <div class="product__variants-item color-5"></div>
+                        <div class="product__variants-item color-6"></div>
+                        <div class="product__variants-item color-7"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">94.0 л</div>
+                        <div class="product__properties-item">2.60 кг</div>
+                        <div class="product__properties-item">51  x 75 x  31</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 69 см</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">17 559</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-2.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- V22*522</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Cosmolite 3.0 </span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 55 см</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">12 995</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-3.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 86V*103</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Shock</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">38.0 л</div>
+                        <div class="product__properties-item">2.40 кг</div>
+                        <div class="product__properties-item">40 x 55 x 23</div>
+                      </div>
+                      <div class="product__desc">Чемодан на 2х колёсах 55 см</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">14 785 </span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-4.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 18G*102</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Air force 1</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 69 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">4 375</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-5.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 37G*003</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">TECHNUM</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">108/127.5 л</div>
+                        <div class="product__properties-item">4 кг</div>
+                        <div class="product__properties-item">51 x 77 x  30/35</div>
+                      </div>
+                      <div class="product__desc">Чемодан 77 см с расширением</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">5 009</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-6.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 34G*003</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Tracklite</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан 78 см. с расширением</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">3 245</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-7.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 37G*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">TECHNUM</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">73/84.5 л</div>
+                        <div class="product__properties-item">2.60 кг</div>
+                        <div class="product__properties-item">46 x 66 x 27/32</div>
+                      </div>
+                      <div class="product__desc">Чемодан 66 см. с расширением</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">4 589</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-8.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- CB0*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">FLUX</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                        <div class="product__variants-item color-5"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">130/145 л</div>
+                        <div class="product__properties-item">4.70 кг</div>
+                        <div class="product__properties-item">55 x 81 x 36/40</div>
+                      </div>
+                      <div class="product__desc">Чемодан 81 см. с расширением</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">8 065</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-9.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 86V*103</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Shock</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">38.0 л</div>
+                        <div class="product__properties-item">2.40 кг</div>
+                        <div class="product__properties-item">40 x 55 x 23</div>
+                      </div>
+                      <div class="product__desc">Чемодан на 2х колёсах 55 см</div>
+                      <div class="product__price">
+                        <div class="product__price-inner">
+                          <del class="product__price-old"><span class="product__price-old-value">14 785</span><span class="product__price-old-currency">грн</span></del><ins class="product__price-new"><span class="product__price-new-value">14 785</span><span class="product__price-new-currency">грн</span></ins>
+                        </div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-10.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 82V*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube DLX</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 76 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">20 519</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-11.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- V22*305</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Cosmolite 3.0</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                        <div class="product__variants-item color-5"></div>
+                        <div class="product__variants-item color-6"></div>
+                        <div class="product__variants-item color-7"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">94.0 л</div>
+                        <div class="product__properties-item">2.60 кг</div>
+                        <div class="product__properties-item">51 x 75 x  31</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 69 см</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">17 559</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-12.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 33V*007</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 82 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">19 110</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-13.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 82V*003</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Cube DLX</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">67.5 л</div>
+                        <div class="product__properties-item">2.90 кг</div>
+                        <div class="product__properties-item">45 x 68 x 28.5</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 68 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value"></span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-14.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">American Tourister<span>- 31C*008</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Wavebreaker Marvel</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 77 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">4 445</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-15.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 01V*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Locked</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">94.0 л</div>
+                        <div class="product__properties-item">2.60 кг</div>
+                        <div class="product__properties-item">51 x 75 x  31</div>
+                      </div>
+                      <div class="product__desc">Чемодан на четырех колесах 75 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">18 105</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-16.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 44D*001</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Neopulse</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                        <div class="product__variants-item color-5"></div>
+                        <div class="product__variants-item color-6"></div>
+                        <div class="product__variants-item color-7"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 82 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">8 779</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-17.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 98V*002</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Lite-Shock</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">67.5 л</div>
+                        <div class="product__properties-item">2.90 кг</div>
+                        <div class="product__properties-item">45 x 68 x 28.5</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 68 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">15 139</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="slider__item">
+                  <article class="product">
+                    <div class="product__inner js-product"><a class="product__photo" href="product-single.html"><img src="images/product/p-18.jpg" alt=""></a>
+                      <h2 class="product__title"><a class="product__title-link" href="product-single.html">Samsonite<span>- 44D*004</span></a></h2><a class="product__brand" href=""><span class="product__brand-inner">Neopulse</span></a>
+                      <div class="product__variants">
+                        <div class="product__variants-item color-1"></div>
+                        <div class="product__variants-item color-2"></div>
+                        <div class="product__variants-item color-3"></div>
+                        <div class="product__variants-item color-4"></div>
+                      </div>
+                      <div class="product__properties">
+                        <div class="product__properties-item">36.0 л</div>
+                        <div class="product__properties-item">1.70 кг</div>
+                        <div class="product__properties-item">40 x 55 x 20</div>
+                      </div>
+                      <div class="product__desc">Чемодан на колёсах 69 см.</div>
+                      <div class="product__price">
+                        <div class="product__price-inner"><span class="product__price-value">11 469</span><span class="product__price-currency">грн</span></div>
+                      </div>
+                      <div class="product__action"><a class="product__action-link" href=""><i class="icon icon--product-compare"></i></a><a class="product__action-link" href=""><i class="icon icon--product-cart"></i></a></div>
+                    </div>
+                  </article>
                 </div>
               </div>
             </div>
-          </main>
-          <aside class="page__sidebar sidebar is--no-padding">
-            <nav class="personal-menu">
-              <ul class="personal-menu__list">
-                <li class="personal-menu__item"><a class="personal-menu__link " href="personal-data.html">Персональные данные</a></li>
-                <li class="personal-menu__item"><a class="personal-menu__link " href="personal-change-password.html">Изменить пароль</a></li>
-                <li class="personal-menu__item"><a class="personal-menu__link is--current" href="personal-favorite-orders.html">Избранные заказы (4)</a></li>
-                <li class="personal-menu__item"><a class="personal-menu__link " href="personal-orders.html">Мои заказы</a></li>
-              </ul>
-            </nav>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -632,7 +1070,7 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1521538129018"></script>
-    <script src="js/main.js?v=1521538129018"></script>
+    <script src="js/vendor.js?v=1521558628647"></script>
+    <script src="js/main.js?v=1521558628647"></script>
   </body>
 </html>

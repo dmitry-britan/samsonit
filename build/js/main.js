@@ -23,6 +23,46 @@ function _classCallCheck(instance, Constructor) {
 	}
 }
 
+function getQty($input) {
+	return parseInt($input.val(), 10) || 0;
+}
+
+function validateQty($input, minValue) {
+	if (getQty($input) < minValue) {
+		$input.val(minValue);
+	}
+}
+
+function changeQty(selector, minValue) {
+	var $el = $(selector);
+
+	$el.each(function(i, element) {
+		var $qty = $(element);
+		var $minus = $qty.find('.js-qty-minus');
+		var $plus = $qty.find('.js-qty-plus');
+		var $input = $qty.find('.js-qty-value');
+
+		$minus.on('click', function() {
+			$input.val(getQty($input) - 1);
+			validateQty($input, minValue);
+		});
+
+		$plus.on('click', function() {
+			$input.val(getQty($input) + 1);
+			validateQty($input, minValue);
+		});
+
+		$input.on('keyup', function(event) {
+			if (!(event.keyCode > 95 && event.keyCode < 106 || event.keyCode > 47 && event.keyCode < 58 || event.keyCode === 8)) {
+				$input.val(minValue);
+			}
+			validateQty($input, minValue);
+		});
+	});
+}
+
+changeQty('.js-qty', 1);
+
 //
 // Tabs
 //---------------------------------------------------------------------------------------
@@ -159,21 +199,28 @@ if ($('.js-recommend-slider').length) {
 		nextArrow: $('.js-recommend-slider-next'),
 		prevArrow: $('.js-recommend-slider-prev'),
 		responsive: [{
-			breakpoint: 768,
+			breakpoint: 1680,
+			settings: {
+				vertical: false,
+				slidesToShow: 4,
+				slidesToScroll: 4
+			}
+		}, {
+			breakpoint: 1400,
 			settings: {
 				vertical: false,
 				slidesToShow: 3,
 				slidesToScroll: 3
 			}
 		}, {
-			breakpoint: 600,
+			breakpoint: 1080,
 			settings: {
 				vertical: false,
 				slidesToShow: 2,
 				slidesToScroll: 2
 			}
 		}, {
-			breakpoint: 480,
+			breakpoint: 840,
 			settings: {
 				vertical: false,
 				slidesToShow: 1,

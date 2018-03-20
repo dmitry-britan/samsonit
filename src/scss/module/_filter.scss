@@ -49,6 +49,9 @@
 }
 .filter__body{
 	padding: 43px 51px 25px 37px;
+	@include media('<1140px'){
+		padding: 30px 30px 25px 20px;
+	}
 }
 .filter__checkbox{
 	display: inline-block;

@@ -1,31 +1,41 @@
-function checkQtyStatus($el, minValue) {
-	if (parseInt($el.val(), 10) > minValue) {
-		$el.parent().addClass('is--active');
-	} else {
-		$el.parent().removeClass('is--active');
+function getQty($input) {
+	return parseInt($input.val(), 10) || 0;
+}
+function validateQty($input, minValue) {
+	if (getQty($input) < minValue) {
+		$input.val(minValue);
 	}
 }
+function changeQty(selector, minValue) {
+	let $el = $(selector);
 
-function changeQty($el, className = '', minValue = 1) {
 	$el.each((i, element) => {
 		let $qty = $(element);
-		let $minus = $qty.find(`.js-${className}qty-minus`);
-		let $plus = $qty.find(`.js-${className}qty-plus`);
-		let $input = $qty.find(`.js-${className}qty-value`);
-		let qtyVal = parseInt($input.val(), 10);
+		let $minus = $qty.find('.js-qty-minus');
+		let $plus = $qty.find('.js-qty-plus');
+		let $input = $qty.find('.js-qty-value');
 
 		$minus.on('click', () => {
-			if (qtyVal > minValue) {
-				$input.val(--qtyVal);
-			}
-			checkQtyStatus($input, minValue);
+			$input.val(getQty($input) - 1);
+			validateQty($input, minValue);
 		});
+
 		$plus.on('click', () => {
-			$input.val(++qtyVal);
-			checkQtyStatus($input, minValue);
+			$input.val(getQty($input) + 1);
+			validateQty($input, minValue);
+		});
+
+		$input.on('keyup', (event) => {
+			if (
+				!(event.keyCode > 95 && event.keyCode < 106
+					|| event.keyCode > 47 && event.keyCode < 58
+					|| event.keyCode === 8)
+			) {
+				$input.val(minValue);
+			}
+			validateQty($input, minValue);
 		});
 	});
 }
 
-changeQty($('.js-qty'));
-changeQty($('.js-additive-qty'), 'additive-', 0);
+changeQty('.js-qty', 1);

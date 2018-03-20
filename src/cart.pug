@@ -1,0 +1,90 @@
+extends pug/base
+
+append vars
+  - body.classList.push('page page--cart')
+
+block content
+  section.section.section--cart
+    .container
+      .page__header
+        .page__breadcrumbs
+          -var breadcrumbs = ['Главная', 'Корзина'];
+          include pug/parts/breadcrumbs
+        h1.page__title Корзина
+      main.cart
+        .cart__inner
+          .cart__header
+            .cart__header-item.is--photo Изображение
+            .cart__header-item.is--title Название
+            .cart__header-item.is--qty Количество
+            .cart__header-item.is--price Цена 
+            .cart__header-item.is--total Итого
+          each cartItem in [1,2]
+            article.cart__product
+              a(href="").cart__product-photo
+                img(src="images/product/p-"+cartItem+".jpg", alt="")
+              .cart__product-content
+                .cart__product-info
+                  h4.cart__product-title
+                    span.cart__product-title-name Samsonite 
+                    span.cart__product-title-model - V22*305
+                  .cart__product-details 36.0 л | 1.70 кг | 40 x 55 x 20
+                  .cart__product-details Чемодан на колёсах 55 см
+                .cart__product-qty
+                  .qty.js-qty
+                    span.qty__minus.js-qty-minus
+                      i.icon.icon--minus
+                    input(type="text", name="qty", value="1").qty__value.js-qty-value
+                    span.qty__plus.js-qty-plus
+                      i.icon.icon--plus
+                .cart__product-price
+                  span.cart__product-price-value 17 559 
+                  span.cart__product-price-currency грн
+                .cart__product-total
+                  span.cart__product-total-value 17 559 
+                  span.cart__product-total-currency грн
+              .cart__product-remove.js-cart-item-remove
+                span Удалить товар
+                i.icon.icon--remove
+
+          .cart__total
+            .cart__total-item
+              .cart__total-sum 
+                span Сумма: 
+                | 52 677 грн
+              .cart__total-discount 
+                span Cкидка: 
+                | - 20 %  (10 535 грн)
+            .cart__total-item
+              .cart__total-value
+                span.cart__total-value-text Итого:
+                span.cart__total-value-num 42 141
+                span.cart__total-value-currency грн
+          .cart__action
+            .cart__action-item
+              a(href="").btn.btn--grey.is--large продолжить покупки
+            .cart__action-item
+              a(href="").btn.btn--primary.is--large Оформить заказ
+            
+  section.section.section--recommend
+    .container
+      .section__title Рекомендуемые товары
+      .section__body
+        .slider.is--reverse.slider--recommend
+          .slider__controls
+            button.slider__controls-prev.js-recommend-slider-prev
+              i.icon.icon--prev-up
+            .slider__pagination
+              .slider__pagination-current
+              .slider__pagination-divider /
+              .slider__pagination-total
+            button.slider__controls-next.js-recommend-slider-next
+              i.icon.icon--next-down
+          .slider__body
+            .js-recommend-slider
+              include pug/db/products
+              each product, index in products
+                .slider__item
+                  include pug/parts/product
+
+block body-end

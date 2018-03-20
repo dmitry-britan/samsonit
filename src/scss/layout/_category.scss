@@ -1,8 +1,9 @@
 .category{
 	display: flex;
 	flex-direction: row-reverse;
-	max-width: 1680px;
+	max-width: 1710px;
 	margin: 0 auto;
+	padding: 0 15px;
 	justify-content: space-between;
 }
 .category__content{
@@ -13,6 +14,10 @@
 	margin-right: 65px;
 	flex-basis: 320px;
 	flex-shrink: 0;
+	@include media('<1140px'){
+		margin-right: 25px;
+		flex-basis: 300px;
+	}
 }
 
 .category__header{

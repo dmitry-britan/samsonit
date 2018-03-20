@@ -9,6 +9,7 @@
 }
 .category-panel__filter{
 	display: flex;
+	width: calc(100% - 200px);
 }
 .category-panel__filter-reset{
 	font-size: 14px;
@@ -18,7 +19,15 @@
 	color: $color__primary;
 	cursor: pointer;
 }
+.category-panel__filter-items{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	width: calc(100% - 100px);
+	margin-right: 30px;
+}
 .category-panel__filter-item{
+	flex-shrink: 0;
 	position: relative;
 	padding-right: 20px;
 	margin-right: 30px;

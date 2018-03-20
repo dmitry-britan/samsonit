@@ -19,6 +19,13 @@
 	.product{
 		width: 25%;
 		padding-left: 22px;
+
+		@include media('<1680px'){
+			width: percentage(1/3);
+		}
+		@include media('<1360px'){
+			width: percentage(1/2);
+		}
 	}
 }
 .product{

@@ -76,7 +76,15 @@ if ($('.js-recommend-slider').length) {
 		prevArrow: $('.js-recommend-slider-prev'),
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 1680,
+				settings: {
+					vertical: false,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+				},
+			},
+			{
+				breakpoint: 1400,
 				settings: {
 					vertical: false,
 					slidesToShow: 3,
@@ -84,7 +92,7 @@ if ($('.js-recommend-slider').length) {
 				},
 			},
 			{
-				breakpoint: 600,
+				breakpoint: 1080,
 				settings: {
 					vertical: false,
 					slidesToShow: 2,
@@ -92,7 +100,7 @@ if ($('.js-recommend-slider').length) {
 				},
 			},
 			{
-				breakpoint: 480,
+				breakpoint: 840,
 				settings: {
 					vertical: false,
 					slidesToShow: 1,

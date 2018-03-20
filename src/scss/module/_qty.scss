@@ -1,0 +1,34 @@
+.qty{
+	display: flex;
+	align-items: center;
+	user-select: none;
+	i{
+		cursor: pointer;
+	}
+} 
+.qty__minus,
+.qty__plus{
+	width: 36px; height: 26px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+.qty__value{
+	display: inline-block;
+	width: 62px;
+	height: 41px;
+	margin: 0 20px;
+	padding: 5px;
+	vertical-align: middle;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	outline: none;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 31px;
+	color: rgba(#000000, .5);
+	text-align: center;
+	&:focus,
+	&:hover{
+		outline: none;
+	}
+}
