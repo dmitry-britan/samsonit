@@ -239,6 +239,26 @@ $sprites: (
 			total_height: 196,
 		),
 	),
+	"multy": (
+		normal: (
+			x: 102,
+			y: 25,
+			width: 7,
+			height: 8,
+			image: "sprites.png",
+			total_width: 132,
+			total_height: 98,
+		),
+		retina: (
+			x: 204,
+			y: 50,
+			width: 14,
+			height: 16,
+			image: "sprites@2x.png",
+			total_width: 264,
+			total_height: 196,
+		),
+	),
 	"next-down": (
 		normal: (
 			x: 56,
@@ -381,26 +401,6 @@ $sprites: (
 	),
 	"product-compare-alt": (
 		normal: (
-			x: 69,
-			y: 65,
-			width: 21,
-			height: 18,
-			image: "sprites.png",
-			total_width: 132,
-			total_height: 98,
-		),
-		retina: (
-			x: 138,
-			y: 130,
-			width: 42,
-			height: 36,
-			image: "sprites@2x.png",
-			total_width: 264,
-			total_height: 196,
-		),
-	),
-	"product-compare": (
-		normal: (
 			x: 111,
 			y: 0,
 			width: 21,
@@ -412,6 +412,26 @@ $sprites: (
 		retina: (
 			x: 222,
 			y: 0,
+			width: 42,
+			height: 36,
+			image: "sprites@2x.png",
+			total_width: 264,
+			total_height: 196,
+		),
+	),
+	"product-compare": (
+		normal: (
+			x: 69,
+			y: 65,
+			width: 21,
+			height: 18,
+			image: "sprites.png",
+			total_width: 132,
+			total_height: 98,
+		),
+		retina: (
+			x: 138,
+			y: 130,
 			width: 42,
 			height: 36,
 			image: "sprites@2x.png",

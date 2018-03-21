@@ -55,6 +55,7 @@
 		background: #fff url('../images/login-bg.jpg') right bottom no-repeat;
 	}
 	&--news,
+	&--cart,
 	&--specials{
 		@include media('<640px'){
 			padding: 30px 0;

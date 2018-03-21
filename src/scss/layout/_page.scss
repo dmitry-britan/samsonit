@@ -2,6 +2,13 @@
 	&.page--checkout{
 		background: #fff;
 	}
+	&.page--cart{
+		@include media('<768px'){
+			.section--recommend{
+				display: none;
+			}
+		}
+	}
 }
 .page__inner{
 	display: flex;
