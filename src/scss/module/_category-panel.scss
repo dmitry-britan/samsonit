@@ -6,10 +6,16 @@
 	align-items: center;
 	border-radius: 3px;
 	background-color: rgba(#ffffff, .8);
+	@include media('<992px'){
+		margin-bottom: 20px;
+	}
 }
 .category-panel__filter{
 	display: flex;
 	width: calc(100% - 200px);
+	@include media('<660px'){
+		display: none;
+	}
 }
 .category-panel__filter-reset{
 	font-size: 14px;

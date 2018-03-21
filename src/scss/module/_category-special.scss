@@ -9,6 +9,9 @@
 	@include media('<1360px'){
 		width: percentage(1/2);
 	}
+	@include media('<992px'){
+		display: none;
+	}
 }
 .category-special__inner{
 	position: relative;

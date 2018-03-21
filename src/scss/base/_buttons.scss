@@ -60,6 +60,15 @@
 		color: $color__primary;
 	}
 }
+.btn--bordered{
+	border: 1px solid $color__primary;
+	color: $color__primary;
+	background: transparent;
+	&:hover{
+		background: $color__primary;
+		color: #fff;
+	}
+}
 .btn--choose-shop{
 	display: block;
 	padding: 14px 24px 14px 12px;

@@ -26,6 +26,12 @@
 		@include media('<1360px'){
 			width: percentage(1/2);
 		}
+		@include media('<660px'){
+			width: percentage(1/1);
+			max-width: 480px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 .product{

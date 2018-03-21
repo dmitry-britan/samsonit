@@ -54,6 +54,9 @@
 	text-decoration: underline;
 	letter-spacing: 0.8px;
 	color: #000;
+	@include media('<1200px'){
+		display: none;
+	}
 
 	span{
 		margin-right: 30px;
