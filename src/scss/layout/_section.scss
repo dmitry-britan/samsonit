@@ -54,6 +54,11 @@
 		margin-bottom: 250px;
 		background: #fff url('../images/login-bg.jpg') right bottom no-repeat;
 	}
+	&--specials{
+		@include media('<640px'){
+			padding: 30px 0;
+		}
+	}
 }
 
 .section__title{

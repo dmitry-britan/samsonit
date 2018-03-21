@@ -25,6 +25,11 @@
 	text-transform: uppercase;
 	color: $color__primary;
 	letter-spacing: 0.71px;
+  @include media('<640px'){
+		margin: 0 0 25px;
+		font-size: 28px;
+		line-height: 30px;
+  }
 }
 .page__content{
 	flex-grow: 1;
