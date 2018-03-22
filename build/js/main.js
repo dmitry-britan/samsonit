@@ -63,6 +63,21 @@ function changeQty(selector, minValue) {
 
 changeQty('.js-qty', 1);
 
+(function() {
+	$('a[href="#search"]').on('click', function(event) {
+		event.preventDefault();
+
+		$('.search-modal').addClass('open');
+		$('.search-modal > form > input[type="search"]').focus();
+	});
+
+	$('.search-modal').on('click keyup', function(event) {
+		if (event.target === event.currentTarget || event.target.className === 'close' || event.keyCode === 27) {
+			$(event.currentTarget).removeClass('open');
+		}
+	});
+})();
+
 //
 // Tabs
 //---------------------------------------------------------------------------------------
