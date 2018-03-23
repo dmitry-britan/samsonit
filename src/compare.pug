@@ -1,0 +1,93 @@
+extends pug/base
+
+append vars
+  - body.classList.push('page page--compare')
+
+block content
+  .compare
+    .compare__inner.js-scroll-compare
+      .compare__top
+        .compare__title Сравнение товаров
+        .compare__products
+          include pug/db/products-6
+          each product, index in products
+            .compare__product
+              .compare__product-remove Удалить
+              .compare__product-inner
+                include pug/parts/product-compare
+              .compare__product-buy 
+                a(href="").compare__product-buy-button Купить
+      .compare__bottom
+        .compare__properties
+          .compare__row
+            .compare__cell Артикул
+            .compare__cell 42N*001
+            .compare__cell 42N*001
+            .compare__cell 42N*001
+            .compare__cell 42N*001
+            .compare__cell 42N*001
+            .compare__cell 42N*001
+          .compare__row
+            .compare__cell Коллекция
+            .compare__cell LITE-BOX
+            .compare__cell LITE-BOX
+            .compare__cell LITE-BOX
+            .compare__cell LITE-BOX
+            .compare__cell LITE-BOX
+            .compare__cell LITE-BOX
+          .compare__row
+            .compare__cell Объем
+            .compare__cell 38.0 л.
+            .compare__cell 38.0 л.
+            .compare__cell 38.0 л.
+            .compare__cell 38.0 л.
+            .compare__cell 38.0 л.
+            .compare__cell 38.0 л.
+          .compare__row
+            .compare__cell Вес
+            .compare__cell 2.20 кг.
+            .compare__cell 2.20 кг.
+            .compare__cell 2.20 кг.
+            .compare__cell 2.20 кг.
+            .compare__cell 2.20 кг.
+            .compare__cell 2.20 кг.
+          .compare__row
+            .compare__cell Ширина
+            .compare__cell 40 см.
+            .compare__cell 40 см.
+            .compare__cell 40 см.
+            .compare__cell 40 см.
+            .compare__cell 40 см.
+            .compare__cell 40 см.
+          .compare__row
+            .compare__cell Высота
+            .compare__cell 55 см.
+            .compare__cell 55 см.
+            .compare__cell 55 см.
+            .compare__cell 55 см.
+            .compare__cell 55 см.
+            .compare__cell 55 см.
+          .compare__row
+            .compare__cell Глубина
+            .compare__cell 20 см
+            .compare__cell 20 см
+            .compare__cell 20 см
+            .compare__cell 20 см
+            .compare__cell 20 см
+            .compare__cell 20 см
+          .compare__row
+            .compare__cell Материал
+            .compare__cell 100% Curv - разработано Propex Германия.
+            .compare__cell 100% Curv - разработано Propex Германия.
+            .compare__cell 100% Curv - разработано Propex Германия.
+            .compare__cell 100% Curv - разработано Propex Германия.
+            .compare__cell 100% Curv - разработано Propex Германия.
+            .compare__cell 100% Curv - разработано Propex Германия.
+          .compare__row
+            .compare__cell Гарантия
+            .compare__cell Ограниченная всемирная 10 лет
+            .compare__cell Ограниченная всемирная 10 лет
+            .compare__cell Ограниченная всемирная 10 лет
+            .compare__cell Ограниченная всемирная 10 лет
+            .compare__cell Ограниченная всемирная 10 лет
+            .compare__cell Ограниченная всемирная 10 лет

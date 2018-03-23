@@ -19,3 +19,12 @@
 		});
 	}
 })();
+
+(() => {
+	let $scrollable = $('.js-scroll-compare');
+
+	$scrollable.jScrollPane();
+	if ($scrollable.length) {
+		$scrollable.jScrollPane();
+	}
+})();

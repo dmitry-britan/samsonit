@@ -721,3 +721,12 @@ if ($('.js-product').length) {
 		});
 	}
 })();
+
+(function() {
+	var $scrollable = $('.js-scroll-compare');
+
+	$scrollable.jScrollPane();
+	if ($scrollable.length) {
+		$scrollable.jScrollPane();
+	}
+})();
