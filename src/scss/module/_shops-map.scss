@@ -6,6 +6,9 @@
 }
 .shops-map__content{
 	width: 600px;
+	@include media('<1200px'){
+		width: 420px;
+	}
 }
 .shops-map__map{
 	flex-grow: 1;
@@ -23,6 +26,7 @@
 	line-height: 30px;
 	text-transform: uppercase;
 	text-decoration: none;
+	transition: all 300ms linear;
 	color: #bfbdc7;
 	&.is--active{
 		font-weight: 800;
@@ -45,6 +49,10 @@
 	padding: 45px 80px 25px;
 	transition: all 300ms linear;
 	cursor: pointer;
+	@include media('<1200px'){
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 	&.is--active,
 	&:hover{
 		background-color: #f8f9f9;

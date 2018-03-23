@@ -25,6 +25,9 @@
     .shops-map__list &{
         top: 0; right: 50px;
         background-color: rgba(#004c93, .12);
+        @include media('<1200px'){
+            right: 10px;
+        }
     }
 }
 

@@ -80,6 +80,13 @@
 	border: 1px solid rgba(#000000, .5);
 	text-transform: none;
 	color: rgba(#000000, .5);
+	@include media('<1660px'){
+		font-size: 16px;
+		line-height: 24px;
+	}
+	@include media('<1300px'){
+		max-width: 430px;
+	}
 
 	.icon{
 		margin-right: 10px;

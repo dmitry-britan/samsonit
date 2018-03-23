@@ -77,6 +77,13 @@
 		text-transform: uppercase;
 		letter-spacing: 0.71px;
 		color: #000000;
+		@include media('<600px'){
+			margin-bottom: 30px;
+			font-size: 18px;
+			font-weight: 800;
+			line-height: 24px;
+			text-transform: uppercase;
+		}
 	}
 	&.is--primary{
 		color: $color__primary;

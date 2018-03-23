@@ -1,13 +1,23 @@
 .checkout{
 	display: flex;
 	justify-content: space-between;
-	width: 1500px;
+	max-width: 1500px;
 	margin: 0 auto;
+	
+	@include media('<900px'){
+		width: 100%;
+		flex-wrap: wrap;
+	}
 }
 .checkout__main{
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
+	width: calc(100% - 470px);
+	
+	@include media('<900px'){
+		width: 100%;
+	}
 }
 .checkout__sidebar{
 	display: flex;
@@ -15,10 +25,45 @@
 	justify-content: space-between;
 	flex-basis: 420px;
 	margin-left: 50px;
+	@include media('<900px'){
+		margin-left: 0;
+	}
 }
+.checkout__user{
+	display: flex;
+	width: 100%;
+	margin-bottom: 30px;
+	&.is--mobile-only{
+		display: none;
+		@include media('<900px'){
+			display: flex;
+		}
+	}
+}
+.checkout__user-new,
+.checkout__user-old{
+	width: 50%;
+	padding: 0 15px;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #848484;
+	letter-spacing: 0.34px;
+	text-align: center;
+	&.is--active{
+		color: $color__primary;
+	}
+}
+
 .checkout__usesr-form,
 .checkout__login-form{
 	margin-bottom: 50px;
+}
+.checkout__login-form{
+	@include media('<900px'){
+		display: none;
+	}
 }
 .checkout__checkbox{
 	margin-bottom: 20px;
@@ -78,6 +123,17 @@
 		line-height: 30px;
 		text-transform: uppercase;
 		text-align: center;
+		@include media('<1560px'){
+			font-size: 21px;
+			line-height: 24px;
+			max-width: 480px;
+		}
+		@include media('<=480px'){
+			padding: 12px 15px;
+			font-size: 20px;
+			line-height: 21px;
+			text-transform: none;
+		}
 	}
 }
 .checkout__title{
@@ -93,6 +149,9 @@
 	display: flex;
 	justify-content: space-between;
 	flex-grow: 1;
+	@include media('<1300px'){
+	flex-wrap: wrap;
+	}
 }
 .checkout__delivery,
 .checkout__payment{
@@ -100,8 +159,18 @@
 	width: 40%;
 	flex-direction: column;
 	justify-content: space-between;
+	@include media('<1300px'){
+		width: 100%;
+	}
+	@include media('<900px'){
+		margin-bottom: 30px;
+	}
 }
 
 .checkout__delivery{
 	width: 46%;
+	@include media('<1300px'){
+		width: 100%;
+		margin-bottom: 30px;
+	}
 }

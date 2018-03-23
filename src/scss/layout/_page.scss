@@ -9,6 +9,18 @@
 			}
 		}
 	}
+	&.page--product{
+		@include media('<992px'){
+			.product-single{
+				margin-top: 40px;
+			}
+		}
+		@include media('<840px'){
+			.section--recommend{
+				display: none;
+			}
+		}
+	}
 }
 .page__inner{
 	display: flex;

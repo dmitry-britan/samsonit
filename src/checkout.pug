@@ -8,6 +8,10 @@ block content
     h1.section__title.is--large.is--centered
       | Контактные данные
     .checkout
+      .checkout__user.is--mobile-only
+        .checkout__user-new.is--active.js-checkout-user-new Я новый клиент
+        .checkout__user-old.js-checkout-user-old Я постоянный клиент
+
       .checkout__main
         .checkout__user-form
           form(action="").form.js--client-form
@@ -59,7 +63,7 @@ block content
                 input(id="payment-3", type="radio", name="payment").checkbox
                 label(for="payment-3") Наличными 
             .checkout__action
-              a(href="").btn.btn--grey продолжить покупки
+              a(href="").btn.btn--grey Продолжить покупки
 
             
       .checkout__sidebar

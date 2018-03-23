@@ -11,6 +11,7 @@
 	flex-grow: 1;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-left: -20px;
 	img{
 		display: block;
 		max-width: 100%;
@@ -18,7 +19,15 @@
 	}
 }
 .lookbook__photos-item{
-	max-width: 424px;
+	width: percentage(1/3);
+	padding-left: 20px;
+	@include media('<1500px'){
+		width: percentage(1/2);
+		margin-bottom: 20px;
+	}
+	@include media('<960px'){
+		width: percentage(1/1);
+	}
 	.is--page &{
 		margin-bottom: 20px;
 	}

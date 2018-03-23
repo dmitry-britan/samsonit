@@ -149,7 +149,7 @@ if ($('.js-thumbs-slider').length) {
 	$('.js-thumbs-slider').slick({
 		arrows: true,
 		vertical: true,
-		infinite: false,
+		infinite: true,
 		speed: 400,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -157,22 +157,36 @@ if ($('.js-thumbs-slider').length) {
 		nextArrow: $('.js-thumbs-slider-next'),
 		prevArrow: $('.js-thumbs-slider-prev'),
 		responsive: [{
-			breakpoint: 768,
+			breakpoint: 1500,
 			settings: {
 				vertical: false,
-				slidesToShow: 3
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				adaptiveHeight: false
 			}
 		}, {
-			breakpoint: 600,
+			breakpoint: 1184,
 			settings: {
 				vertical: false,
-				slidesToShow: 2
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				adaptiveHeight: false
 			}
 		}, {
-			breakpoint: 480,
+			breakpoint: 992,
 			settings: {
 				vertical: false,
-				slidesToShow: 1
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				adaptiveHeight: false
+			}
+		}, {
+			breakpoint: 660,
+			settings: {
+				vertical: false,
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				adaptiveHeight: false
 			}
 		}]
 	});
