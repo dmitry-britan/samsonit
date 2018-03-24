@@ -1,5 +1,7 @@
 nav.breadcrumbs
 	-var current = "";
-	each item, i in breadcrumbs
-		-if (i ===  breadcrumbs.length - 1) { current = " is--current" }
-		a(href="",class="breadcrumbs__item"+current)= item
+	ul.breadcrumbs__list
+		each item, i in breadcrumbs
+			-if (i ===  breadcrumbs.length - 1) { current = " is--current" }
+				li(class="breadcrumbs__item"+current)
+					a(href="").breadcrumbs__link= item
