@@ -83,16 +83,21 @@ block content
             | Samsonite 
             span - V22*305
           .product-single__photos
-            a(href="").product-single__photo
-              img(src="images/product-single/main.jpg", alt="")
+            .product-single__photo 
+              .product-single__photo-inner
+                .product-single__photo-slider.js-slider-product-single
+                  each i in [1,2,3,4,5]
+                    .product-single__photo-item
+                      img(src="images/product-single/main.jpg", alt="")
             .product-single__thumbs
               button.product-single__thumbs-control.product-single__thumbs-control--prev.js-thumbs-slider-prev
                 i.fa.fa-angle-up
-              .product-single__thumbs-inner.js-thumbs-slider
+
+              .product-single__thumbs-inner.js-slider-product-single-nav
                 each i in [1,2,3,4,5]
-                  -var isActive = (i===1)?'is--active':'';
-                  a(href="images/product-single/t-"+i+".jpg", rel="gallery", class="product-single__thumbs-item "+isActive)
-                    img(src="images/product-single/t-"+i+".jpg", alt="")
+                  .product-single__thumbs-item
+                    .product-single__thumbs-item-inner
+                      img(src="images/product-single/t-"+(i)+".jpg", alt="")
               button.product-single__thumbs-control.product-single__thumbs-control--next.js-thumbs-slider-next
                 i.fa.fa-angle-down
 

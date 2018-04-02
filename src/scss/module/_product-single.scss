@@ -14,6 +14,9 @@
 		flex-direction: column;
 		padding: 20px 40px;
 	}
+	@include media('<660px'){
+		padding: 20px;
+	}
 }
 .product-single__media{
 	width: 50%;
@@ -56,14 +59,23 @@
 .product-single__photo{
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	flex-grow: 1;
+	width: calc(100% - 171px);
 	border: 1px solid #f2f2f2;
 	@include media('<1500px'){
 		width: 100%;
 		margin: 0 auto 12px;
 		text-align: center;
 	}
+	@include media('<660px'){
+		margin-bottom: 24px;
+	}
+}
+.product-single__photo-inner{
+	max-width: 100%;
+	overflow: hidden;
+}
+.product-single__photo-item{
+	outline: none;
 }
 
 .product-single__details{
@@ -71,6 +83,8 @@
 	padding-left: 50px;
 	
 	@include media('<992px'){
+		display: flex;
+		flex-direction: column;
 		order: 2;
 		width: 100%;
 		padding-left: 0;
@@ -93,6 +107,11 @@
 			margin: 0 0 30px;
 			font-size: 26px;
 			line-height: 32px;
+		}
+	}
+	@include media('<660px'){
+		&.is--mobile-only{
+			margin-bottom: 10px;
 		}
 	}
 	span{
@@ -270,6 +289,9 @@
 		flex-direction: column;
 		align-items: stretch;
 	}
+	@include media('<660px'){
+		order: -1;
+	}
 }
 .product-single__qty-buy{
 	display: flex;
@@ -279,9 +301,13 @@
 .product-single__price{
 	display: flex;
 	align-items: flex-end;
+	flex-wrap: wrap;
 	
 	@include media('<1580px'){
 		margin-bottom: 20px;
+	}
+	@include media('<660px'){
+		justify-content: center;
 	}
 }
 .product-single__price-new{
@@ -333,6 +359,12 @@
 	font-size: 22px;
 	line-height: 24px;
 }
+.product-single__qty-buy{
+	@include media('<660px'){
+		display: flex;
+		justify-content: center;
+	}
+}
 .product-single__qty{
 	width: 56px;
 	height: 56px;
@@ -349,17 +381,24 @@
 	@include media('<1580px'){
 		margin-left: 0;
 	}
+	@include media('<480px'){
+		display: none;
+	}
 }
 .product-single__buy{
 	display: inline-block;
 	block-size: unset;
-	padding: 18px 56px;
+	min-width: 225px;
+	padding: 18px 20px;
 	font-size: 18px;
 	font-weight: 800;
 	line-height: 20px;
 	
 	@include media('<1580px'){
 		margin-right: auto;
+	}
+	@include media('<480px'){
+		margin-right: 0;
 	}
 }
 
@@ -390,14 +429,28 @@
 		padding: 0 30px;
 	}
 }
+.product-single__thumbs-inner{
+	.slick-list{
+		@include media('<660px'){
+			display: none!important;
+			position: absolute;
+			width: 0;
+			height: 0;
+			visibility: hidden;
+		}
+	}
+}
 .product-single__thumbs-item{
 	display: block;
 	display: flex!important;
 	width: 146px!important; height: 146px!important;
+	justify-content: center;
+	align-items: center;
 	margin-bottom: 8px;
 	border: 1px solid #ebebeb;
 	transition: all 300ms linear;
-	&.is--active,
+	outline: none;
+	&.slick-current,
 	&:hover{
 		border: 1px solid $color__primary;
 	}
@@ -413,6 +466,9 @@
 	color: $color__primary;
 	text-align: center;
 	transition: color 300ms linear;
+	@include media('<660px'){
+		display: none!important;
+	}
 	i {
 		font-size: 24px;
 	}
