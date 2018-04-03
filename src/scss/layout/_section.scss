@@ -46,6 +46,17 @@
 	&--lookbook{
 		padding: 0;
 	}
+	&--about{
+		@include media('<480px'){
+			padding: 30px 0;
+		}
+	}
+	&--shops,
+	&--history{
+		@include media('<900px'){
+			padding: 0;
+		}
+	}
 	&--contacts{
 		padding: 0;
 		margin-bottom: 90px;

@@ -2,10 +2,17 @@
 	max-width: 1562px;
 	margin: 0 auto;
 }
-.about-us__inner{}
+.about-us__inner{
+	@include media('<900px'){
+		padding: 0 15px;
+	}
+}
 .about-us__photo{
 	position: relative;
 	margin-bottom: 72px;
+	@include media('<800px'){
+		margin-bottom: 36px;
+	}
 
 	img{
 		display: block;
@@ -24,9 +31,18 @@
 	text-transform: uppercase;
 	letter-spacing: 0.8px;
 	color: #ffffff;
+	@include media('<800px'){
+		position: static;
+		padding: 0;
+		margin: 0 0 20px;
+		font-size: 28px;
+		background: transparent;
+		text-align: right;
+		color: $color__primary;
+	}
 }
 .about-us__content{
-	width: 884px;
+	max-width: 884px;
 	margin: 0 auto;
 	font-size: 18px;
 	font-weight: 400;
@@ -41,12 +57,26 @@
 		line-height: 30px;
 		letter-spacing: 0.45px;
 		color: rgba(#000000, .7);
+
+		@include media('<800px'){
+			padding: 0;
+			margin-bottom: 36px;
+			font-size: 14px;
+			line-height: 24px;
+		}
 	}
 	blockquote{
 		position: relative;
 		padding: 0 72px;
 		margin: 0 0 72px;
 		font-weight: 700;
+
+		@include media('<800px'){
+			padding: 0 0 0 30px;
+			margin-bottom: 36px;
+			font-size: 14px;
+			line-height: 24px;
+		}
 		&:after{
 			content: '';
 			position: absolute;

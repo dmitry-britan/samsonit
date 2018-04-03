@@ -24,16 +24,16 @@
 }
 .page__inner{
 	display: flex;
-	flex-direction: row-reverse;
+	// flex-direction: row-reverse;
 	flex-wrap: wrap;
 	max-width: 1680px;
 	min-height: 60vh;
 	margin: 0 auto;
 	padding-bottom: 100px;
 	justify-content: space-between;
-	@include media('<1600px'){
-		flex-direction: column-reverse;
-	}
+	// @include media('<1600px'){
+	// 	flex-direction: column-reverse;
+	// }
 }
 .page__header{
 	display: flex;
