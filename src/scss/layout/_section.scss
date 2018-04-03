@@ -45,7 +45,11 @@
 		padding: 0;
 		margin-bottom: 90px;
 	}
-	&--personal{}
+	&--personal{
+		@include media('<660px'){
+			padding: 30px 0;
+		}
+	}
 	&--shops-map{
 		padding: 50px 0 0;
 		margin-bottom: 80px;

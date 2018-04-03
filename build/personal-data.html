@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1522655277594">
+    <link rel="stylesheet" href="css/main.css?v=1522753401532">
   </head>
   <body class="page page--personal-data">
     <header class="header">
@@ -557,23 +557,26 @@
                   <form class="personal-block__form" action="">
                     <div class="personal-block__form-field">
                       <label class="personal-block__form-label">ФИО</label>
-                      <input class="personal-block__form-input" type="text" name="name" disabled value="Иванова Наталья Викторовна">
+                      <input class="personal-block__form-input" type="text" name="name" value="Иванова Наталья Викторовна">
                       <button class="personal-block__form-action" type="submit">Изменить</button>
                     </div>
                     <div class="personal-block__form-field">
                       <label class="personal-block__form-label">Email</label>
-                      <input class="personal-block__form-input" type="email" name="email" disabled value="client@gmail.com">
+                      <input class="personal-block__form-input" type="email" name="email" value="client@gmail.com">
                       <button class="personal-block__form-action" type="submit">Изменить</button>
                     </div>
                     <div class="personal-block__form-field">
                       <label class="personal-block__form-label">Телефон</label>
-                      <input class="personal-block__form-input" type="text" name="phone" disabled value="+38 (099) 555 44 33">
+                      <input class="personal-block__form-input" type="text" name="phone" value="+38 (099) 555 44 33">
                       <button class="personal-block__form-action" type="submit">Изменить</button>
                     </div>
                     <div class="personal-block__form-field">
                       <label class="personal-block__form-label">Адрес доставки</label>
-                      <textarea class="personal-block__form-input" name="address" disabled cols="30" rows="10">Ивано - Франковска обл., г. Ивано-Франковск ул. Победы красной армии в Воронеже,  дом. 459 К, 3 корпус, кв. 543</textarea>
+                      <textarea class="personal-block__form-input" name="address" cols="30" rows="10">Ивано - Франковска обл., г. Ивано-Франковск ул. Победы красной армии в Воронеже,  дом. 459 К, 3 корпус, кв. 543</textarea>
                       <button class="personal-block__form-action" type="submit">Изменить</button>
+                    </div>
+                    <div class="personal-block__action is--mobile-only">
+                      <button class="personal-block__action-btn" type="submit">Сохранить</button>
                     </div>
                   </form>
                 </div>
@@ -635,7 +638,40 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1522655277602"></script>
-    <script src="js/main.js?v=1522655277602"></script>
+    <script src="js/vendor.js?v=1522753401540"></script>
+    <script src="js/main.js?v=1522753401540"></script>
+    <script>
+      (function() {
+        $('.personal-block__form-action').on('click', function(event) {
+          event.preventDefault();
+          var btnText = $(this).text();
+          var $parent = $(this).parent();
+      
+          // Меняем активное состояние у текущего поля формы
+          $parent.toggleClass('is--active')
+            .find('.personal-block__form-input').attr('disabled', function(index, attr) {
+                return attr == 'disabled' ? false : true;
+            });
+          
+          // Меняем текст кнопки
+          $(this).text((btnText === 'Изменить')?'Сохранить':'Изменить');
+        });
+      
+        // Переключаем активное состояние в зависимости от ширины
+        if (matchMedia) {
+          function checkMatches(){
+            var mq = window.matchMedia( "(max-width: 1099px)" );
+      
+            if (mq.matches) {
+              $('.personal-block__form-input').removeAttr('disabled').parent().addClass('is--active');
+            } else {
+              $('.personal-block__form-input').attr('disabled', true).parent().removeClass('is--active');
+            }
+          }
+      
+          $(window).on('load resize', checkMatches);
+        }
+      })();
+    </script>
   </body>
 </html>

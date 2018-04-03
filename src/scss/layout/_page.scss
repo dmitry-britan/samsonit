@@ -25,11 +25,15 @@
 .page__inner{
 	display: flex;
 	flex-direction: row-reverse;
+	flex-wrap: wrap;
 	max-width: 1680px;
 	min-height: 60vh;
 	margin: 0 auto;
 	padding-bottom: 100px;
 	justify-content: space-between;
+	@include media('<1600px'){
+		flex-direction: column-reverse;
+	}
 }
 .page__header{
 	display: flex;
@@ -58,6 +62,11 @@
 	margin-right: 65px;
 	flex-basis: 320px;
 	flex-shrink: 0;
+	@include media('<1600px'){
+		padding: 0;
+		margin: 0 0 20px;
+		flex-basis: 100%;
+	}
 }
 .page__breadcrumbs{}
 .page__text{
@@ -67,6 +76,15 @@
 .page__body{
 	padding: 55px 110px;
 	background-color: #ffffff;
+	@include media('<1200px'){
+		padding: 40px 60px;
+	}
+	@include media('<700px'){
+		padding: 20px;
+	}
+	@include media('<480px'){
+		padding: 20px 10px;
+	}
 }
 .page__action{
 	display: flex;

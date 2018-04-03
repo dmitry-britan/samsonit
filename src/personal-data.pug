@@ -24,3 +24,35 @@ block content
           include pug/personal/menu
 
 block body-end
+  script.
+    (function() {
+      $('.personal-block__form-action').on('click', function(event) {
+        event.preventDefault();
+        var btnText = $(this).text();
+        var $parent = $(this).parent();
+
+        // Меняем активное состояние у текущего поля формы
+        $parent.toggleClass('is--active')
+          .find('.personal-block__form-input').attr('disabled', function(index, attr) {
+              return attr == 'disabled' ? false : true;
+          });
+        
+        // Меняем текст кнопки
+        $(this).text((btnText === 'Изменить')?'Сохранить':'Изменить');
+      });
+
+      // Переключаем активное состояние в зависимости от ширины
+      if (matchMedia) {
+        function checkMatches(){
+          var mq = window.matchMedia( "(max-width: 1099px)" );
+
+          if (mq.matches) {
+            $('.personal-block__form-input').removeAttr('disabled').parent().addClass('is--active');
+          } else {
+            $('.personal-block__form-input').attr('disabled', true).parent().removeClass('is--active');
+          }
+        }
+
+        $(window).on('load resize', checkMatches);
+      }
+    })();

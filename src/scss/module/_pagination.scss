@@ -33,6 +33,13 @@
 	margin-right: 10px;
 	border: 2px solid $color__primary;
 	background-color: #fff;
+	@include media('<660px'){
+		width: 41px;
+    height: 41px;
+    font-size: 26px;
+    line-height: 37px;
+    margin-right: 5px;
+	}
 }
 .pagination__item.is--ellipsis{
 	align-self: center;
@@ -44,6 +51,10 @@
 	line-height: 51px;
 	text-align: center;
 	color: $color__primary;
+	@include media('<660px'){
+		margin-right: 5px;
+		line-height: 41px;
+	}
 }
 .pagination__next-page{
 	padding: 28px 30px 28px 44px;
@@ -61,5 +72,8 @@
 	span{
 		margin-right: 30px;
 		text-decoration: underline;
+		@include media('<660px'){
+			margin-right: 20px;
+		}
 	}
 }
