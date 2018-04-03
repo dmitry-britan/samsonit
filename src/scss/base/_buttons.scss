@@ -44,6 +44,9 @@
 	font-weight: 700;
 	text-align: center;
 	color: $color__primary;
+	@include media('<480px'){
+		min-width: 260px;
+	}
 	&:hover{
 		border: 2px solid $color__primary;
 		background: $color__primary;

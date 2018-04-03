@@ -38,6 +38,11 @@
 			display: none;
 		}
 	}
+	.page--lookbook &{
+		@include media('<560px'){
+			padding: 30px 0;
+		}
+	}
 	&--lookbook{
 		padding: 0;
 	}

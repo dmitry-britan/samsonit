@@ -5,6 +5,10 @@
 	align-items: flex-start;
 	padding: 15px;
 	background: #fff;
+
+	@include media('<760px'){
+		flex-direction: column;
+	}
 }
 .lookbook__photos{
 	display: flex;
@@ -39,6 +43,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 10px 50px 10px 40px;
+
+	@include media('<760px'){
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	@include media('<560px'){
+		padding: 10px;
+	}
 }
 .lookbook__title{
 	margin: 40px 0 70px;
@@ -46,6 +58,9 @@
 	font-weight: 700;
 	line-height: 40px;
 	color: #000000;
+	@include media('<560px'){
+		margin: 20px 0;
+	}
 }
 .lookbook__text{
 	margin: 0 0 70px;
@@ -53,6 +68,9 @@
 	font-weight: 600;
 	line-height: 28px;
 	color: rgba(#000000, .8);
+	@include media('<560px'){
+		margin-bottom: 20px;
+	}
 }
 .lookbook__action{}
 .lookbook__action-btn{
@@ -72,5 +90,9 @@
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
-	padding: 50px 0 90px;
+	padding: 50px 0 90px 20px;
+	@include media('<560px'){
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 }
