@@ -3,11 +3,23 @@
 	align-self: flex-start;
 	align-items: center;
 	justify-content: space-between;
+	width: 100%;
 	padding: 40px 60px;
 	background-color: #004c93;
+
+	@include media('<1400px'){
+		padding: 40px;
+	}
+  @include media('<480px'){
+    flex-direction: column;
+  }
 }
 .contacts-block__worktime{}
-.contacts-block__phones{}
+.contacts-block__phones{
+  @include media('<480px'){
+    margin-bottom: 20px;
+	}
+}
 .contacts-block__phones-item{
 	font-size: 24px;
 	font-weight: 800;

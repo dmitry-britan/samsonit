@@ -8,6 +8,9 @@
 	@include media('<1460px'){
 		padding-right: 30px;
 	}
+	@include media('<480px'){
+		padding-right: 15px;
+	}
 }
 .header__menu{
 	margin-left: 30px;
@@ -31,7 +34,7 @@
 		margin-left: 30px;
 	}
 	@include media('<480px'){
-    margin-left: 15px;
+    margin: 0 auto;
 	}
 }
 .header__categories{
@@ -55,5 +58,8 @@
 	}
 	@include media('<860px'){
 		width: percentage(1/2);
+	}
+	@include media('<480px'){
+		width: auto;
 	}
 }

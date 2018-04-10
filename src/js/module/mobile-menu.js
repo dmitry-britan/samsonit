@@ -4,6 +4,7 @@
 class Menu {
 	constructor() {
 		this.closeMobileMenuOnOutOfClick();
+		this.toggleSubMenu();
 		$('.js-nav-toggle').on('click', () => {
 			this.toggleMenuVisibility();
 			this.toggleMenuTriggerClass();
@@ -15,6 +16,7 @@ class Menu {
 			"toggleMenuVisibility",
 			"toggleBodyBackground",
 			"toggleMenuTriggerClass",
+			"toggleSubMenu",
 			"closeMobileMenuOnOutOfClick",
 		] }] 
 	*/
@@ -26,6 +28,13 @@ class Menu {
 	}
 	toggleMenuTriggerClass() {
 		$('.js-nav-toggle').toggleClass('is-active');
+	}
+	toggleSubMenu() {
+		$('.mobile-nav__block-title').on('click', 'i', (event) => {
+			let $this = $(event.currentTarget);
+
+			$this.parents('.mobile-nav__block-nav').toggleClass('is--opened');
+		});
 	}
 	closeMobileMenuOnOutOfClick() {
 		$('body').mouseup((e) => {

@@ -1,0 +1,37 @@
+.search-mobile {
+	margin-bottom: 25px;
+}
+.search-mobile__form {
+	position: relative;
+	width: 100%;
+	height: 55px;
+	padding: 16px;
+	padding-right: 40px;
+	border-radius: 3px;
+	border: 1px solid #c8c8c8;
+}
+.search-mobile__input {
+	width: 100%;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	color: rgba(#6f6e72, .8);
+	letter-spacing: 0.11px;
+  outline: none;
+  border: 0px;
+
+  &:focus,
+  &:hover {
+    border: 0px;
+  }
+}
+
+.search-mobile__btn {
+	position: absolute;
+  right: 15px; bottom: 15px;
+	padding: 0;
+  outline: none;
+  border: 0;
+  background:transparent;
+}

@@ -5,93 +5,116 @@
 // MENU
 nav.mobile-nav
   .mobile-nav__inner
+    .mobile-nav__search
+      .search-mobile
+        form.search-mobile__form
+          input(type="search", value="", placeholder="Поиск", name="search").search-mobile__input
+          button(type="submit").search-mobile__btn 
+            i.icon.icon--search
+    a(href="").mobile-nav__login Войти в кабинет
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-1.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Чемоданы
-        ul.mobile-nav__list
-          -var items = ['Пластиковые', 'Тканевые', 'Чемоданы на 4х колесах', 'Чемоданы на 2х колесах', 'Чемоданы для детей'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Чемоданы
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Пластиковые', 'Тканевые', 'Чемоданы на 4х колесах', 'Чемоданы на 2х колесах', 'Чемоданы для детей'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
           
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-2.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Сумки
-        ul.mobile-nav__list
-          -var items = ['Дорожные сумки', 'Дорожные сумки ан калесах', 'Сумки для ноутбуков', 'Женские сумки', 'Мужские сумки', 'Бьюти кейсы'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Сумки
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Дорожные сумки', 'Дорожные сумки ан калесах', 'Сумки для ноутбуков', 'Женские сумки', 'Мужские сумки', 'Бьюти кейсы'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-3.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Рюкзаки
-        ul.mobile-nav__list
-          -var items = ['Рюкзаки на колосах ', 'Рюкзаки для ноутбуков', 'Женские рюкзаки', 'Мужские рюкзаки', 'Рюкзаки для детей'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Рюкзаки
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Рюкзаки на колосах ', 'Рюкзаки для ноутбуков', 'Женские рюкзаки', 'Мужские рюкзаки', 'Рюкзаки для детей'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-4.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Бизнес
-        ul.mobile-nav__list
-          -var items = ['Пордпледы для костюмов ', 'Портфели', 'Рюкзаки для ноутбуков', 'Сумки для ноутбуков'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Бизнес
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Пордпледы для костюмов ', 'Портфели', 'Рюкзаки для ноутбуков', 'Сумки для ноутбуков'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-5.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Кожгалантерея
-        ul.mobile-nav__list
-          -var items = ['Кошельки', 'Женские кошельки', 'Мужские  кошельки'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Кожгалантерея
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Кошельки', 'Женские кошельки', 'Мужские  кошельки'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-6.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Дорожные аксессуары
-        ul.mobile-nav__list
-          -var items = ['Чехлы для чемоданов', 'Зонты ', 'Подушки для путишествий ', 'Ремни для чемоданов', 'Повязки для сна'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Дорожные аксессуары
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Чехлы для чемоданов', 'Зонты ', 'Подушки для путишествий ', 'Ремни для чемоданов', 'Повязки для сна'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner
         a(href="").mobile-nav__block-icon
           img(src="images/menu/m-7.jpg", alt="")
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Коллекции
-        ul.mobile-nav__list
-          -var items = ['Cabin size', 'Limited Edition', 'Cross collection'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Коллекции
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['Cabin size', 'Limited Edition', 'Cross collection'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
     .mobile-nav__block
       .mobile-nav__block-inner.is--no-icon.is--two-column
-        h4.mobile-nav__block-title
-          a.mobile-nav__block-title-link(href='catalog.html') Компания
-        ul.mobile-nav__list
-          -var items = ['О нас', 'Гарантия и сервия', 'Новости', 'Контакты', 'Магазины', 'Lookbook'];
-          each item in items
-            li.mobile-nav__item
-              a.mobile-nav__link(href='catalog.html')= item
+        nav.mobile-nav__block-nav
+          h4.mobile-nav__block-title
+            a.mobile-nav__block-title-link(href='catalog.html') Компания
+            i.icon.icon--arrow-up
+          ul.mobile-nav__list
+            -var items = ['О нас', 'Гарантия и сервия', 'Новости', 'Контакты', 'Магазины', 'Lookbook'];
+            each item in items
+              li.mobile-nav__item
+                a.mobile-nav__link(href='catalog.html')= item
 
     .mobile-nav__block
       .mobile-nav__block-inner.is--contacts

@@ -1,8 +1,17 @@
 .site-actions{
 	display: flex;
 	justify-content: space-between;
+	@include media('<480px'){
+		justify-content: flex-end;
+	}
 }
 .site-actions__item{
 	position: relative;
 	padding: 38px 0;
+	@include media('<480px'){
+		display: none;
+		&:last-child{
+			display: block;
+		}
+	}
 }

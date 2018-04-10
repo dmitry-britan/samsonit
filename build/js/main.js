@@ -368,6 +368,7 @@ var Menu = function() {
 		_classCallCheck(this, Menu);
 
 		this.closeMobileMenuOnOutOfClick();
+		this.toggleSubMenu();
 		$('.js-nav-toggle').on('click', function() {
 			_this.toggleMenuVisibility();
 			_this.toggleMenuTriggerClass();
@@ -379,6 +380,7 @@ var Menu = function() {
  		"toggleMenuVisibility",
  		"toggleBodyBackground",
  		"toggleMenuTriggerClass",
+ 		"toggleSubMenu",
  		"closeMobileMenuOnOutOfClick",
  	] }] 
  */
@@ -397,6 +399,15 @@ var Menu = function() {
 		key: 'toggleMenuTriggerClass',
 		value: function toggleMenuTriggerClass() {
 			$('.js-nav-toggle').toggleClass('is-active');
+		}
+	}, {
+		key: 'toggleSubMenu',
+		value: function toggleSubMenu() {
+			$('.mobile-nav__block-title').on('click', 'i', function(event) {
+				var $this = $(event.currentTarget);
+
+				$this.parents('.mobile-nav__block-nav').toggleClass('is--opened');
+			});
 		}
 	}, {
 		key: 'closeMobileMenuOnOutOfClick',
