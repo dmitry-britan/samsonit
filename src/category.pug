@@ -54,69 +54,136 @@ block content
       include pug/parts/filter
 block body-end
   script.
-    var $range = $(".js-price-slider"),
-    $from = $(".js-price-from"),
-    $to = $(".js-price-to"),
-    range,
-    min = 0,
-    max = 40000,
-    from = 3000,
-    to = 20000;
-
-    var updateValues = function () {
-        $from.prop("value", from);
-        $to.prop("value", to);
-    };
-
-    $range.ionRangeSlider({
-        type: "double",
-        min: min,
-        max: max,
-        prettify_enabled: false,
-        grid: false,
-        from: from,
-        to: to,
-        hide_min_max: true,
-        hide_from_to: true,
-        onChange: function (data) {
-            from = data.from;
-            to = data.to;
-            
-            updateValues();
-        }
-    });
-
-    range = $range.data("ionRangeSlider");
-
-    var updateRange = function () {
-        range.update({
-            from: from,
-            to: to
+    function RangeSliderFactory(options){
+        factory = this;
+        factory.slider = options.slider;
+        factory.slider_from = options.slider_from;
+        factory.slider_to = options.slider_to;
+        factory.range = options.range;
+        factory.min = options.min;
+        factory.max = options.max;
+        factory.from = options.from;
+        factory.to = options.to;
+        
+        runRangeSlider(factory);
+    }
+    function runRangeSlider(factory){
+        factory.updateValues = function () {
+            factory.slider_from.prop("value", factory.from);
+            factory.slider_to.prop("value", factory.to);
+        };
+        factory.slider.ionRangeSlider({
+            type: "double",
+            min: factory.min,
+            max: factory.max,
+            prettify_enabled: false,
+            grid: false,
+            from: factory.from,
+            to: factory.to,
+            hide_min_max: true,
+            hide_from_to: true,
+            onChange: function (data) {
+                factory.from = data.from;
+                factory.to = data.to;
+                
+                factory.updateValues();
+            }
         });
+        factory.range = factory.slider.data("ionRangeSlider");
+
+        factory.updateRange = function() {
+            factory.range.update({from: factory.from, to: factory.to})
+        }
+
+        factory.slider_from.on("change", function (event) {
+            factory.from = +$(event.currentTarget).prop("value");
+            if (isNaN(factory.from) || factory.from === undefined) {
+                factory.from = factory.min;
+            }
+            if (factory.from <= factory.min) {
+                factory.from = factory.min;
+            }
+            if (factory.from > factory.to) {
+                factory.from = factory.to;
+            }
+
+            factory.updateValues();
+            factory.updateRange();
+        });
+
+        factory.slider_to.on("change", function (event) {
+            factory.to = +$(event.currentTarget).prop("value");
+            if (isNaN(factory.to) || factory.to === undefined) {
+                factory.to = factory.max;
+            }
+            if (factory.to >= factory.max) {
+                factory.to = factory.max;
+            }
+            if (factory.to < factory.from) {
+                factory.to = factory.from;
+            }
+
+            factory.updateValues();
+            factory.updateRange();
+        });
+        factory.updateValues();
+        factory.updateRange();
+    }
+
+    // =======================================
+    // НИЖЕ ИДУТ БЛОКИ С НАСТРОЙКАМИ ФИЛЬТРОВ
+    // =======================================
+
+    // Фильтр по ЦЕНЕ
+    var priceRangeSliderOptions = {
+        slider: $(".js-price-slider"),
+        slider_from: $(".js-price-from"),
+        slider_to: $(".js-price-to"),
+        range: 0,
+        min: 0,
+        max: 40000,
+        from: 3000,
+        to: 20000
+    }
+    new RangeSliderFactory(priceRangeSliderOptions);
+
+
+    // Фильтр по ДЛИННЕ
+    var lengthRangeSliderOptions = {
+        slider: $(".js-length-slider"),
+        slider_from: $(".js-length-from"),
+        slider_to: $(".js-length-to"),
+        range: 0,
+        min: 0,
+        max: 2000,
+        from: 300,
+        to: 1000
     };
+    new RangeSliderFactory(lengthRangeSliderOptions);
 
-    $from.on("change", function () {
-        from = +$(this).prop("value");
-        if (from < min) {
-            from = min;
-        }
-        if (from > to) {
-            from = to;
-        }
+    // Фильтр по ВЫСОТЕ
+    var heightRangeSliderOptions = {
+        slider: $(".js-height-slider"),
+        slider_from: $(".js-height-from"),
+        slider_to: $(".js-height-to"),
+        range: 0,
+        min: 0,
+        max: 1000,
+        from: 300,
+        to: 1000
+    };
+    new RangeSliderFactory(heightRangeSliderOptions);
 
-        updateValues();
-        updateRange();
-    });
 
-    $to.on("change", function () {
-        to = +$(this).prop("value");
-        if (to > max) {
-            to = max;
-        }
-        if (to < from) {
-            to = from;
-        }
-
-        updateValues();
-        updateRange();
-    });
+    // Фильтр по ШИРИНЕ
+    var widthRangeSliderOptions = {
+        slider: $(".js-width-slider"),
+        slider_from: $(".js-width-from"),
+        slider_to: $(".js-width-to"),
+        range: 0,
+        min: 0,
+        max: 1500,
+        from: 300,
+        to: 1000
+    };
+    new RangeSliderFactory(widthRangeSliderOptions);

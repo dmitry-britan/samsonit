@@ -63,8 +63,8 @@
 		background-color: #efefef;
 	}
 }
-.filter__price{}
-.filter__price-separator{
+.filter__range{}
+.filter__range-separator{
 	display: inline-block;
 	margin: 0 12px 30px;
 	font-size: 19px;
@@ -72,7 +72,7 @@
 	line-height: 36px;
 	vertical-align: middle;
 }
-.filter__price-input{
+.filter__range-input{
 	display: inline-block;
 	width: 98px;
 	margin: 0;
@@ -84,7 +84,7 @@
 	vertical-align: middle;
 	@include clearfix();
 }
-.filter__price-value{
+.filter__range-value{
 	float: left;
 	width: 50px;
 	padding: 0;
@@ -99,7 +99,7 @@
 		border: none;
 	}
 }
-.filter__price-currency{
+.filter__range-measure{
 	float: right;
 	font-size: 10px;
 	line-height: 22px;

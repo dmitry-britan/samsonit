@@ -1,21 +1,70 @@
 .widget
 	.widget__header Фильтр
-	.widget__body
-		//- Filter - Price
+	.widget__body 
+		// Filter - Price
 		.filter
 			.filter__header
 				.filter__header-title Цена
 				.filter__header-toggle: i.icon--arrow-up
 			.filter__body
-				.filter__price
-					label.filter__price-input
-						input(value="15 000").filter__price-value.js-price-from
-						span.filter__price-currency грн
-					.filter__price-separator - 
-					label.filter__price-input
-						input(value="20 000").filter__price-value.js-price-to
-						span.filter__price-currency грн
-					input.filter__price-slider.js-price-slider
+				.filter__range
+					label.filter__range-input
+						input(value="15 000").filter__range-value.js-price-from
+						span.filter__range-measure грн
+					.filter__range-separator - 
+					label.filter__range-input
+						input(value="20 000").filter__range-value.js-price-to
+						span.filter__range-measure грн
+					input.filter__range-slider.js-price-slider
+					
+		// Filter - Length
+		.filter
+			.filter__header
+				.filter__header-title Длинна
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__range
+					label.filter__range-input
+						input(value="300").filter__range-value.js-length-from
+						span.filter__range-measure мм
+					.filter__range-separator - 
+					label.filter__range-input
+						input(value="1 000").filter__range-value.js-length-to
+						span.filter__range-measure мм
+					input.filter__range-slider.js-length-slider
+					
+		// Filter - Height
+		.filter
+			.filter__header
+				.filter__header-title Высота
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__range
+					label.filter__range-input
+						input(value="300").filter__range-value.js-height-from
+						span.filter__range-measure мм
+					.filter__range-separator - 
+					label.filter__range-input
+						input(value="1 000").filter__range-value.js-height-to
+						span.filter__range-measure мм
+					input.filter__range-slider.js-height-slider
+					
+		// Filter - Width
+		.filter
+			.filter__header
+				.filter__header-title Ширина
+				.filter__header-toggle: i.icon--arrow-up
+			.filter__body
+				.filter__range
+					label.filter__range-input
+						input(value="300").filter__range-value.js-width-from
+						span.filter__range-measure мм
+					.filter__range-separator - 
+					label.filter__range-input
+						input(value="1 000").filter__range-value.js-width-to
+						span.filter__range-measure мм
+					input.filter__range-slider.js-width-slider
+
 			
 		//- Filter - Materials
 		.filter
