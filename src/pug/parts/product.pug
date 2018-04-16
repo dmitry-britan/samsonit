@@ -12,7 +12,7 @@ article.product
 			span.product__brand-inner= product.brand
 		.product__variants
 			each color in product.colors
-				div(class="product__variants-item color-"+color)
+				div(class="product__variants-item" style="background-color:"+color)
 		.product__properties
 			each prop in product.props
 				.product__properties-item= prop

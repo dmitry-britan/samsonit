@@ -38,10 +38,10 @@ block content
                 .product-single__variants-text
                   strong Цвет:
                   span Синий шифер
-                each color in [1,2,3,4]
+                each color, index in ['#e6dfd5','#909497','#7b7b7b','#6594ae']
                   .product-single__variants-color
-                    input(id="color-"+color, type="radio", name="product_color").is--hidden
-                    label(for="color-"+color class="is--color-"+color)
+                    input(id="color-"+index, type="radio", name="product_color").is--hidden
+                    label(for="color-"+index class="is--color" style="background-color:"+color)
 
 
 
