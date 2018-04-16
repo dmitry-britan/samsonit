@@ -31,9 +31,12 @@
 	margin: 0 auto;
 	padding-bottom: 100px;
 	justify-content: space-between;
-	// @include media('<1600px'){
-	// 	flex-direction: column-reverse;
-	// }
+	.page--personal-data &{
+		flex-direction: row-reverse;
+		@include media('<1600px'){
+			flex-direction: column-reverse;
+		}
+	}
 }
 .page__header{
 	display: flex;

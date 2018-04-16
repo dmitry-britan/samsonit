@@ -26,6 +26,9 @@
 .icon--color-check{
 	@include sprite('color-check');
 }
+.icon--product-favore{
+	@include sprite('heart-grey');
+}
 .icon--product-compare{
 	@include sprite('product-compare');
 }

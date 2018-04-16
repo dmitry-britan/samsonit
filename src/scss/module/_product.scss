@@ -278,6 +278,10 @@
 	}
 	&:hover{
 		border: 2px solid rgba($color__primary, .4);
+		.icon--product-favore{
+			@include sprite('heart-alt');
+			opacity: 0.5;
+		}
 		.icon--product-compare{
 			@include sprite('product-compare-alt');
 		}
@@ -285,26 +289,4 @@
 			@include sprite('product-cart-alt');
 		}
 	}
-}
-
-.color-1{
-	background-color: #9bb5bc;
-}
-.color-2{
-	background-color: #d2bfb7;
-}
-.color-3{
-	background-color: #3d4661;
-}
-.color-4{
-	background-color: #c38c73;
-}
-.color-5{
-	background-color: #96908e;
-}
-.color-6{
-	background-color: #8a2826;
-}
-.color-7{
-	background-color: #363431;
 }
