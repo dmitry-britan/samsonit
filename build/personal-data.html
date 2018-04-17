@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1523903540654">
+    <link rel="stylesheet" href="css/main.css?v=1523978080203">
   </head>
   <body class="page page--personal-data">
     <header class="header">
@@ -491,7 +491,7 @@
               <input class="search-modal__input" type="search" value="" placeholder="Поиск" name="search">
               <button class="search-modal__btn" type="submit"> <i class="icon icon--search-lg"></i></button>
             </form>
-          </div><a class="site-actions__item" href="personal-data.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href=""><i class="icon icon--heart"></i></a>
+          </div><a class="site-actions__item" href="personal-data.html"><i class="icon icon--user"></i></a><a class="site-actions__item" href="" data-modal="authorization"><i class="icon icon--heart"></i></a>
           <div class="site-actions__item"><i class="icon icon--cart"></i>
             <div class="cart-dropdown">
               <div class="cart-dropdown__inner">
@@ -662,8 +662,101 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <script src="js/vendor.js?v=1523903540658"></script>
-    <script src="js/main.js?v=1523903540658"></script>
+    <div style="display: none;">
+      <div class="popup" id="registration">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <div class="popup__header">Регистрация</div>
+          <div class="popup__body">
+            <form class="popup__form" action="">
+              <div class="popup__form-row is--col-2">
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Имя</label>
+                  <input class="popup__form-input" type="text" name="name">
+                </div>
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Фамилия</label>
+                  <input class="popup__form-input" type="text" name="sname">
+                </div>
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Email</label>
+                  <input class="popup__form-input" type="email" name="email">
+                </div>
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Телефон</label>
+                  <input class="popup__form-input" type="text" name="phone">
+                </div>
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Пароль</label>
+                  <input class="popup__form-input" type="password" name="password">
+                </div>
+                <div class="popup__form-field">
+                  <label class="popup__form-label">Подтверждение пароля</label>
+                  <input class="popup__form-input" type="password" name="password_confirm">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popup__action">
+            <button class="btn btn--bordered btn--primary" type="submit">Регистрация</button>
+          </div>
+          <div class="popup__footer">
+            <div class="popup__links"><a href="" data-modal="recover">Забыли пароль</a><a href="" data-modal="registration">Регистрация</a></div>
+            <div class="popup__links-separate"><span>или</span></div>
+            <div class="popup__links is--bigger"><a href="">facebook</a><a href="">вконтакте</a><a href="">google</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="authorization">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <div class="popup__header">Авторизация</div>
+          <div class="popup__body">
+            <form class="popup__form" action="">
+              <div class="popup__form-row">
+                <div class="popup__form-field with-icon"><i class="icon icon--client"></i>
+                  <label class="popup__form-label">Email</label>
+                  <input class="popup__form-input" type="email" name="email">
+                </div>
+                <div class="popup__form-field with-icon"><i class="icon icon--locked"></i>
+                  <label class="popup__form-label">Пароль</label>
+                  <input class="popup__form-input" type="password" name="password">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popup__action">
+            <button class="btn btn--bordered btn--primary" type="submit">Войти</button>
+          </div>
+          <div class="popup__footer">
+            <div class="popup__links"><a href="" data-modal="recover">Забыли пароль</a><a href="" data-modal="registration">Регистрация</a></div>
+            <div class="popup__links-separate"><span>или</span></div>
+            <div class="popup__links is--bigger"><a href="">facebook</a><a href="">вконтакте</a><a href="">google</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="recover">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <div class="popup__header">Восстановление пароля</div>
+          <div class="popup__body">
+            <form class="popup__form" action="">
+              <div class="popup__form-row">
+                <div class="popup__form-field with-icon"><i class="icon icon--phone"></i>
+                  <label class="popup__form-label">Телефон</label>
+                  <input class="popup__form-input" type="text" name="phone">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popup__action">
+            <button class="btn btn--bordered btn--primary" type="submit">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.js?v=1523978080209"></script>
+    <script src="js/main.js?v=1523978080209"></script>
     <script>
       (function() {
         $('.personal-block__form-action').on('click', function(event) {

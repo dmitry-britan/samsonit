@@ -15,6 +15,7 @@ $('[data-modal]').on('click', (e) => {
 	let link = $(e.currentTarget).data('modal');
 
 	if (link) {
+		$.arcticmodal('close');
 		$(`#${link}`).arcticmodal();
 	}
 });

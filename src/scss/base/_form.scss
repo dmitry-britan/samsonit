@@ -135,7 +135,18 @@ textarea {
       }
     }
   }
+  &.is--col-2{
+    flex-wrap: wrap;
+    .form__field{
+      max-width: 100%;
+      width: percentage(1/2);
+      @include media('<1100px'){
+        width: percentage(1/1);
+      }
+    }
+  }
   &.is--col-3{
+    flex-wrap: wrap;
     .form__field{
       max-width: 300px;
       width: percentage(1/3);

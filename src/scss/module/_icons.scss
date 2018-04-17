@@ -62,3 +62,12 @@
 .icon--search-lg{
 	@include sprite('search-lg');
 }
+.icon--client{
+	@include sprite('client');
+}
+.icon--phone{
+	@include sprite('phone');
+}
+.icon--locked{
+	@include sprite('locked');
+}

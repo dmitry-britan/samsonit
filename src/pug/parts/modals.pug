@@ -1,0 +1,83 @@
+div(style='display: none;')
+	//- registration
+	#registration.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			.popup__header Регистрация
+			.popup__body
+				form(action="").popup__form
+					.popup__form-row.is--col-2
+						.popup__form-field
+							label.popup__form-label Имя
+							input(type="text", name="name").popup__form-input
+						.popup__form-field
+							label.popup__form-label Фамилия
+							input(type="text", name="sname").popup__form-input
+						.popup__form-field
+							label.popup__form-label Email
+							input(type="email", name="email").popup__form-input
+						.popup__form-field
+							label.popup__form-label Телефон
+							input(type="text", name="phone").popup__form-input
+						.popup__form-field
+							label.popup__form-label Пароль
+							input(type="password", name="password").popup__form-input
+						.popup__form-field
+							label.popup__form-label Подтверждение пароля
+							input(type="password", name="password_confirm").popup__form-input
+			.popup__action
+				button(type="submit").btn.btn--bordered.btn--primary Регистрация
+			.popup__footer
+				.popup__links
+					a(href="" data-modal="recover") Забыли пароль
+					a(href="" data-modal="registration") Регистрация
+				.popup__links-separate
+					span или
+				.popup__links.is--bigger
+					a(href="") facebook
+					a(href="") вконтакте
+					a(href="") google
+
+	//- authorization
+	#authorization.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			.popup__header Авторизация
+			.popup__body
+				form(action="").popup__form
+					.popup__form-row
+						.popup__form-field.with-icon
+							i.icon.icon--client
+							label.popup__form-label Email
+							input(type="email", name="email").popup__form-input
+						.popup__form-field.with-icon
+							i.icon.icon--locked
+							label.popup__form-label Пароль
+							input(type="password", name="password").popup__form-input
+			.popup__action
+				button(type="submit").btn.btn--bordered.btn--primary Войти
+			.popup__footer
+				.popup__links
+					a(href="" data-modal="recover") Забыли пароль
+					a(href="" data-modal="registration") Регистрация
+				.popup__links-separate
+					span или
+				.popup__links.is--bigger
+					a(href="") facebook
+					a(href="") вконтакте
+					a(href="") google
+
+	//- recover
+	#recover.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			.popup__header Восстановление пароля
+			.popup__body
+				form(action="").popup__form
+					.popup__form-row
+						.popup__form-field.with-icon
+							i.icon.icon--phone
+							label.popup__form-label Телефон
+							input(type="text", name="phone").popup__form-input
+			.popup__action
+				button(type="submit").btn.btn--bordered.btn--primary Отправить

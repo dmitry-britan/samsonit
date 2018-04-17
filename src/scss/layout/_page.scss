@@ -31,6 +31,7 @@
 	margin: 0 auto;
 	padding-bottom: 100px;
 	justify-content: space-between;
+	.page--personal-change-password &,
 	.page--personal-data &{
 		flex-direction: row-reverse;
 		@include media('<1600px'){

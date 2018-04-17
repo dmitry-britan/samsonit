@@ -1,13 +1,26 @@
+//
+// Material Effect for form elements
+//---------------------------------------------------------------------------------------
+(() => {
+	let $inputs = $('.popup__form-input');
 
-  //
-  // Material Effect for form elements
-  //---------------------------------------------------------------------------------------
-	(function(){
-		$('.form__input').focus(function() {
-			$(this).parent().find('label').addClass('is--active');
-		}).blur(function() {
-			if ( $(this).val() == '' ){
-				$(this).parent().find('label').removeClass('is--active');
+	if ($inputs.length) {
+		$inputs.each((index, element) => {
+			if ($(element).val() !== '') {
+				$(element).parent().find('label').addClass('is--active');
 			}
 		});
-	})();
+
+		$inputs.focus((event) => {
+			let $element = $(event.currentTarget);
+
+			$element.parent().find('label').addClass('is--active');
+		}).blur(() => {
+			let $element = $(event.currentTarget);
+
+			if ($element.val() === '') {
+				$element.parent().find('label').removeClass('is--active');
+			}
+		});
+	}
+})();
