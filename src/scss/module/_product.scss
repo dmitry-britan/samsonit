@@ -67,6 +67,29 @@
 		}
 	}
 }
+.product__tag{
+	display: block;
+	position: absolute;
+	top: 25px; left: 0; right: 0;
+	text-align: center;
+	span{
+		display: inline-block;
+		min-width: 105px;
+		padding: 0 17px;
+		margin: 0 auto;
+		border: 1px solid $color__primary;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 21px;
+		letter-spacing: 0.45px;
+		text-align: center;
+		color: $color__primary;
+	}
+	&.is--promo span{
+		border-color: #e96b6b;
+		color: #e96b6b;
+	}
+}
 .product__photo{
 	display: flex;
 	margin: 0 0 42px;

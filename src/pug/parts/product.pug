@@ -1,5 +1,8 @@
 article.product
 	.product__inner.js-product
+		if product.tag
+			div(class="product__tag "+product.tagType)
+				span=product.tag
 		a(href="product-single.html").product__photo
 			img(src="images/product/p-"+(index+1)+".jpg", alt="")
 		h2.product__title
