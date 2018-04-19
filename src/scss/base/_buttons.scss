@@ -90,6 +90,10 @@
 	@include media('<1300px'){
 		max-width: 430px;
 	}
+	@include media('<480px'){
+		padding: 14px 6px;
+		margin: 30px 0 20px;
+	}
 
 	.icon{
 		margin-right: 10px;

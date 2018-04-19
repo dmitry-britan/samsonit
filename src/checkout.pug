@@ -44,6 +44,8 @@ block content
                 a(href="" data-modal="shops").btn.btn--choose-shop.js-shop-link
                   i.icon.icon--location
                   | Выбрать ближайший магазин
+                .checkout__shop-selected.js-shop-selected
+                input(type="hidden" name="shop_id")
               .checkout__checkbox
                 input(id="delivery-2", type="radio", name="delivery").checkbox
                 label(for="delivery-2") Куръерская доставка

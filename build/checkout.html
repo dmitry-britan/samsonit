@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1524157267056">
+    <link rel="stylesheet" href="css/main.css?v=1524164366624">
   </head>
   <body class="page page--checkout">
     <header class="header">
@@ -604,6 +604,8 @@
                   <input class="checkbox" id="delivery-1" type="radio" name="delivery">
                   <label for="delivery-1">
                      Самовывоз<i class="icon icon--arrow-down"></i></label><a class="btn btn--choose-shop js-shop-link" href="" data-modal="shops"><i class="icon icon--location"></i>Выбрать ближайший магазин</a>
+                  <div class="checkout__shop-selected js-shop-selected"></div>
+                  <input type="hidden" name="shop_id">
                 </div>
                 <div class="checkout__checkbox">
                   <input class="checkbox" id="delivery-2" type="radio" name="delivery">
@@ -800,8 +802,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1524157267064"></script>
-    <script src="js/main.js?v=1524157267064"></script>
+    <script src="js/vendor.js?v=1524164366628"></script>
+    <script src="js/main.js?v=1524164366628"></script>
     <div style="display: none;">
       <div class="popup" id="shops">
         <div class="popup__close arcticmodal-close"></div>
@@ -812,33 +814,33 @@
                 <div class="shops-map__tabs js-tabs"><a class="shops-map__tabs-item is--active js-tabs-item" href="#city-1">Киев</a><a class="shops-map__tabs-item js-tabs-item" href="#city-2">Одесса</a><a class="shops-map__tabs-item js-tabs-item" href="#city-3">Львов</a></div>
                 <div class="shops-map__tabs-content is--active js-tabs-content" id="city-1">
                   <ul class="shops-map__list js-scroll-shops">
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="1">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="2">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="3">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
                       <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="2">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="4">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="6">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
@@ -848,34 +850,34 @@
                 </div>
                 <div class="shops-map__tabs-content js-tabs-content" id="city-2">
                   <ul class="shops-map__list js-scroll-shops">
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="3">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="6">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                       <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="9">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="4">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="8">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                       <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="12">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
@@ -884,34 +886,34 @@
                 </div>
                 <div class="shops-map__tabs-content js-tabs-content" id="city-3">
                   <ul class="shops-map__list js-scroll-shops">
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="5">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="10">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
                       <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="15">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056">
+                    <li class="shops-map__list-item js-shop" data-lat="50.429931" data-lng="30.5332056" data-shop="6">
                       <div class="shops-map__shop-title">бульвар Леси Украинки, 24</div>
                       <div class="shops-map__shop-phone">(044) 286-82-38</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363">
+                    <li class="shops-map__list-item js-shop" data-lat="50.4463352" data-lng="30.4897363" data-shop="12">
                       <div class="shops-map__shop-title">Универмаг "Украина" </div>
                       <div class="shops-map__shop-address">пл. Победы, 3, второй зтаж</div>
                       <div class="shops-map__shop-phone">(044) 496-16-55</div>
                       <div class="shops-map__shop-worktime"><span>Время работы:</span><span>Пн - Вс  10:00 - 20:00 </span><span>Сб. - Вс. 10:00 - 22:00 </span></div>
                     </li>
-                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313">
+                    <li class="shops-map__list-item js-shop" data-lat="50.460133" data-lng="30.5201313" data-shop="18">
                       <div class="shops-map__shop-title">ул. Сагайдачного, 25б</div>
                       <div class="shops-map__shop-phone">(044) 498-33-54</div>
                       <div class="shops-map__shop-worktime"><span>Время работы: </span><span>Пн - Вс  10:00 - 20:00 </span></div>

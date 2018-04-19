@@ -63,6 +63,10 @@
 .checkout__login-form{
 	@include media('<900px'){
 		display: none;
+		
+		.is--login-show &{
+			display: block;
+		}
 	}
 }
 .checkout__checkbox{

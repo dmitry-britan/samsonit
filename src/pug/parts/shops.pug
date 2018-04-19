@@ -11,7 +11,7 @@
 			#city-1.shops-map__tabs-content.is--active.js-tabs-content
 				ul.shops-map__list.js-scroll-shops
 					each item in [1, 2]
-						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313")
+						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313" data-shop=1*item)
 							.shops-map__shop-title
 								| ул. Сагайдачного, 25б
 							.shops-map__shop-phone
@@ -19,7 +19,7 @@
 							.shops-map__shop-worktime
 								span Время работы: 
 								span Пн - Вс  10:00 - 20:00 
-						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056")
+						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056" data-shop=2*item)
 							.shops-map__shop-title
 								| бульвар Леси Украинки, 24
 							.shops-map__shop-phone
@@ -27,7 +27,7 @@
 							.shops-map__shop-worktime
 								span Время работы: 
 								span Пн - Вс  10:00 - 20:00 
-						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363")
+						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363" data-shop=3*item)
 							.shops-map__shop-title
 								| Универмаг "Украина" 
 							.shops-map__shop-address
@@ -40,15 +40,15 @@
 								span Сб. - Вс. 10:00 - 22:00 
 			#city-2.shops-map__tabs-content.js-tabs-content
 				ul.shops-map__list.js-scroll-shops
-					each item in [1, 2]
-						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363")
+					each item in [3, 4]
+						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363" data-shop=1*item)
 							.shops-map__shop-title
 								| Универмаг "Украина" 
 							.shops-map__shop-address
 								| пл. Победы, 3, второй зтаж
 							.shops-map__shop-phone
 								| (044) 496-16-55
-						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056")
+						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056" data-shop=2*item)
 							.shops-map__shop-title
 								| бульвар Леси Украинки, 24
 							.shops-map__shop-phone
@@ -60,7 +60,7 @@
 								span Время работы:
 								span Пн - Вс  10:00 - 20:00 
 								span Сб. - Вс. 10:00 - 22:00 
-						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313")
+						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313" data-shop=3*item)
 							.shops-map__shop-title
 								| ул. Сагайдачного, 25б
 							.shops-map__shop-phone
@@ -70,8 +70,8 @@
 								span Пн - Вс  10:00 - 20:00 
 			#city-3.shops-map__tabs-content.js-tabs-content
 				ul.shops-map__list.js-scroll-shops
-					each item in [1, 2]
-						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056")
+					each item in [5, 6]
+						li.shops-map__list-item.js-shop(data-lat="50.429931" data-lng="30.5332056" data-shop=1*item)
 							.shops-map__shop-title
 								| бульвар Леси Украинки, 24
 							.shops-map__shop-phone
@@ -79,7 +79,7 @@
 							.shops-map__shop-worktime
 								span Время работы: 
 								span Пн - Вс  10:00 - 20:00 
-						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363")
+						li.shops-map__list-item.js-shop(data-lat="50.4463352" data-lng="30.4897363" data-shop=2*item)
 							.shops-map__shop-title
 								| Универмаг "Украина" 
 							.shops-map__shop-address
@@ -90,7 +90,7 @@
 								span Время работы:
 								span Пн - Вс  10:00 - 20:00 
 								span Сб. - Вс. 10:00 - 22:00 
-						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313")
+						li.shops-map__list-item.js-shop(data-lat="50.460133" data-lng="30.5201313" data-shop=3*item)
 							.shops-map__shop-title
 								| ул. Сагайдачного, 25б
 							.shops-map__shop-phone
