@@ -2,6 +2,9 @@
 	margin: 0 0 60px;
 	padding: 0;
 	list-style: none;
+	@include media('<992px'){
+		display: none;
+	}
 }
 .categories-groups__icon{
 	position: absolute;

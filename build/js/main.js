@@ -156,6 +156,18 @@ if ($productSinglePhoto.length) {
 	}
 })();
 
+if ($('.js-filter-toggler').length) {
+	var $toggler = $('.js-filter-toggler');
+	var $sidebar = $('.sidebar');
+
+	$toggler.on('click', function(event) {
+		event.preventDefault();
+
+		$('body').toggleClass('is--sidebar-active');
+		$sidebar.toggleClass('is--opened');
+	});
+}
+
 //
 // Slider - on main page
 // =================================================================
@@ -420,7 +432,7 @@ var Menu = function() {
 	}, {
 		key: 'toggleBodyBackground',
 		value: function toggleBodyBackground() {
-			$('body').toggleClass('is--mobile-active');
+			$('body').toggleClass('is--menu-active');
 		}
 	}, {
 		key: 'toggleMenuTriggerClass',

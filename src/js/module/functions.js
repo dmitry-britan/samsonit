@@ -4,3 +4,4 @@
 // @include('function/dropdown-menu.js')
 // @include('function/fancybox-elements.js')
 // @include('function/form-label.js')
+// @include('function/toggleFilter.js')

@@ -12,6 +12,41 @@ body {
   background-color: #eee;
   font: normal normal normal 12px/24px "Proxima Nova", Verdana, Geneva, Tahoma, sans-serif;
 }
+body:after{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  cursor: pointer;
+}
+body.is--sidebar-active{
+  overflow: hidden;
+
+  &:after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background: rgba(0,0,0,0.75);
+    z-index: 900;
+  }
+}
+body.is--menu-active{
+  overflow: hidden;
+
+  &:after{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.5s;
+    background: rgba(255,255,255,0.01);
+    z-index: 900;
+  }
+}
 a{
   transition: all 300ms linear;
   transition-property: color, background-color;

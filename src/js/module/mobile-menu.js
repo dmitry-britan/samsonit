@@ -24,7 +24,7 @@ class Menu {
 		$('.mobile-nav').toggleClass('is--visible');
 	}
 	toggleBodyBackground() {
-		$('body').toggleClass('is--mobile-active');
+		$('body').toggleClass('is--menu-active');
 	}
 	toggleMenuTriggerClass() {
 		$('.js-nav-toggle').toggleClass('is-active');
