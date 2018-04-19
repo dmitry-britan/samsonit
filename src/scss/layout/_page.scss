@@ -60,6 +60,10 @@
 }
 .page__content{
 	flex-grow: 1;
+
+	.page--contacts & {
+		width: 100%;
+	}
 }
 .page__sidebar{
 	padding-top: 100px;

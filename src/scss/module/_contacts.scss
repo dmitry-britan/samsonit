@@ -15,6 +15,9 @@
 		margin-right: 0;
 		margin-bottom: 20px;
 	}
+	@include media('<480px'){
+		padding: 25px 30px;
+	}
 }
 .contacts__data-header{
 	margin: 0 0 26px;
@@ -24,9 +27,15 @@
 	letter-spacing: 0.36px;
 	line-height: 20px;
 	color: $color__primary;
+	@include media('<480px'){
+		margin-bottom: 15px;;
+	}
 }
 .contacts__data-block{
 	margin-bottom: 30px;
+	@include media('<480px'){
+		margin-bottom: 20px;
+	}
 	&:last-child{
 		margin-bottom: 0;
 	}
@@ -39,6 +48,10 @@
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #000000;
+	@include media('<480px'){
+		font-size: 18px;
+		line-height: 24px;
+	}
 }
 .contacts__data-email{
 	display: block;
@@ -74,6 +87,20 @@
 	@include media('<960px'){
 		width: 100%;
 	}
+	@include media('<480px'){
+		padding: 25px 30px;
+	}
+
+	.btn{
+		@include media('<480px') {
+			display: block;
+			margin: 0 auto;
+			padding: 8px 16px;
+			font-size: 14px;
+			line-height: 20px;
+			min-width: 220px;
+		}
+	}
 }
 .contacts__form-header{
 	margin: 0 0 52px;
@@ -84,6 +111,11 @@
 	color: #1e1e1e;
 	@include media('<1100px'){
 		margin-bottom: 32px;
+	}
+	@include media('<480px'){
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 20px;
 	}
 }
 .contacts__form-body{}

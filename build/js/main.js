@@ -168,6 +168,24 @@ if ($('.js-filter-toggler').length) {
 	});
 }
 
+(function() {
+	var $shopsMap = $('#map');
+
+	if (!$shopsMap.length) {
+		return false;
+	}
+
+	var $shopItems = $('.js-shop');
+	var minWidth = 992;
+	var $window = $(window);
+
+	$shopItems.on('click', function() {
+		if ($window.width() < minWidth) {
+			$shopsMap.arcticmodal();
+		}
+	});
+})();
+
 //
 // Slider - on main page
 // =================================================================

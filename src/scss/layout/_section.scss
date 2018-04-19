@@ -60,6 +60,10 @@
 	&--contacts{
 		padding: 0;
 		margin-bottom: 90px;
+		
+		@include media('<640px'){
+			margin-bottom: 45px;
+		}
 	}
 	&--personal{
 		@include media('<660px'){
@@ -75,6 +79,7 @@
 		background: #fff url('../images/login-bg.jpg') right bottom no-repeat;
 	}
 	&--news,
+	&--contacts-page,
 	&--cart,
 	&--specials{
 		@include media('<640px'){
@@ -99,10 +104,16 @@
 		color: #000000;
 		@include media('<600px'){
 			margin-bottom: 30px;
-			font-size: 18px;
+			font-size: 24px;
 			font-weight: 800;
 			line-height: 24px;
 			text-transform: uppercase;
+		}
+		@include media('<480px'){
+			margin-bottom: 20px;
+			font-size: 21px;
+			font-weight: 800;
+			line-height: 21px;
 		}
 	}
 	&.is--primary{

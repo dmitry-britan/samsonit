@@ -5,3 +5,4 @@
 // @include('function/fancybox-elements.js')
 // @include('function/form-label.js')
 // @include('function/toggleFilter.js')
+// @include('function/toggleShops.js')
