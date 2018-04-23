@@ -133,60 +133,36 @@ block body-end
         factory.updateRange();
     }
 
+
+    function getSliderOptions(sliderName) {
+        return {
+            slider: $(".js-"+ sliderName +"-slider"),
+            slider_from: $(".js-"+ sliderName +"-from"),
+            slider_to: $(".js-"+ sliderName +"-to"),
+            range: 0,
+            min: $(".js-"+ sliderName +"-slider").data('min'),
+            max: $(".js-"+ sliderName +"-slider").data('max'),
+            from: $(".js-"+ sliderName +"-slider").data('from'),
+            to: $(".js-"+ sliderName +"-slider").data('to')
+        }
+    }
+
     // =======================================
     // НИЖЕ ИДУТ БЛОКИ С НАСТРОЙКАМИ ФИЛЬТРОВ
     // =======================================
 
     // Фильтр по ЦЕНЕ
-    var priceRangeSliderOptions = {
-        slider: $(".js-price-slider"),
-        slider_from: $(".js-price-from"),
-        slider_to: $(".js-price-to"),
-        range: 0,
-        min: 0,
-        max: 40000,
-        from: 3000,
-        to: 20000
-    }
+    var priceRangeSliderOptions = getSliderOptions('price');
     new RangeSliderFactory(priceRangeSliderOptions);
 
-
     // Фильтр по ДЛИННЕ
-    var lengthRangeSliderOptions = {
-        slider: $(".js-length-slider"),
-        slider_from: $(".js-length-from"),
-        slider_to: $(".js-length-to"),
-        range: 0,
-        min: 0,
-        max: 2000,
-        from: 300,
-        to: 1000
-    };
+    var lengthRangeSliderOptions = getSliderOptions('length');
     new RangeSliderFactory(lengthRangeSliderOptions);
 
     // Фильтр по ВЫСОТЕ
-    var heightRangeSliderOptions = {
-        slider: $(".js-height-slider"),
-        slider_from: $(".js-height-from"),
-        slider_to: $(".js-height-to"),
-        range: 0,
-        min: 0,
-        max: 1000,
-        from: 300,
-        to: 1000
-    };
+    var heightRangeSliderOptions = getSliderOptions('height');
     new RangeSliderFactory(heightRangeSliderOptions);
 
-
     // Фильтр по ШИРИНЕ
-    var widthRangeSliderOptions = {
-        slider: $(".js-width-slider"),
-        slider_from: $(".js-width-from"),
-        slider_to: $(".js-width-to"),
-        range: 0,
-        min: 0,
-        max: 1500,
-        from: 300,
-        to: 1000
-    };
+    var widthRangeSliderOptions = getSliderOptions('width');
     new RangeSliderFactory(widthRangeSliderOptions);
