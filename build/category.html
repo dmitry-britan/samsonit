@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1524500184235">
+    <link rel="stylesheet" href="css/main.css?v=1524554990887">
   </head>
   <body class="page page--category">
     <header class="header">
@@ -1051,7 +1051,7 @@
                   <label class="filter__range-input">
                     <input class="filter__range-value js-price-to" value="20 000"><span class="filter__range-measure">грн</span>
                   </label>
-                  <input class="filter__range-slider js-price-slider" data-min="0" data-max="40000" data-from="3000" data-to="20000">
+                  <input class="filter__range-slider js-price-slider" data-filter="price" data-min="0" data-max="40000" data-from="3000" data-to="20000">
                 </div>
               </div>
             </div>
@@ -1070,7 +1070,7 @@
                   <label class="filter__range-input">
                     <input class="filter__range-value js-length-to" value="1 000"><span class="filter__range-measure">мм</span>
                   </label>
-                  <input class="filter__range-slider js-length-slider" data-min="0" data-max="2000" data-from="300" data-to="1000">
+                  <input class="filter__range-slider js-length-slider" data-filter="length" data-min="0" data-max="2000" data-from="300" data-to="1000">
                 </div>
               </div>
             </div>
@@ -1089,7 +1089,7 @@
                   <label class="filter__range-input">
                     <input class="filter__range-value js-height-to" value="1 000"><span class="filter__range-measure">мм</span>
                   </label>
-                  <input class="filter__range-slider js-height-slider" data-min="0" data-max="1000" data-from="300" data-to="1000">
+                  <input class="filter__range-slider js-height-slider" data-filter="height" data-min="0" data-max="1000" data-from="300" data-to="1000">
                 </div>
               </div>
             </div>
@@ -1108,7 +1108,7 @@
                   <label class="filter__range-input">
                     <input class="filter__range-value js-width-to" value="1 000"><span class="filter__range-measure">мм</span>
                   </label>
-                  <input class="filter__range-slider js-width-slider" data-min="0" data-max="1500" data-from="300" data-to="1000">
+                  <input class="filter__range-slider js-width-slider" data-filter="width" data-min="0" data-max="1500" data-from="300" data-to="1000">
                 </div>
               </div>
             </div>
@@ -1377,8 +1377,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1524500184242"></script>
-    <script src="js/main.js?v=1524500184242"></script>
+    <script src="js/vendor.js?v=1524554990897"></script>
+    <script src="js/main.js?v=1524554990897"></script>
     <script>
       function RangeSliderFactory(options){
           factory = this;
@@ -1471,24 +1471,16 @@
       }
       
       // =======================================
-      // НИЖЕ ИДУТ БЛОКИ С НАСТРОЙКАМИ ФИЛЬТРОВ
+      // НИЖЕ ИДУТ БЛОКИ ИНИЦИАЛИЗАЦИИ ФИЛЬТРОВ
       // =======================================
-      
-      // Фильтр по ЦЕНЕ
-      var priceRangeSliderOptions = getSliderOptions('price');
-      new RangeSliderFactory(priceRangeSliderOptions);
-      
-      // Фильтр по ДЛИННЕ
-      var lengthRangeSliderOptions = getSliderOptions('length');
-      new RangeSliderFactory(lengthRangeSliderOptions);
-      
-      // Фильтр по ВЫСОТЕ
-      var heightRangeSliderOptions = getSliderOptions('height');
-      new RangeSliderFactory(heightRangeSliderOptions);
-      
-      // Фильтр по ШИРИНЕ
-      var widthRangeSliderOptions = getSliderOptions('width');
-      new RangeSliderFactory(widthRangeSliderOptions);
+      var $filters = $('.filter__range-slider');
+      if ($filters !== undefined && $filters.length) {
+          $filters.each(function() {
+              var filterName = $(this).data('filter');
+              var rangeSliderOptions = getSliderOptions(filterName);
+              new RangeSliderFactory(rangeSliderOptions);
+          });
+      }
     </script>
   </body>
 </html>

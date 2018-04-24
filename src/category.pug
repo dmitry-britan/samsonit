@@ -148,21 +148,13 @@ block body-end
     }
 
     // =======================================
-    // НИЖЕ ИДУТ БЛОКИ С НАСТРОЙКАМИ ФИЛЬТРОВ
+    // НИЖЕ ИДУТ БЛОКИ ИНИЦИАЛИЗАЦИИ ФИЛЬТРОВ
     // =======================================
-
-    // Фильтр по ЦЕНЕ
-    var priceRangeSliderOptions = getSliderOptions('price');
-    new RangeSliderFactory(priceRangeSliderOptions);
-
-    // Фильтр по ДЛИННЕ
-    var lengthRangeSliderOptions = getSliderOptions('length');
-    new RangeSliderFactory(lengthRangeSliderOptions);
-
-    // Фильтр по ВЫСОТЕ
-    var heightRangeSliderOptions = getSliderOptions('height');
-    new RangeSliderFactory(heightRangeSliderOptions);
-
-    // Фильтр по ШИРИНЕ
-    var widthRangeSliderOptions = getSliderOptions('width');
-    new RangeSliderFactory(widthRangeSliderOptions);
+    var $filters = $('.filter__range-slider');
+    if ($filters !== undefined && $filters.length) {
+        $filters.each(function() {
+            var filterName = $(this).data('filter');
+            var rangeSliderOptions = getSliderOptions(filterName);
+            new RangeSliderFactory(rangeSliderOptions);
+        });
+    }
