@@ -391,7 +391,7 @@ textarea {
   position: absolute;
   opacity: 0;
 }
-
+.filter__checkbox > label,
 .checkbox:not(checked)+label {
   position: relative;
   padding: 0 0 0 28px;
@@ -403,6 +403,7 @@ textarea {
   color: #38373c;
 }
 
+.filter__checkbox > label::before,
 .checkbox:not(checked)+label:before {
   content: "";
   position: absolute;
@@ -415,6 +416,7 @@ textarea {
   background-color: #ffffff;
 }
 
+.filter__checkbox > label::after,
 .checkbox:not(checked)+label:after {
   content: "";
   position: absolute;
@@ -428,11 +430,12 @@ textarea {
   opacity: 0;
   transition: all 0.2s;
 }
-
+.filter__checkbox.is-active > label::after,
 .checkbox:checked+label:after {
   opacity: 1;
 }
 
+.filter__checkbox.is-active > label::before,
 .checkbox:checked+label:before {
   background-color: #fff;
 }

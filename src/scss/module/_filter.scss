@@ -58,6 +58,7 @@
 	margin-right: -0.25em;
 	padding: 7px 6px 8px;
 	width: 50%;
+	text-decoration: none;
 	transition: background-color 300ms linear;
 	&:hover{
 		background-color: #efefef;
@@ -115,8 +116,9 @@
 .filter__color{
 	position: relative;
 	flex-basis: percentage(1/5);
+	text-decoration: none;
 
-	input+label{
+	label{
 		&:after,
 		&:before{
 			content: '';
@@ -128,7 +130,7 @@
 		}
 	}
 
-	input:checked+label{
+	&.is-active label{
 		&:after{
 			opacity: 1;
 		}
